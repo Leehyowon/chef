@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>CHEF</title>
+        <link rel="shortcut icon" href="https://github.com/hyemni/chef/blob/master/image/HBpic.jpeg?raw=true">
+        <script src="http://malsup.github.com/jquary.cycle2.js"></script>
+    </head>
+    <body>
+        <header> <!--main파일의 index1에서 따옴-->
+            <div class = "head"> Login</div>
+            <div class = "head"> SignUp </div>
+            <div class = "head"> Mypage </div>
+            <div class = "head"> Cart </div>
+        </header>
+
+        <aside> <!--main파일의 index1에서 따옴-->
+            <div>
+                <img src="https://github.com/hyemni/chef/blob/master/main/logo.png?raw=true" alt="CHEF - centre of Hanyang univ.ERICA foundation club" />
+            </div>
+
+            <div class = "sidebar">
+                <ul>
+                    <li>SHOPPING
+                        <ul>
+                            <li><a href = ""> by BRAND </a></li>
+                            <ul>
+                                <li><a href = "">Wootique</a></li>
+                                <li><a href = "">Dalrang</a></li>
+                                <li><a href = "">Clothes1</a></li>
+                                <li><a href = "">Clothes2</a></li>
+                                <li><a href = "">Slime1</a></li>
+                                <li><a href = "">Slime2</a></li>
+                            </ul>
+                            <li><a href = ""> by PRODUCT </a></li>
+                            <ul>
+                                <li><a href = "">Clothes</a></li>
+                                <li><a href = "">Jewelry</a></li>
+                                <li><a href = "">Slime</a></li>
+                            </ul>
+                        </ul>
+                    </li>
+                    <li>COMMUNITY
+                        <ul>
+                            <li><a href = ""> Notice </a></li>
+                            <li><a href = ""> Event </a></li>
+                            <li><a href = ""> QnA </a></li>
+                            <li><a href = ""> Review </a></li>
+                            <li><a href = ""> Information </a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+        <main>
+            <article>
+
+                <h1>제품 설명</h1>
+
+                <div class="cycle-slideshow"
+                    data-cycle-fx="scrollHorz"
+                    data-cycle-pause-on-hover="true"
+                    data-cycle-speed="200"
+                > <!--이미지를 슬라이드로 두개 보여줄려했는데 실패. 좀더 검색해봐야할 것 같음ㅠ-->
+                        <img src="https://github.com/hyemni/chef/blob/master/image/wootique/링.png?raw=true" alt="ring"> <!--밑에 김혜빈이랑 수평으로 배치-->
+                        <!--<img src="https://github.com/hyemni/chef/blob/master/image/wootique/링2.png?raw=true" alt="ring">-->
+                </div>
+
+                <div class="one_two">
+                    <h2>링 귀걸이</h2>
+                    <hr/>
+                    <p>판매가</p>
+                    <p>7,000</p> <!--여기에 중간줄로 찍 그어야할거같음(할인가로 판매하니까)-->
+                    <p>할인가</p>
+                    <p>5,900</p>
+                    <p>배송비</p>
+                    <p>2,500 원</p>
+
+                    <p>주문 수량  <!--form으로 받게 해야할거같음-->
+                        <select name="number">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                    </p>
+                    <!--form부분-->
+                    <p>소재 <!--근데 이건 form 사용해서 은이랑 금이랑 무니켈 사용선택할수 있게 해야할거같음-->
+                    <!--form부분-->
+                        <select name="ringoption">
+                            <option>골드</option>
+                            <option>실버</option>
+                            <option>무니켈</option>
+                        </select>
+                    </p>
+
+                    <input type="submit" name="put" value="주문하기" />
+
+
+                    <p>&#35; 최소주문수량 1개 이상</p>
+                    <p>&#35; 최대주문수량 5개 이하</p>
+                    <p>&#35; 옵션선택 박스를 선택하시면 아래에 상품이 추가됩니다.</p>
+
+                    <p>총 상품금액</p>
+                    <!--이 부분도 php로 하는건가?-->
+
+                    <div>
+                        <p><a href="">구매하기</a></p>
+                        <p><a href="">장바구니</a></p>
+                    </div>
+                </div>
+
+                <hr/>
+
+                <div class="button">
+                    <p><a href="">상세정보</a></p>
+                    <p><a href="">제품후기</a></p>
+                </div>
+
+                <hr/>
+
+                <div class="thing_information"> <!--상세 정보-->
+                    <p>comment</p>
+                    <p>가볍고 깔끔한 링 드롭 디자인의 펨므.</p>
+                    <p>송알송알 맺힌 글라스가 사랑스럽습니다.</p>
+                    <p>유니크한 디자인에 깔끔하여 자꾸 눈이 가는 이어링이예요.</p>
+                    <p>평소에 가벼운 링 스타일을 찾으셨다면, 정말 추천드립니다.</p>
+                </div>
+
+                <div class="thing_blog"> <!--제품 후기-->
+
+                </div>
+
+            </article>
+        </main>
+    </body>
+</html>
