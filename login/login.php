@@ -13,7 +13,7 @@
 		$filename = file("id.txt");
 		$check = TRUE;
 
-		// Confirm the registered ID and password
+		// 아이디와 비밀번호가 맞는지 확인
 		foreach ($filename as $info){
 			$information = explode(";" , $info);
 			if ($information[0] == $logid && $information[1] == $logpw){
@@ -21,13 +21,13 @@
 			}
 		}
 
-		// Check Blank
+		// 빈칸확인
 		if (!isset($logid) || $logid=='' || !isset($logpw) || $logpw==''){
 		?>
 		<h1>Sorry</h1>
 		<p>You didn't fill out the form completely. <a href="/login/login.html">Try again?</a></p>
 		
-		<?php 	// Confirm the registered ID and password. If not...
+		<?php 	// 아이디와 비밀번호 맞는지 확인
 		} else if ($check){
 		?>
 		<h1>Sorry</h1>
