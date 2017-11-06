@@ -37,6 +37,9 @@ aside{
     padding: 0px;
 }
 
-/* article{
-    float: right;
-} */
+footer{
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /* border: 4px solid gray;  */
+}
