@@ -1,0 +1,42 @@
+body{
+    background-color: white;
+    font-size : 10pt;
+    font-family : "Verdana", "Tahoma", sans-serif;
+    margin : 15px;
+    padding : 0px;
+}
+
+nav{
+    text-align: right;
+    background-color: #EFEFEF;
+    margin-bottom: 10px;
+    height : 30px;
+}
+
+nav li{
+	list-style-type: none;
+	display: inline;
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+main{ 
+    width: 1400px;
+    overflow: hidden;
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+aside{
+    width: 200px;
+    height: 800px;
+    background-color: white;
+    float: left;
+    margin-right: 10px;
+    padding: 0px;
+}
+
+/* article{
+    float: right;
+} */
