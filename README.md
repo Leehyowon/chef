@@ -8,6 +8,10 @@
 
 **Hyowon Lee**
 * main page of CHEF : /main/index1.html
+* notice board : /board/notice.html
+* event board : /board/event.html
+* QnA board : /board/qna.html
+* information board : /board/info.html
 
 ## CSS
 **Hyowon Lee**
