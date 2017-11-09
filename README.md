@@ -19,6 +19,11 @@
 * basis of main page : /main/main.css
 
 ## PHP
+**Jina Sung**
+* Log in : /login/login.php
+* Sign Up : /login/signup.php
+* Find ID : /login/findID.php
+* Find Password : /login/findpw.php
 
 <!-- # 제목
 ## 소제목
