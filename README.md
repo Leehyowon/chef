@@ -12,6 +12,7 @@
 * event board : /board/event.html
 * QnA board : /board/qna.html
 * information board : /board/info.html
+* categories of QnA board : /board/category_qna/
 
 ## CSS
 **Hyowon Lee**
