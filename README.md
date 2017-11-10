@@ -5,6 +5,7 @@
 * a product information (Wootique) : /things/things.html
 * product review page for above html : /things/things_blog.html
 * new writing page of product review : /things/writingblog.html
+* We can look what I ordered; JANGBAGUNI : /mypage/buypocket.html
 
 **Hyowon Lee**
 * main page of CHEF : /main/index1.html
