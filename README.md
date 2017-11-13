@@ -14,6 +14,7 @@
 * QnA board : /board/qna.html
 * information board : /board/info.html
 * categories of QnA board : /board/category_qna/
+* input format for QnA board : /board/write_qna.html
 
 ## CSS
 **Hyowon Lee**
