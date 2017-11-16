@@ -74,26 +74,12 @@ nav ul li:hover > ul{
 }
 
 main{ 
-    width: 1400px;
     overflow: hidden;
     margin: auto;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-aside{
-    width: 200px;
-    float: left;
-    margin-right: 10px;
-    padding: 0px;
 }
 
 article{
     overflow: hidden;
-}
-
-aside ul{
-    list-style: none;
 }
 
 footer{
