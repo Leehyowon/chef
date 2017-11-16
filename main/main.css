@@ -1,16 +1,76 @@
 body{
-    background-color: white;
     font-size : 10pt;
     font-family : "Verdana", "Tahoma", sans-serif;
     margin : 0px;
     padding : 0px;
 }
-
 nav{
-    text-align: right;
-    line-height: 25px;
-    margin: 10px;
-    height : 30px;
+    height: 90px;
+    background-color: #535151;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+}
+
+nav ul{
+    display: inline-block;
+	list-style:none;
+	position:relative;
+    margin:0;
+    padding:0;
+    background-color: #535151;
+
+}
+#mainpage{
+    font-size: 40px;
+}
+
+
+nav ul a{
+	display:block;
+	color:#a1a1a1;
+	text-decoration:none;
+	font-size:12px;
+	line-height:90px;
+    padding:0 15px;
+    font-size: 12pt;
+
+}
+/* menu */
+nav ul li{
+	position:relative;
+	float:left;
+	margin:0px 10px 0px 10px;
+    padding:0;
+}
+
+/* submenu */
+nav ul ul{
+	display: none;
+    position:absolute;
+    width: 100px;
+
+}
+/* submenu by */
+nav ul ul li{
+    width:100px;
+    margin: 0;
+}
+
+nav ul ul a{
+	line-height:120%;
+    padding:10px 15px;
+    font-size: 9pt;
+}
+/* submenu2 */
+nav ul ul ul{
+	top:0;
+    left:100%;
+    margin: 0;
+}
+
+nav ul li:hover > ul{
+	display:block
 }
 
 main{ 
@@ -54,7 +114,7 @@ footer{
 
 a:link{text-decoration: none;}
 a:visited{text-decoration: none;}
-a{color: black;}
+a{color: #a1a1a1;}
 
 /* GENERAL BUTTON STYLING */
 /* button, button::after {
@@ -123,7 +183,7 @@ button:hover {
 .btn-2:hover:after {
     width: 100%;
 } */
-
+/* 
 .login {
     font-family : "Verdana", "Tahoma", sans-serif;
     color: #a3a3a3;
@@ -141,4 +201,4 @@ button:hover {
 
 .mincate a:hover{
     color: #9b9b9b;
-}
+} */
