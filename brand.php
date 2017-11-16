@@ -30,8 +30,8 @@
                             <ul>
                                 <li><a href = ""> by BRAND </a></li>
                                 <ul>
-                                    <li><a href = "">Wootique</a></li>
-                                    <li><a href = "">Dalrang</a></li>
+                                    <li><a href = "brand.php?brand=wootique">Wootique</a></li>
+                                    <li><a href = "brand.php?brand=dallrang">Dallrang</a></li>
                                     <li><a href = "">Clothes1</a></li>
                                     <li><a href = "">Clothes2</a></li>
                                     <li><a href = "">Slime1</a></li>
@@ -74,7 +74,7 @@
     <p>BRAND</p>    
         <ul>
             <li><a href="brand.php?brand=wootique">wootique</a></li>
-            <li><a href="brand.php?brand=dalrang">dalrang</a></li>
+            <li><a href="brand.php?brand=dallrang">dallrang</a></li>
             <li><a href="">clothes1</a></li>
             <li><a href="">clothes2</a></li>
             <li><a href="">slime1</a></li>
