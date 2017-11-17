@@ -6,6 +6,7 @@
         <title>CHEF</title>
         <link href="/chef/main/favicon.png" type="image/png" rel="shortcut icon"/>
         <link href="/chef/main/main.css" type="text/css" rel="stylesheet" />
+        <script src="ThingFunc.js" type="text/javascript"></script>
         <script src="http://malsup.github.com/jquary.cycle2.js"></script>
     </head>
 
@@ -107,8 +108,10 @@
                     <!--이 부분도 php로 하는건가?-->
 
                     <div>
-                        <p><a href="">구매하기</a></p>
-                        <p><a href="">장바구니</a></p>
+                        <!-- <p><a href="">구매하기</a></p>
+                        <p><a href="">장바구니</a></p> -->
+                        <button onclick="buy();" type="button" name="buy">구매하기</button>
+                        <button onclick="pocket();" type="button" name="pocket">장바구니</button>
                     </div>
                 </div>
 
