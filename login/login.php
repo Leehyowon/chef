@@ -4,64 +4,55 @@
         <meta charset="utf-8" />
 		<title>CHEF</title>
 		<link href="https://github.com/hyemni/chef/blob/master/image/HBpic.jpeg?raw=true" type="image/jpeg" rel="shortcut icon"/>
-		<link href="/chef/main/main.css" type="text/css" rel="stylesheet" />
+        <link href="/chef/main/main.css" type="text/css" rel="stylesheet" />
     </head>
 
     <body>
-        <nav>
-            <li class="login"><a href = "/chef/login/login.php"> Login </a></li>
-            <li class="login"><a href = "/chef/login/signup.php"> SignUp </a></li>
-            <li class="login"><a href = ""> Mypage </a></li>
-            <li class="login"><a href = ""> Cart </a></li>
-        </nav>
-
         <main>
-            <aside>
+            <nav>
                 <div>
-                    <a href = "/chef/main/index1.html"><img src="https://github.com/hyemni/chef/blob/master/main/image/logo.png?raw=true" alt="CHEF - centre of Hanyang univ.ERICA foundation club"
-                    width = 200px height = 100px> </a>
-                </div>
-
-                <div class = "sidebar">
                     <ul>
-                        <li><button class="btn">SHOPPING</button>
-                            <ul>
-                                <li><a href = ""> <button class="btn-2">by BRAND</button></a></li>
-                                <ul>
-                                    <li class="mincate"><a href = "">Wootique</a></li>
-                                    <li class="mincate"><a href = "">Dalrang</a></li>
-                                    <li class="mincate"><a href = "">Clothes1</a></li>
-                                    <li class="mincate"><a href = "">Clothes2</a></li>
-                                    <li class="mincate"><a href = "">Slime1</a></li>
-                                    <li class="mincate"><a href = "">Slime2</a></li>
-                                </ul>
-                                <li><a href = ""> <button class="btn-2">by PRODUCT</button></a></li>
-                                <ul>
-                                    <li class="mincate"><a href = "">Clothes</a></li>
-                                    <li class="mincate"><a href = "">Jewelry</a></li>
-                                    <li class="mincate"><a href = "">Slime</a></li>
-                                </ul>
+                        <li><a href="/chef/main/index1.html" id="mainpage">CHEF</a></li>
+                        <li><a href="/chef/main/index1.html">HOME</a></li>
+                        <li><a href="#">SHOP</a>
+                            <ul class="submenu">
+                                <li><a href="#">by Brand</a>
+                                    <ul>
+                                        <li><a href="#">Wootique</a></li>
+                                        <li><a href="#">Dalrang</a></li>
+                                        <li><a href="#">Clothes</a></li>
+                                        <li><a href="#">Slime</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">by Product</a>
+                                    <ul>
+                                        <li><a href="#">Clothes</a></li>
+                                        <li><a href="#">Jewelry</a></li>
+                                        <li><a href="#">Slime</a></li>    
+                                    </ul>
+                                </li>
                             </ul>
-                        </li>
-                        <li><button class="btn">COMMUNITY</button>
+                        </li>                                                                                            
+                        <!-- <li>COMMUNITY
                             <ul>
                                 <li class="mincate"><a href = "/chef/board/notice.html"> Notice </a></li>
                                 <li class="mincate"><a href = "/chef/board/event.html"> Event </a></li>
                                 <li class="mincate"><a href = "/chef/board/qna.html"> QnA </a></li>
                                 <li class="mincate"><a href = "/chef/board/info.html"> Information </a></li>
                             </ul>
-                        </li>
+                        </li> -->
+                        <li><a href="#">CUSTOMER CARE</a></li>
+                        <li><a href="#">MY PAGE</a></li>
+                        <li><a href="/chef/login/login.php">Sign In</a></li>
                     </ul>
-                </div>
-            </aside>
-
+                </div>           
+            </nav>
 
             <article>
                 <div class = "slide">
                     <img src="https://github.com/hyemni/chef/blob/master/main/image/slide1.png?raw=true" alt="slide image" 
                     width = "1040px" height = "550px" />
                 </div>
-
                 <section>
                     <div class="loginHtml">
 						<h2>Log in</h2>
@@ -126,35 +117,26 @@
         </main>
 
         <footer>
-        <div class = "phone">
-            CS center
             <ul>
+                <li>CS CENTER</li>
                 <li>1588-1588</li>
                 <li>상담시간 : 09:00 ~ 17:00</li>
                 <li>점심시간 : 12:00 ~ 13:00 </li>
-            </ul>         
-        </div>
-
-        <div class = "bank">
-            BANK info   
+            </ul>                 
             <ul>
+                <li>BANK INFO</li>
                 <li>신한 110386389614 (주)셰프</li>
                 <li>기업 1111222233333 (주)셰프</li>
                 <li>국민 245656565555 (주)셰프</li>
             </ul>                      
-        </div>
-
-        <div class = "company">
-            기업정보                    
             <ul>
+                <li>OUR STORE</li>
                 <li>회사 : (주)셰프</li>
                 <li>대표 : 김웹앱</li>
-                <li>주소 : 경기도 안산시 상록구 사동 1271 한양대학교 제4공학관 SMaSH룸</li>
-                <li>사업자등록번호 : [101-11-22222]</li>
-                <li>통신판매업신고 : 제2017-경기안산-0285호 [ 사업자정보확인 ]</li>
+                <li>주소 : 경기도 안산시 상록구 사동 1271 </br>
+                    한양대학교 제4공학관 SMaSH룸</li>
                 <li>제휴/제안 : info@hanyang.ac.kr</li>
             </ul>                
-        </div>
     </footer>
     </body>
 </html>
