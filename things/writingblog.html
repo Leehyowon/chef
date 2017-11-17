@@ -4,59 +4,58 @@
     <head>
         <meta charset="utf-8">
         <title>CHEF</title>
-        <link rel="shortcut icon" href="https://github.com/hyemni/chef/blob/master/image/HBpic.jpeg?raw=true">
+        <link href="/chef/main/favicon.png" type="image/png" rel="shortcut icon"/>
+        <link href="/chef/main/main.css" type="text/css" rel="stylesheet" />
         <script src="http://malsup.github.com/jquary.cycle2.js"></script>
     </head>
+
     <body>
-        <header> <!--main파일의 index1에서 따옴-->
-            <div class = "head"> Login</div>
-            <div class = "head"> SignUp </div>
-            <div class = "head"> Mypage </div>
-            <div class = "head"> Cart </div>
-        </header>
-
-        <aside> <!--main파일의 index1에서 따옴-->
-            <div>
-                <img src="https://github.com/hyemni/chef/blob/master/main/image/logo.png?raw=true" alt="CHEF - centre of Hanyang univ.ERICA foundation club" />
-            </div>
-
-            <div class = "sidebar">
-                <ul>
-                    <li>SHOPPING
-                        <ul>
-                            <li><a href = ""> by BRAND </a></li>
-                            <ul>
-                                <li><a href = "">Wootique</a></li>
-                                <li><a href = "">Dalrang</a></li>
-                                <li><a href = "">Clothes1</a></li>
-                                <li><a href = "">Clothes2</a></li>
-                                <li><a href = "">Slime1</a></li>
-                                <li><a href = "">Slime2</a></li>
-                            </ul>
-                            <li><a href = ""> by PRODUCT </a></li>
-                            <ul>
-                                <li><a href = "">Clothes</a></li>
-                                <li><a href = "">Jewelry</a></li>
-                                <li><a href = "">Slime</a></li>
-                            </ul>
-                        </ul>
-                    </li>
-                    <li>COMMUNITY
-                        <ul>
-                            <li><a href = ""> Notice </a></li>
-                            <li><a href = ""> Event </a></li>
-                            <li><a href = ""> QnA </a></li>
-                            <li><a href = ""> Review </a></li>
-                            <li><a href = ""> Information </a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </aside>
-
         <main>
-            <article>
+            <nav>
+                <div>
+                    <ul>
+                        <li><a href="/chef/main/index1.html" id="mainpage">CHEF</a></li>
+                        <li><a href="/chef/main/index1.html">HOME</a></li>
+                        <li><a href="#">SHOP</a>
+                            <ul class="submenu">
+                                <li><a href="#">by Brand</a>
+                                    <ul>
+                                        <li><a href="#">Wootique</a></li>
+                                        <li><a href="#">Dalrang</a></li>
+                                        <li><a href="#">Clothes</a></li>
+                                        <li><a href="#">Slime</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">by Product</a>
+                                    <ul>
+                                        <li><a href="/chef/things/things.html">Clothes</a></li>
+                                        <li><a href="#">Jewelry</a></li>
+                                        <li><a href="#">Slime</a></li>    
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>                                                                                            
+                        <!-- <li>COMMUNITY
+                            <ul>
+                                <li class="mincate"><a href = "/chef/board/notice.html"> Notice </a></li>
+                                <li class="mincate"><a href = "/chef/board/event.html"> Event </a></li>
+                                <li class="mincate"><a href = "/chef/board/qna.html"> QnA </a></li>
+                                <li class="mincate"><a href = "/chef/board/info.html"> Information </a></li>
+                            </ul>
+                        </li> -->
+                        <li><a href="#">CUSTOMER CARE</a></li>
+                        <li><a href="/chef/mypage/buypocket.html">MY PAGE</a></li>
+                        <li><a href="/chef/login/login.php">Sign In</a></li>
+                    </ul>
+                </div>           
+            </nav>
 
+            <article>
+                <div class = "slide">
+                    <img src="https://github.com/hyemni/chef/blob/master/main/image/slide1.png?raw=true" alt="slide image" 
+                    width = "1040px" height = "550px" />
+                </div>                
+            
                 <h1>제품 설명</h1>
 
                 <div class="cycle-slideshow"
@@ -139,5 +138,28 @@
 
             </article>
         </main>
+
+        <footer>
+            <ul>
+                <li>CS CENTER</li>
+                <li>1588-1588</li>
+                <li>상담시간 : 09:00 ~ 17:00</li>
+                <li>점심시간 : 12:00 ~ 13:00 </li>
+            </ul>                 
+            <ul>
+                <li>BANK INFO</li>
+                <li>신한 110386389614 (주)셰프</li>
+                <li>기업 1111222233333 (주)셰프</li>
+                <li>국민 245656565555 (주)셰프</li>
+            </ul>                      
+            <ul>
+                <li>OUR STORE</li>
+                <li>회사 : (주)셰프</li>
+                <li>대표 : 김웹앱</li>
+                <li>주소 : 경기도 안산시 상록구 사동 1271 </br>
+                    한양대학교 제4공학관 SMaSH룸</li>
+                <li>제휴/제안 : info@hanyang.ac.kr</li>
+            </ul>                
+        </footer>
     </body>
 </html>
