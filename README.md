@@ -4,8 +4,8 @@
 * jewelry : /image/wootique ||dallrang
 
 **Hyowon Lee**
-* jewelry : /image/joy || veneno
-* slime : /image/slime1 || slime2
+* jewelry : /image/joy || veneno || wingbling || ringing
+* slime : /image/slime1 || slime2 || slime3 
 
 ## HTML
 **Hyebeen Kim**
