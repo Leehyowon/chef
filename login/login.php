@@ -71,21 +71,32 @@
 						</form>
 					</div>
 					<div>
-						<?php
-						if ($_SERVER["REQUEST_METHOD"] == "POST") {
+					<?php
+                        $host = 'localhost';
+                        $user = 'chef';
+                        $pw = '1234';
+                        $dbName = 'chef';
+                        $mysqli = new mysqli($host, $user, $pw, $dbName);
+    
+                        if ($_SERVER["REQUEST_METHOD"] == "POST") {
 							$logid = $_POST['logid'];
 							$logpw = $_POST['logpw'];
 						
 							$filename = file("id.txt");
 							$check = TRUE;
 
-							// 아이디와 비밀번호가 맞는지 확인
-							foreach ($filename as $info){
-								$information = explode(";" , $info);
-								if ($information[0] == $logid && $information[1] == $logpw){
-									$check = FALSE;
-								}
-							}
+                            $sql2 = "select * from consumer";
+                            $result = $mysqli->query($sql2);
+                            if ($result->num_rows > 0) {
+                                    // output data of each row
+                                while($row = $result->fetch_assoc()) {
+                                    if ($row["consumer_id"] == $logid && $row["pwd"] == $logpw){
+                                        $check = FALSE; 
+                                    }
+                                }
+                            } else {
+                                echo "0 results";
+                            }
 
 							// 빈칸확인
 							if (!isset($logid) || $logid=='' || !isset($logpw) || $logpw==''){

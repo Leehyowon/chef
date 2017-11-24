@@ -71,23 +71,35 @@
 					</div>
 					<div>
 						<?php
+                        $host = 'localhost';
+                        $user = 'chef';
+                        $pwd = '1234';
+                        $dbName = 'chef';
+                        
+                        $mysqli = new mysqli($host, $user, $pwd, $dbName);
+
 						if ($_SERVER["REQUEST_METHOD"] == "POST") {
 							$id = $_POST['findid'];
 							$findname = $_POST['findname_pw'];
 							$email = $_POST['email_pw'];
 							$submit = $_POST['findpw'];
+														
+                            // 등록된 아이디와 입력한 아이디가 일치하는지, 해당 아이디에 따른 비밀번호와 email이 일치하는지.
+                            $check = TRUE;                  
+                            $sql2 = "select * from consumer";
+                            $result = $mysqli->query($sql2);
+                            if ($result->num_rows > 0) {
+                                    // output data of each row
+                                while($row = $result->fetch_assoc()) {
+                                    if ($row["consumer_id"] == $id && $row["name"] == $findname && $row["email"] == $email){
+                                        $check = FALSE; 
+                                    }
+                                }
+                            } else {
+                                echo "0 results";
+                            }
+
 							
-							$filename = file("id.txt");
-							$check = TRUE;
-
-							// 등록된 아이디와 입력한 아이디가 일치하는지, 해당 아이디에 따른 비밀번호와 email이 일치하는지.
-							foreach ($filename as $info){
-								$information = explode(";" , $info);
-								if ($information[0] == $id && $information[3] == $findname && $information[6] == $email){
-									$check = FALSE;
-								}
-							}
-
 							// 빈칸 존재 확인
 							if (!isset($id) || $id=='' || !isset($findname) || $findname=='' || !isset($email) || $email==''){
 							?>

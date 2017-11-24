@@ -35,6 +35,10 @@
 ** Hyebeen Kim **
 * thing's function information of javascript : /things/ThingFunc.js
 
+## Database
+** Chaeein Kown**
+* create table & insert data : chef.sql
+
 <!-- # 제목
 ## 소제목
 **A**

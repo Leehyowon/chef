@@ -67,6 +67,7 @@
                         <p> Address : <input type="text" name="address" /> </p>
                         <p> Phone : <input type="text" name="phone" /> </p>
                         <p> E-mail : <input type="text" name="e_mail" /> </p>
+                        <p> Gender : <input type="text" name="gender" /> </p>
                         <p>
                             <div id="submitButton" >
                                 <input type="submit" name="submit" value="submit" />
@@ -76,6 +77,14 @@
                     </div>
                     <div>
                         <?php
+                        $host = 'localhost';
+                        $user = 'chef';
+                        $pwd = '1234';
+                        $dbName = 'chef';
+                        
+                        $mysqli = new mysqli($host, $user, $pwd, $dbName);
+
+
                         if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             $id = $_POST['id'];
                             $pw = $_POST['pw'];
@@ -84,17 +93,28 @@
                             $address = $_POST['address'];
                             $phone = $_POST['phone'];
                             $e_mail = $_POST['e_mail'];
+                            $gender = $_POST['gender'];
                             
-                            $filename = file("id.txt");
-                            $check = FALSE;
 
                             // 새로 입력한 아이디가 중복되는지 확인.
-                            foreach ($filename as $info){
-                                $information = explode(";" , $info);
-                                if ($information[0] == $id){
-                                    $check = TRUE;  
+                            $check = FALSE;
+                            
+                            $sql2 = "select * from consumer";
+                            $result = $mysqli->query($sql2);
+                            if ($result->num_rows > 0) {
+                                    // output data of each row
+                                while($row = $result->fetch_assoc()) {
+                                    // echo "id: " . $row["consumer_id"];
+                                    if ($row["consumer_id"] == $id){
+                                        $check = TRUE; 
+                                    }
                                 }
+                            } else {
+                                echo "0 results";
                             }
+                            // $mysqli->close();
+              
+                            
                             // 빈칸확인
                             if (!isset($id) || $id=='' || !isset($pw) || $pw=='' || !isset($pwcheck) || $pwcheck=='' || !isset($name) || $name=='' || !isset($address) || $address=='' || !isset($phone) || $phone=='' || !isset($e_mail) || $e_mail==''){  
                             ?>
@@ -121,10 +141,11 @@
 
                             <?php
                             } else {
-                                $idAdd = "id.txt";
-                                $newarray = array($id,$pw,$pwcheck,$name,$address,$phone,$e_mail,$login);
-                                $newtext = implode(";", $newarray);
-                                file_put_contents($idAdd, $newtext."\n", FILE_APPEND);  // txt 파일에 정보들을 ; 로 구분하여 적는다.
+                                
+                                $sql = "insert INTO consumer VALUES";
+                                $sql = $sql."('".$id."','".$pw."','".$e_mail."','".$name."','".$phone."',1998-02-13,'".$gender."')";
+                                $mysqli->query($sql);
+
                             ?>
                             <h2>Your Information</h2>
                             <ul> 
@@ -135,6 +156,7 @@
                                 <li>Address : <?= $address ?> </li>
                                 <li>Phone : <?= $phone ?> </li>
                                 <li>E-mail : <?= $e_mail ?> </li>
+                                <li>Gender : <?= $gender ?> </li>
                             </ul>
                             <?php
                             }
