@@ -51,6 +51,14 @@
 			$sql = "insert into myclass_tb values";
 			$sql = $sql."('".$id."', '둘리', '남', 10, 100, 'korea')";
 			$mysqli->query($sql);
+
+ 
+			$sql = 'SELECT * FROM myClass_tb';
+			$res = $mysqli->query($sql);
+			 
+			echo 'count is '.$res->field_count;
+
+
                         
    //          if ($_SERVER["REQUEST_METHOD"] == "POST") {
    //              $id = $_POST['id'];

@@ -7,3 +7,8 @@ jaaa;1234;1234;1234;1234;1234;1234@gmail.com;F;
 jinaaa;1234;1234;1234;1234;1234;1234@gmail.com;F;
 jaaaaaaa;1234;1234;1234;1234;1234;1234@gmail.com;F;
 jjjjjjjjj;1234;1234;1234;1234;1234;1234@gmail.com;M;
+jjjjaaaa;1234;1234;1234;1234;1234;1234@gmail.com;A;
+chaeun;1234;1234;chaeun;Hanyang;01011112222;1234@gmail.com;F;
+chaeun2;1234;1234;1234;1234;1234;1234@gmail.com;B;
+jjjjjjaaaaaaaaaaaaa;1234;1234;1234;1234;1234;1234@gmail.com;NN;
+abcd;1234;1234;1234;1234;1234;1234@gmail.com;BB;

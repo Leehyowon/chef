@@ -77,16 +77,6 @@
                         $pw = '1234';
                         $dbName = 'chef';
                         $mysqli = new mysqli($host, $user, $pw, $dbName);
-                     
-                        if($mysqli){
-                            echo "MySQL 접속 성공";
-                        }else{
-                            echo "MySQL 접속 실패";
-                        }
-                        
-                        $sql = "select * from buy;";
-                        $rows = $mysqli->query($sql);
-
     
                         if ($_SERVER["REQUEST_METHOD"] == "POST") {
 							$logid = $_POST['logid'];
@@ -95,13 +85,26 @@
 							$filename = file("id.txt");
 							$check = TRUE;
 
+                            $sql2 = "select * from consumer";
+                            $result = $mysqli->query($sql2);
+                            if ($result->num_rows > 0) {
+                                    // output data of each row
+                                while($row = $result->fetch_assoc()) {
+                                    if ($row["consumer_id"] == $logid && $row["pwd"] == $logpw){
+                                        $check = FALSE; 
+                                    }
+                                }
+                            } else {
+                                echo "0 results";
+                            }
+
 							// 아이디와 비밀번호가 맞는지 확인
-							foreach ($filename as $info){
-								$information = explode(";" , $info);
-								if ($information[0] == $logid && $information[1] == $logpw){
-									$check = FALSE;
-								}
-							}
+							// foreach ($filename as $info){
+							// 	$information = explode(";" , $info);
+							// 	if ($information[0] == $logid && $information[1] == $logpw){
+							// 		$check = FALSE;
+							// 	}
+							// }
 
 							// 빈칸확인
 							if (!isset($logid) || $logid=='' || !isset($logpw) || $logpw==''){
