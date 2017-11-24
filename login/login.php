@@ -71,8 +71,24 @@
 						</form>
 					</div>
 					<div>
-						<?php
-						if ($_SERVER["REQUEST_METHOD"] == "POST") {
+					<?php
+                        $host = 'localhost';
+                        $user = 'chef';
+                        $pw = '1234';
+                        $dbName = 'chef';
+                        $mysqli = new mysqli($host, $user, $pw, $dbName);
+                     
+                        if($mysqli){
+                            echo "MySQL 접속 성공";
+                        }else{
+                            echo "MySQL 접속 실패";
+                        }
+                        
+                        $sql = "select * from buy;";
+                        $rows = $mysqli->query($sql);
+
+    
+                        if ($_SERVER["REQUEST_METHOD"] == "POST") {
 							$logid = $_POST['logid'];
 							$logpw = $_POST['logpw'];
 						

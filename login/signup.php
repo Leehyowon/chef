@@ -67,6 +67,7 @@
                         <p> Address : <input type="text" name="address" /> </p>
                         <p> Phone : <input type="text" name="phone" /> </p>
                         <p> E-mail : <input type="text" name="e_mail" /> </p>
+                        <p> Gender : <input type="text" name="gender" /> </p>
                         <p>
                             <div id="submitButton" >
                                 <input type="submit" name="submit" value="submit" />
@@ -76,6 +77,13 @@
                     </div>
                     <div>
                         <?php
+                        $host = 'localhost';
+                        $user = 'chef';
+                        $pwd = '1234';
+                        $dbName = 'chef';
+                        
+                        $mysqli = new mysqli($host, $user, $pwd, $dbName);
+
                         if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             $id = $_POST['id'];
                             $pw = $_POST['pw'];
@@ -84,6 +92,7 @@
                             $address = $_POST['address'];
                             $phone = $_POST['phone'];
                             $e_mail = $_POST['e_mail'];
+                            $gender = $_POST['gender'];
                             
                             $filename = file("id.txt");
                             $check = FALSE;
@@ -121,8 +130,33 @@
 
                             <?php
                             } else {
+                                
+                     
+                                // if($mysqli){
+                                //     echo "MySQL 접속 성공";
+                                // }else{
+                                //     echo "MySQL 접속 실패";
+                                // }
+                                $sql = "insert INTO consumer VALUES";
+                                $sql = $sql."('".$id."','".$pw."','".$e_mail."','".$name."','".$phone."',1998-02-13,'".$gender."')";
+                                $mysqli->query($sql);
+
+                                // $select = "select * from consumer";
+                                // $rows = $db->query($select);
+                                // foreach ($rows as $row){
+                                // ?>
+                                //     <li>
+                                //         <?php 
+                                //         foreach ($row as $val){
+                                //             print_r($val." ");
+                                //         } 
+                                //         ?>      
+                                //     </li>
+                                // <?php
+                                // }
+                                
                                 $idAdd = "id.txt";
-                                $newarray = array($id,$pw,$pwcheck,$name,$address,$phone,$e_mail,$login);
+                                $newarray = array($id,$pw,$pwcheck,$name,$address,$phone,$e_mail,$gender,$login);
                                 $newtext = implode(";", $newarray);
                                 file_put_contents($idAdd, $newtext."\n", FILE_APPEND);  // txt 파일에 정보들을 ; 로 구분하여 적는다.
                             ?>
@@ -135,6 +169,7 @@
                                 <li>Address : <?= $address ?> </li>
                                 <li>Phone : <?= $phone ?> </li>
                                 <li>E-mail : <?= $e_mail ?> </li>
+                                <li>Gender : <?= $gender ?> </li>
                             </ul>
                             <?php
                             }
