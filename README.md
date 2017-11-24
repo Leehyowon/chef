@@ -1,6 +1,12 @@
 # CHEF - Centre of Hanyang univ.ERICA Foundation Club
 
-## Html
+## Data Collection
+* jewelry : /image/wootique ||dallrang
+**Hyowon Lee**
+* jewelry : /image/joy || veneno
+* slime : /image/slime1 || slime2
+
+## HTML
 **Hyebeen Kim**
 * a product information (Wootique) : /things/things.html
 * product review page for above html : /things/things_blog.html
@@ -36,7 +42,7 @@
 * thing's function information of javascript : /things/ThingFunc.js
 
 ## Database
-**Chaeein Kown**
+**Chaeein Kwon**
 * create table & insert data : chef.sql
 
 <!-- # 제목
