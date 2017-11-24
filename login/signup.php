@@ -95,7 +95,8 @@
                             $e_mail = $_POST['e_mail'];
                             $gender = $_POST['gender'];
                             
-                            $filename = file("id.txt");
+
+                            // 새로 입력한 아이디가 중복되는지 확인.
                             $check = FALSE;
                             
                             $sql2 = "select * from consumer";
@@ -112,14 +113,8 @@
                                 echo "0 results";
                             }
                             // $mysqli->close();
-
-                            // 새로 입력한 아이디가 중복되는지 확인.
-                            // foreach ($filename as $info){
-                            //     $information = explode(";" , $info);
-                            //     if ($information[0] == $id){
-                            //         $check = TRUE;  
-                            //     }
-                            // }
+              
+                            
                             // 빈칸확인
                             if (!isset($id) || $id=='' || !isset($pw) || $pw=='' || !isset($pwcheck) || $pwcheck=='' || !isset($name) || $name=='' || !isset($address) || $address=='' || !isset($phone) || $phone=='' || !isset($e_mail) || $e_mail==''){  
                             ?>
@@ -151,25 +146,6 @@
                                 $sql = $sql."('".$id."','".$pw."','".$e_mail."','".$name."','".$phone."',1998-02-13,'".$gender."')";
                                 $mysqli->query($sql);
 
-
-                                // $sql2 = "select consumer_id from consumer where consumer_id='chaeun'";
-                                // $result = $mysqli->query($sql2);
-
-                                // if ($result->num_rows > 0) {
-                                //     // output data of each row
-                                //     while($row = $result->fetch_assoc()) {
-                                //         echo "id: " . $row["consumer_id"];
-                                //     }
-                                // } else {
-                                //     echo "0 results";
-                                // }
-                                // $mysqli->close();
-
-                                // HHHH
-                                // $idAdd = "id.txt";
-                                // $newarray = array($id,$pw,$pwcheck,$name,$address,$phone,$e_mail,$gender,$login);
-                                // $newtext = implode(";", $newarray);
-                                // file_put_contents($idAdd, $newtext."\n", FILE_APPEND);  // txt 파일에 정보들을 ; 로 구분하여 적는다.
                             ?>
                             <h2>Your Information</h2>
                             <ul> 

@@ -98,14 +98,6 @@
                                 echo "0 results";
                             }
 
-							// 아이디와 비밀번호가 맞는지 확인
-							// foreach ($filename as $info){
-							// 	$information = explode(";" , $info);
-							// 	if ($information[0] == $logid && $information[1] == $logpw){
-							// 		$check = FALSE;
-							// 	}
-							// }
-
 							// 빈칸확인
 							if (!isset($logid) || $logid=='' || !isset($logpw) || $logpw==''){
 							?>
