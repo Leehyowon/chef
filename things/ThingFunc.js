@@ -1,3 +1,12 @@
+function upload() {
+    var buybutton = document.getElementById("buy");
+    var pocketbutton = document.getElementById("pocket");
+    buybutton.onclick = buy;
+    pocketbutton.onclick = pocket;
+}
+window.onload = upload;
+
+
 var pock;
 function pocket() {
     pock = confirm("상품이 장바구니에 정상적으로 등록되었습니다. \n장바구니로 이동하시겠습니까?")
@@ -10,7 +19,7 @@ function pocket2() {
     }
 }
 
-function buy() {
+function buy() { //구입하는 페이지
 }
 
 function writing(){
