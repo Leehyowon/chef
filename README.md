@@ -1,7 +1,7 @@
 # CHEF - Centre of Hanyang univ.ERICA Foundation Club
 
 ## Html
-** Hyebeen Kim **
+**Hyebeen Kim**
 * a product information (Wootique) : /things/things.html
 * product review page for above html : /things/things_blog.html
 * new writing page of product review : /things/writingblog.html
