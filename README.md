@@ -2,6 +2,7 @@
 
 ## Data Collection
 * jewelry : /image/wootique ||dallrang
+
 **Hyowon Lee**
 * jewelry : /image/joy || veneno
 * slime : /image/slime1 || slime2
