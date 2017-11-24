@@ -32,11 +32,11 @@
 * bybrand : bybrand.php
 
 ## JavaScript
-** Hyebeen Kim **
+**Hyebeen Kim**
 * thing's function information of javascript : /things/ThingFunc.js
 
 ## Database
-** Chaeein Kown**
+**Chaeein Kown**
 * create table & insert data : chef.sql
 
 <!-- # 제목
