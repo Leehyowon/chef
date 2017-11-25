@@ -1,7 +1,9 @@
+chef.sql
 DROP TABLE IF EXISTS `product`;
 CREATE TABLE `product`(
-	`product_id` INTEGER NOT NULL PRIMARY KEY ,
+	`product_id` VARCHAR(20) NOT NULL PRIMARY KEY ,
 	`brand` VARCHAR(20) NOT NULL,
+	`name` VARCHAR(20) NOT NULL,
 	`price` INTEGER NOT NULL,
 	`count` INTEGER NOT NULL,
 	`kind` INTEGER NOT NULL, 
@@ -33,11 +35,23 @@ CREATE TABLE `buy`(
 )character set utf8;
 -- o_date : order date 
 
-INSERT INTO `product` VALUES (1, 'wootique', 8000, 100, 1,2017-10-11);
+INSERT INTO `product` VALUES ('wootique1', 'wootique','에뜨', 9000, 100, 1,'2017-10-11');
+INSERT INTO `product` VALUES ('wootique2', 'wootique','드림캐쳐', 18000, 100, 1,'2017-10-11');
+INSERT INTO `product` VALUES ('wootique3', 'wootique','물방울', 8000, 100, 1,'2017-10-11');
+INSERT INTO `product` VALUES ('wootique4', 'wootique','링', 10000, 100, 1,'2017-10-11');
+INSERT INTO `product` VALUES ('wootique5', 'wootique','체인스틱', 11000, 100, 1,'2017-10-11');
+INSERT INTO `product` VALUES ('wootique6', 'wootique','골든서클', 10000, 100, 1,'2017-10-11');
+INSERT INTO `product` VALUES ('wootique7', 'wootique','더블링진주', 8000, 100, 1,'2017-10-11');
+
+INSERT INTO `product` VALUES ('dallrang1', 'dallrang','aaa', 8000, 100, 1,'2017-10-11');
+INSERT INTO `product` VALUES ('dallrang2', 'dallrang','bbb', 8000, 100, 1,'2017-10-11');
+INSERT INTO `product` VALUES ('dallrang3', 'dallrang','ccc', 8000, 100, 1,'2017-10-11');
+INSERT INTO `product` VALUES ('dallrang4', 'dallrang','ddd', 8000, 100, 1,'2017-10-11');
+INSERT INTO `product` VALUES ('dallrang5', 'dallrang','eee', 8000, 100, 1,'2017-10-11');
+
 
 
 INSERT INTO `consumer` VALUES ('abc1001','def0110','abc1001@naver.com','Jina','01012345678','1998-02-13','F');
 
 
 INSERT INTO `buy` VALUES (0001,1,'abc1001','Ansan hanyang university','2017-10-29','credit');
-

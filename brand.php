@@ -1,3 +1,4 @@
+brand.php
 <!DOCTYPE html>
 <html>
 <head>
@@ -83,19 +84,19 @@
         </ul>
     </nav>
 
-    <?php 
-    $count = 1;
-    $lines = file("$br.txt");
- 
-    foreach ($lines as $line) {?>
-        <div id="itembox">
-          <img src="image/<?= $br ?>/<?=$count?>.png">
-          <p><a href=""><!--혜빈이가 만든 상세페이지로 가기-->[<?=$br?>] <?=$line?></a></p>
-       </div>
-
-       <?php $count ++;
-    }?>
-
+    <?php
+        $count = 1;
+        $db = new PDO("mysql:dbname=CHEF;host=localhost", "root", "root");
+        $rows = $db -> query("SELECT name FROM product WHERE brand = '$br'");
+        foreach ($rows as $row) {?>
+            <div id="itembox">
+            <img src="image/<?= $br ?>/<?=$count?>.png">
+            <p><a href="">[<?=$br?>] <?=$row["name"]?></a></p>
+            </div> 
+            <?php 
+            $count++;
+        }
+            ?>
 
 <!-- 효원이메인 -->
     <footer>
