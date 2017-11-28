@@ -61,6 +61,19 @@ INSERT INTO 'product' VALUES ('win9', 'wingbling', '별이빛나는밤에', 1400
 INSERT INTO 'product' VALUES ('win10', 'wingbling', '나비요정', 23000, 100, 2, '2017-10-29');
 INSERT INTO 'product' VALUES ('win11', 'wingbling', '사랑은타이밍초커', 5500, 100, 2, '2017-10-30');
 
+INSERT INTO 'product' VALUES ('joy1', 'joy', '라퓨타', 12500, 100, 1, '2017-11-01');
+INSERT INTO 'product' VALUES ('joy2', 'joy', '하트벨벳줄난', 18000, 100, 1, '2017-11-01');
+INSERT INTO 'product' VALUES ('joy3', 'joy', '리쏨진주드롭', 15300, 100, 1, '2017-11-02');
+INSERT INTO 'product' VALUES ('joy4', 'joy', '보니타크리스탈드롭', 9500, 100, 1, '2017-11-03');
+INSERT INTO 'product' VALUES ('joy5', 'joy', '러빙그레이스', 11500, 100, 1, '2017-11-03');
+INSERT INTO 'product' VALUES ('joy6', 'joy', '시에나크리스탈', 12500, 100, 1, '2017-11-03');
+INSERT INTO 'product' VALUES ('joy7', 'joy', '쥬뗌므송치하트', 7900, 100, 1, '2017-11-04');
+INSERT INTO 'product' VALUES ('joy8', 'joy', '레나스팽글', 13900, 100, 1, '2017-11-04');
+INSERT INTO 'product' VALUES ('joy9', 'joy', '앤더자개언발', 12000, 100, 1, '2017-11-05');
+INSERT INTO 'product' VALUES ('joy10', 'joy', '문크리스링', 13500, 100, 1, '2017-11-05');
+INSERT INTO 'product' VALUES ('joy11', 'joy', '달진주언발', 14500, 100, 1, '2017-11-06');
+INSERT INTO 'product' VALUES ('joy12', 'joy', '썬셋글라스드롭', 15800, 100, 1, '2017-11-07');
+
 
 
 INSERT INTO `consumer` VALUES ('abc1001','def0110','abc1001@naver.com','Jina','01012345678','1998-02-13','F');
