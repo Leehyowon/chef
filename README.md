@@ -13,6 +13,7 @@
 * product review page for above html : /things/things_blog.html
 * new writing page of product review : /things/writingblog.html
 * We can look what I ordered; JANGBAGUNI : /mypage/buypocket.html
+* I can see mypage : /mypage/mypage.html
 
 **Hyowon Lee**
 * main page of CHEF : /main/index1.html
