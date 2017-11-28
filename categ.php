@@ -1,4 +1,4 @@
-brand.php
+categ.php
 <!DOCTYPE html>
 <html>
 <head>
@@ -43,9 +43,9 @@ brand.php
                                 </ul>
                                 <li><a href = ""> by PRODUCT </a></li>
                                 <ul>
-                                    <li><a href = "">Clothes</a></li>
-                                    <li><a href = "">Jewelry</a></li>
-                                    <li><a href = "">Slime</a></li>
+                                    <li><a href = "categ.php?category=1">Jewelry</a></li>
+                                    <li><a href = "categ.php?category=2">Clothes</a></li>
+                                    <li><a href = "categ.php?category=3">Slime</a></li>
                                 </ul>
                             </ul>
                         </li>
@@ -66,35 +66,25 @@ brand.php
 
 
     <?php 
-        $br = $_GET["brand"];
+        $categ = $_GET["category"];
     ?>
-    <div id="brandbox">
-        <img src="image/banner/<?= $br ?>.png">
-        
-
-    </div>
-
+  
     <nav>
-    <p>BRAND</p>    
+    <p>PRODUCT</p>    
         <ul>
-            <li><a href = "brand.php?brand=wootique">Wootique</a></li>
-            <li><a href = "brand.php?brand=dallrang">Dallrang</a></li>
-            <li><a href = "brand.php?brand=veneno">veneno</a></li>
-            <li><a href = "brand.php?brand=joy">joy</a></li>
-            <li><a href = "brand.php?brand=ringing">ringing</a></li>
-            <li><a href = "brand.php?brand=wingbling">wingbling</a></li>
-            <li><a href = "brand.php?brand=slime1">Slime1</a></li>
-            <li><a href = "brand.php?brand=slime2">Slime2</a></li>              <li><a href = "brand.php?brand=slime3">Slime3</a></li>                       
+            <li><a href = "categ.php?category=1">Clothes</a></li>
+            <li><a href = "categ.php?category=2">Jewelry</a></li>
+            <li><a href = "categ.php?category=3">Slime</a></li>                      
             <!-- display : inline -->
         </ul>
     </nav>
 
     <?php
         $db = new PDO("mysql:dbname=CHEF;host=localhost", "root", "root");
-        $rows = $db -> query("SELECT product_id,name FROM product WHERE brand = '$br'");
+        $rows = $db -> query("SELECT product_id,brand,name FROM product WHERE kind = '$categ'");
         foreach ($rows as $row) {?>
             <div id="itembox">
-            <img src="image/<?= $br ?>/<?=$row["product_id"]?>.png">
+            <img src="image/<?=$row["brand"]?>/<?=$row["product_id"]?>.png">
             <p><a href="">[<?=$br?>] <?=$row["name"]?></a></p>
             </div> 
             <?php 
