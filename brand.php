@@ -33,10 +33,13 @@ brand.php
                                 <ul>
                                     <li><a href = "brand.php?brand=wootique">Wootique</a></li>
                                     <li><a href = "brand.php?brand=dallrang">Dallrang</a></li>
-                                    <li><a href = "">Clothes1</a></li>
-                                    <li><a href = "">Clothes2</a></li>
-                                    <li><a href = "">Slime1</a></li>
-                                    <li><a href = "">Slime2</a></li>
+                                    <li><a href = "brand.php?brand=veneno">veneno</a></li>
+                                    <li><a href = "brand.php?brand=joy">joy</a></li>
+                                    <li><a href = "brand.php?brand=ringing">ringing</a></li>
+                                    <li><a href = "brand.php?brand=wingbling">wingbling</a></li>
+                                    <li><a href = "brand.php?brand=slime1">Slime1</a></li>
+                                    <li><a href = "brand.php?brand=slime2">Slime2</a></li>
+                                    <li><a href = "brand.php?brand=slime3">Slime3</a></li>
                                 </ul>
                                 <li><a href = ""> by PRODUCT </a></li>
                                 <ul>
@@ -74,12 +77,14 @@ brand.php
     <nav>
     <p>BRAND</p>    
         <ul>
-            <li><a href="brand.php?brand=wootique">wootique</a></li>
-            <li><a href="brand.php?brand=dallrang">dallrang</a></li>
-            <li><a href="">clothes1</a></li>
-            <li><a href="">clothes2</a></li>
-            <li><a href="">slime1</a></li>
-            <li><a href="">slime2</a></li>
+            <li><a href = "brand.php?brand=wootique">Wootique</a></li>
+            <li><a href = "brand.php?brand=dallrang">Dallrang</a></li>
+            <li><a href = "brand.php?brand=veneno">veneno</a></li>
+            <li><a href = "brand.php?brand=joy">joy</a></li>
+            <li><a href = "brand.php?brand=ringing">ringing</a></li>
+            <li><a href = "brand.php?brand=wingbling">wingbling</a></li>
+            <li><a href = "brand.php?brand=slime1">Slime1</a></li>
+            <li><a href = "brand.php?brand=slime2">Slime2</a></li>              <li><a href = "brand.php?brand=slime3">Slime3</a></li>                       
             <!-- display : inline -->
         </ul>
     </nav>
