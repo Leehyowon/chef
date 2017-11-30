@@ -1,0 +1,19 @@
+article{
+    width: 900px;
+    margin: auto;
+}
+
+h1{
+    text-align: center;
+}
+
+.point ul{
+    list-style: none;
+    background-color: #dfdfdf;
+    padding: 20px;
+    text-align: center;
+}
+
+.my_menu p{
+    border: 1px solid #9b9b9b;
+}

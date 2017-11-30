@@ -37,6 +37,10 @@ nav ul a{
     font-size: 12pt;
 
 }
+nav ul a:hover{
+    color: #82bcca;
+}
+
 /* menu */
 nav ul li{
 	position:relative;
