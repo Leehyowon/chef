@@ -16,11 +16,26 @@ h1{
     text-align: center;
 }
 
-.my_menu p{
-    border: 1px solid #9b9b9b;
+.menu{
+    border: 1px solid #d8d8d8;
     box-sizing: border-box;
     width: 290px;
     height: 140px;
     float: left;
     margin: 5px;
+    text-align: center;
+    padding: 10px;
+}
+
+.menu:hover{
+    border: 1px solid #adadad;
+}
+.menu:hover a{
+    color: #82bcca;
+}
+.menu h3{
+    font-size: 13px;
+}
+.my_menu a{
+    color: #adadad;
 }

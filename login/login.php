@@ -37,16 +37,9 @@
                                 </li>
                             </ul>
                         </li>                                                                                            
-                        <!-- <li>COMMUNITY
-                            <ul>
-                                <li class="mincate"><a href = "/chef/board/notice.html"> Notice </a></li>
-                                <li class="mincate"><a href = "/chef/board/event.html"> Event </a></li>
-                                <li class="mincate"><a href = "/chef/board/qna.html"> QnA </a></li>
-                                <li class="mincate"><a href = "/chef/board/info.html"> Information </a></li>
-                            </ul>
-                        </li> -->
+                        
                         <li><a href="#">CUSTOMER CARE</a></li>
-                        <li><a href="#">MY PAGE</a></li>
+                        <li><a href="/chef/mypage/mypage.html">MY PAGE</a></li>
                         <li><a href="/chef/login/login.php">Sign In</a></li>
                     </ul>
                 </div>           
@@ -57,10 +50,11 @@
                     <img src="https://github.com/hyemni/chef/blob/master/main/image/slide1.png?raw=true" alt="slide image" 
                     width = "1040px" height = "550px" />
                 </div>
+
                 <section>
                     <div class="loginHtml">
-						<h2>Log in</h2>
-						<hr/>
+                        <h2>Log in</h2>
+                        
 						<form method="post">
 						<p> ID : <input type="text" name="logid" /> </p>
 						<p>	PW : <input type="password" name="logpw" /> </p>
