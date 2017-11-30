@@ -5,6 +5,8 @@
 		<title>CHEF</title>
 		<link href="https://github.com/hyemni/chef/blob/master/image/HBpic.jpeg?raw=true" type="image/jpeg" rel="shortcut icon"/>
         <link href="/chef/main/main.css" type="text/css" rel="stylesheet" />
+        <link href="/chef/login/login.css" type="text/css" rel="stylesheet" />
+        <script src="/chef/login/login.js"></script>
     </head>
 
     <body>
@@ -39,35 +41,34 @@
                         </li>                                                                                            
                         
                         <li><a href="#">CUSTOMER CARE</a></li>
-                        <li><a href="/chef/mypage/mypage.html">MY PAGE</a></li>
+                        <li><a href="/chef/mypage">MY PAGE</a></li>
                         <li><a href="/chef/login/login.php">Sign In</a></li>
                     </ul>
                 </div>           
             </nav>
 
             <article>
-                <div class = "slide">
-                    <img src="https://github.com/hyemni/chef/blob/master/main/image/slide1.png?raw=true" alt="slide image" 
-                    width = "1040px" height = "550px" />
-                </div>
-
                 <section>
                     <div class="loginHtml">
-                        <h2>Log in</h2>
-                        
+						<h2>Log in</h2>						
 						<form method="post">
-						<p> ID : <input type="text" name="logid" /> </p>
-						<p>	PW : <input type="password" name="logpw" /> </p>
-						<p>
-							<a href="/chef/login/signup.php">Sign Up</a> | <a href="/chef/login/findID.php">Find ID</a> | <a href="/chef/login/findpw.php">Find PW</a>
-						</p>
-						<p>
-							<div id="submitButton" >
-								<input type="submit" value="login" onclick="submit" />
-							</div>
-						</p>
-						</form>
-					</div>
+                            <div class="login">
+                                <input type="text" name="logid" placeholder="Your ID"/>
+                            </div>
+                            <div class="login">
+                                <input type="password" name="logpw" placeholder="Your Password"/>
+                            <div>
+                            <div>
+                                <input type="submit" value="login" onclick="submit" id="submitButton"/>
+                            </div>
+                            <a href="/chef/login/signup.php">Sign Up</a> | <a href="/chef/login/findID.php">Find ID</a> | <a href="/chef/login/findpw.php">Find PW</a>
+                        </form>                        
+                    </div>
+
+                    <div class="facebook">
+                        <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">페이스북으로 로그인</fb:login-button>
+                    </div>
+
 					<div>
 					<?php
                         $host = 'localhost';
