@@ -66,7 +66,7 @@
                     </div>
 
                     <div class="facebook">
-                        <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">페이스북으로 로그인</fb:login-button>
+                        <fb:login-button id="fbbnt" scope="public_profile,email" onlogin="checkLoginState();">페이스북으로 로그인</fb:login-button>
                     </div>
 
 					<div>

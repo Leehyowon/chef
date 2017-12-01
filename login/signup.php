@@ -5,6 +5,7 @@
 		<title>CHEF</title>
 		<link href="https://github.com/hyemni/chef/blob/master/image/HBpic.jpeg?raw=true" type="image/jpeg" rel="shortcut icon"/>
         <link href="/chef/main/main.css" type="text/css" rel="stylesheet" />
+        <link href="/chef/login/signup.css" type="text/css" rel="stylesheet" />
     </head>
 
     <body>
@@ -54,29 +55,76 @@
 
 
             <article>
-                <div class = "slide">
-                    <img src="https://github.com/hyemni/chef/blob/master/main/image/slide1.png?raw=true" alt="slide image" 
-                    width = "1040px" height = "550px" />
-                </div>
-
                 <section>
                     <div class="signup">
                         <h2>Sign Up</h2>
-                        <hr/>
+                        
                         <form method="post">
-                        <p> ID : <input type="text" name="id" /> </p>
-                        <p> PW : <input type="password" name="pw" /> </p>
-                        <p> PW Check : <input type="password" name="pwcheck" /> </p>
-                        <p> Name : <input type="text" name="name" /> </p>
-                        <p> Address : <input type="text" name="address" /> </p>
-                        <p> Phone : <input type="text" name="phone" /> </p>
-                        <p> E-mail : <input type="text" name="e_mail" /> </p>
-                        <p> Gender : <input type="text" name="gender" /> </p>
-                        <p>
-                            <div id="submitButton" >
-                                <input type="submit" name="submit" value="submit" />
-                            </div>
-                        </p>
+                            <table>
+                                <tr>
+                                    <td>ID</td>
+                                    <td><input type="text" name="id" /></td>
+                                </tr>
+                                <tr>
+                                    <td>PW</td>
+                                    <td><input type="password" name="pw" /></td>
+                                </tr>
+                                <tr>
+                                    <td>PW Check</td>
+                                    <td><input type="password" name="pwcheck" /></td>
+                                </tr>
+                                <tr>
+                                    <td>Name</td>
+                                    <td><input type="text" name="name" /></td>
+                                </tr>
+                                <tr>
+                                    <td>Address</td>
+                                    <td><input type="text" name="address" /></td>
+                                </tr>
+                                <tr>
+                                    <td>Phone</td>
+                                    <td>
+                                        <select name="Phonenumber">
+                                            <option selected="selected">010</option>
+                                            <option>011</option>
+                                            <option>016</option>
+                                            <option>017</option>
+                                            <option>018</option>
+                                            <option>019</option>
+                                        </select>-
+                                        <input type="text" name="phone_mid" />-<input type="text" name="phone_back" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>E-mail</td>
+                                    <td>
+                                        <input type="text" name="e_mail_front" />@
+                                        <input type="text" name="e-mail_back" />
+                                        <select name="e-mail_back">
+                                            <option selected="selected">직접 입력</option>
+                                            <option value="naver.com">naver.com</option>
+                                            <option value="daum.net">daum.net</option>
+                                            <option value="nate.com">nate.com</option>
+                                            <option value="hotmail.com">hotmail.com</option>
+                                            <option>yahoo.com</option>
+                                            <option>empas.com</option>
+                                            <option>korea.com</option>
+                                            <option>dreamwiz.com</option>
+                                            <option>gmail.com</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Gender</td>
+                                    <td><input type="text" name="gender" /></td>
+                                </tr>
+                            </table>
+
+                            <p>
+                                <div id="submitButton" >
+                                    <input type="submit" name="submit" value="submit" />
+                                </div>
+                            </p>
                         </form>
                     </div>
                     <div>

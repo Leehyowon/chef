@@ -50,13 +50,13 @@ function checkLoginState() {
     });
 }
 
-function statusChangeCallback(response){
-    console.log('response를 통해 다양한 정보를 확인할 수 있습니다.');
-    console.log(response);
-    if(response.status==='connected'){
-        console.log('사용자가 Facebook에 로그인하고 앱에 로그인했습니다.');
-        FB.api('/me', function(response){
-            console.log('Successful login for: '+response.name);
-        })
-    }
-}
+// function statusChangeCallback(response){
+//     console.log('response를 통해 다양한 정보를 확인할 수 있습니다.');
+//     console.log(response);
+//     if(response.status==='connected'){
+//         console.log('사용자가 Facebook에 로그인하고 앱에 로그인했습니다.');
+//         FB.api('/me', function(response){
+//             console.log('Successful login for: '+response.name);
+//         })
+//     }
+// }
