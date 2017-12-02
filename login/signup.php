@@ -6,6 +6,7 @@
 		<link href="https://github.com/hyemni/chef/blob/master/image/HBpic.jpeg?raw=true" type="image/jpeg" rel="shortcut icon"/>
         <link href="/chef/main/main.css" type="text/css" rel="stylesheet" />
         <link href="/chef/login/signup.css" type="text/css" rel="stylesheet" />
+        <script src="/chef/login/signup.js"></script>
     </head>
 
     <body>
@@ -55,7 +56,7 @@
 
 
             <article>
-                <section>
+                <!-- <section>
                     <div class="signup">
                         <h2>Sign Up</h2>
                         
@@ -106,11 +107,11 @@
                                             <option value="daum.net">daum.net</option>
                                             <option value="nate.com">nate.com</option>
                                             <option value="hotmail.com">hotmail.com</option>
-                                            <option>yahoo.com</option>
-                                            <option>empas.com</option>
-                                            <option>korea.com</option>
-                                            <option>dreamwiz.com</option>
-                                            <option>gmail.com</option>
+                                            <option value="yahoo.com">yahoo.com</option>
+                                            <option value="empas.com">empas.com</option>
+                                            <option value="korea.com">korea.com</option>
+                                            <option value="dreamwiz.com">dreamwiz.com</option>
+                                            <option value="gmail.com">gmail.com</option>
                                         </select>
                                     </td>
                                 </tr>
@@ -215,7 +216,60 @@
                         }
                         ?>
                     </div>
-                </section>
+                </section> -->
+                <!-- <div class="cotn_principal"> -->
+                    <div class="cont_centrar">
+                        <div class="cont_login">
+                            <div class="cont_info_log_sign_up">
+                                <div class="col_md_login">
+                                    <div class="cont_ba_opcitiy">                            
+                                        <h2>LOGIN</h2>  
+                                        <p>여기다 뭐라고 쓰면 좋을지 모르겠엄 친구들 :)</p> 
+                                        <button class="btn_login" onclick="cambiar_login()">LOGIN</button>
+                                    </div>  <!--cont_ba_opcitiy -->
+                                </div>
+                                <div class="col_md_sign_up">
+                                    <div class="cont_ba_opcitiy">
+                                        <h2>SIGN UP</h2>                    
+                                        <p>여기도 뭐라고 써야할지 모르겠어 :)</p>
+                                        <button class="btn_sign_up" onclick="cambiar_sign_up()">SIGN UP</button>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="cont_back_info">
+                                <div class="cont_img_back_grey">
+                                    <img src="https://images.unsplash.com/42/U7Fc1sy5SCUDIu4tlJY3_NY_by_PhilippHenzler_philmotion.de.jpg?ixlib=rb-0.3.5&q=50&fm=jpg&crop=entropy&s=7686972873678f32efaf2cd79671673d" alt="" />
+                                </div>                        
+                            </div>
+
+                            <div class="cont_forms" >
+                                <div class="cont_img_back_">
+                                    <img src="https://images.unsplash.com/42/U7Fc1sy5SCUDIu4tlJY3_NY_by_PhilippHenzler_philmotion.de.jpg?ixlib=rb-0.3.5&q=50&fm=jpg&crop=entropy&s=7686972873678f32efaf2cd79671673d" alt="" />
+                                </div>
+                                <div class="cont_form_login">
+                                    <a href="#" onclick="ocultar_login_sign_up()" ><i class="material-icons">&#xE5C4;</i></a>
+                                    <h2>LOGIN</h2>
+                                    <input type="text" placeholder="Email" />
+                                    <input type="password" placeholder="Password" />
+                                    <button class="btn_login" onclick="cambiar_login()">LOGIN</button>
+                                </div>
+                    
+                                <div class="cont_form_sign_up">
+                                    <a href="#" onclick="ocultar_login_sign_up()"><i class="material-icons">&#xE5C4;</i></a>
+                                    <h2>SIGN UP</h2>                                    
+                                    <input type="text" placeholder="Name" />
+                                    <input type="text" placeholder="Email" />
+                                    <input type="password" placeholder="Password" />
+                                    <input type="password" placeholder="Confirm Password" />
+                                    <input type="text" placeholder="Phone" class="phone"/>-<input type="text" class="phone"/>-<input type="text" class="phone"/>
+                                    <input type="text" placeholder="Address" />
+                                    <button class="btn_sign_up" onclick="cambiar_sign_up()">SIGN UP</button>
+                                </div>
+                            </div>                        
+                        </div>
+                    </div>
+                <!-- </div> -->
             </article>
         </main>
 
