@@ -146,7 +146,7 @@
                             $address = $_POST['address'];
                             $phone = $_POST['phone'];
                             $e_mail = $_POST['e_mail'];
-                            $gender = $_POST['gender'];
+                            $gender = $_POST['gender']; 
                             
 
                             // 새로 입력한 아이디가 중복되는지 확인.
@@ -218,45 +218,47 @@
                     </div>
                 </section> -->
                 <!-- <div class="cotn_principal"> -->
-                    <div class="cont_centrar">
-                        <div class="cont_login">
-                            <div class="cont_info_log_sign_up">
-                                <div class="col_md_login">
-                                    <div class="cont_ba_opcitiy">                            
+                    <div class="main_log">
+                        <div class="login">
+                            <div class="log_sign_up">
+                                <div class="pre_login">
+                                    <div class="pre_content">                            
                                         <h2>LOGIN</h2>  
                                         <p>여기다 뭐라고 쓰면 좋을지 모르겠엄 친구들 :)</p> 
-                                        <button class="btn_login" onclick="cambiar_login()">LOGIN</button>
+                                        <button class="btn_login" onclick="login()">LOGIN</button>                                        
                                     </div>  <!--cont_ba_opcitiy -->
                                 </div>
-                                <div class="col_md_sign_up">
-                                    <div class="cont_ba_opcitiy">
+                                <div class="pre_sign_up">
+                                    <div class="pre_content">
                                         <h2>SIGN UP</h2>                    
                                         <p>여기도 뭐라고 써야할지 모르겠어 :)</p>
-                                        <button class="btn_sign_up" onclick="cambiar_sign_up()">SIGN UP</button>
+                                        <button class="btn_sign_up" onclick="sign_up()">SIGN UP</button>
                                     </div>
                                 </div>
                             </div>
                         
-                            <div class="cont_back_info">
-                                <div class="cont_img_back_grey">
+                            <div class="back_info">
+                                <div class="back_img">
                                     <img src="https://images.unsplash.com/42/U7Fc1sy5SCUDIu4tlJY3_NY_by_PhilippHenzler_philmotion.de.jpg?ixlib=rb-0.3.5&q=50&fm=jpg&crop=entropy&s=7686972873678f32efaf2cd79671673d" alt="" />
                                 </div>                        
                             </div>
 
-                            <div class="cont_forms" >
-                                <div class="cont_img_back_">
+                            <div class="forms" >
+                                <div class="back_img_sec">
                                     <img src="https://images.unsplash.com/42/U7Fc1sy5SCUDIu4tlJY3_NY_by_PhilippHenzler_philmotion.de.jpg?ixlib=rb-0.3.5&q=50&fm=jpg&crop=entropy&s=7686972873678f32efaf2cd79671673d" alt="" />
                                 </div>
-                                <div class="cont_form_login">
-                                    <a href="#" onclick="ocultar_login_sign_up()" ><i class="material-icons">&#xE5C4;</i></a>
+                                <div class="form_login">
+                                    <a href="#" onclick="login_sign_up()" ><i class="material-icons">&#xE5C4;</i></a>
                                     <h2>LOGIN</h2>
                                     <input type="text" placeholder="Email" />
                                     <input type="password" placeholder="Password" />
-                                    <button class="btn_login" onclick="cambiar_login()">LOGIN</button>
+                                    <button class="btn_login" onclick="login()">LOGIN</button></br>
+                                    <button class="btn_find" onclick=""><a href="/chef/login/findid.php">FIND ID</a></button>
+                                    <button class="btn_find" onclick=""><a href="/chef/login/findpw.php">FIND PW</a></button>
                                 </div>
                     
-                                <div class="cont_form_sign_up">
-                                    <a href="#" onclick="ocultar_login_sign_up()"><i class="material-icons">&#xE5C4;</i></a>
+                                <div class="form_sign_up">
+                                    <a href="#" onclick="login_sign_up()"><i class="material-icons">&#xE5C4;</i></a>
                                     <h2>SIGN UP</h2>                                    
                                     <input type="text" placeholder="Name" />
                                     <input type="text" placeholder="Email" />
@@ -264,7 +266,7 @@
                                     <input type="password" placeholder="Confirm Password" />
                                     <input type="text" placeholder="Phone" class="phone"/>-<input type="text" class="phone"/>-<input type="text" class="phone"/>
                                     <input type="text" placeholder="Address" />
-                                    <button class="btn_sign_up" onclick="cambiar_sign_up()">SIGN UP</button>
+                                    <button class="btn_sign_up" onclick="sign_up()">SIGN UP</button>
                                 </div>
                             </div>                        
                         </div>

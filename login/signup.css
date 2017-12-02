@@ -31,16 +31,18 @@
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cfd8dc', endColorstr='#b0bec5',GradientType=1 ); IE6-9 fallback on horizontal gradient
     
 } */
+body{
+    background-color: #d8d8d8;
+}
 
-
-.cont_centrar {
+.main_log {
     position: relative;
     float: left;
     width: 100%;
     height: 800px;
 }
 
-.cont_login {
+.login {
     position: relative;
     width: 640px;
     left: 50%;
@@ -48,7 +50,7 @@
 
 }
 
-.cont_back_info {  
+.back_info {  
     position: relative;
     float: left;
     width: 640px;
@@ -59,7 +61,7 @@
     box-shadow: 1px 10px 30px -10px rgba(0,0,0,0.5);
 }
 
-.cont_forms {
+.forms {
     position: absolute;
     overflow: hidden;
     top:300px;
@@ -74,7 +76,7 @@
     transition: all 0.5s;
 }
 
-.cont_forms_active_login {
+.active_login {
     box-shadow: 1px 10px 30px -10px rgba(0,0,0,0.5);
     height: 420px;  
     top:220px;
@@ -87,7 +89,7 @@
 
 }
 
-.cont_forms_active_sign_up {
+.active_sign_up {
     box-shadow: 1px 10px 30px -10px rgba(0,0,0,0.5);
     height: 550px;  
     top:220px;
@@ -99,14 +101,14 @@
     transition: all 0.5s;
 }
 
-.cont_img_back_grey {
+.back_img {
     position: absolute;
     width: 950px;
     top:-80px;
     left: -116px;
 }
 
-.cont_img_back_grey > img {
+.back_img > img {
     width: 100%;
     -webkit-filter: grayscale(100%);     
     filter: grayscale(100%);
@@ -119,14 +121,14 @@
     height: 550px;
 }
 
-.cont_img_back_ {
+.back_img_sec {
     position: absolute;
     width: 950px;
     top:-80px;
     left: -116px;
 }
 
-.cont_img_back_ > img {
+.back_img_sec > img {
     width: 100%;
     opacity: 0.3;
     animation-name: animar_fondo;
@@ -137,7 +139,7 @@
     height: 550px;
 }
 
-.cont_forms_active_login > .cont_img_back_ {
+.active_login > .back_img_sec {
     top:0px;  
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
@@ -146,7 +148,7 @@
     transition: all 0.5s;
 }
 
-.cont_forms_active_sign_up > .cont_img_back_ {
+.active_sign_up > .back_img_sec {
     top:0px;  
     left: -435px;
     -webkit-transition: all 0.5s;
@@ -157,7 +159,7 @@
 }
 
 
-.cont_info_log_sign_up {
+.log_sign_up {
     position: absolute;
     width: 640px;
     height: 280px;
@@ -165,19 +167,19 @@
     z-index: 1;
 } 
 
-.col_md_login {
+.pre_login {
     position: relative;
     float: left;
     width: 50%;
 }
 
-.col_md_login > h2 {
+.pre_login > h2 {
     font-weight: 400;
     margin-top: 70px;
     color: #757575;
 }
 
-.col_md_login > p {
+.pre_login > p {
     font-weight: 400;
     margin-top: 15px;
     width: 80%;
@@ -196,18 +198,34 @@
     cursor: pointer;
 }
 
-.col_md_sign_up {
+.btn_find { 
+    background-color: #e771ff;
+    border: none;
+    padding: 10px;
+    width: 100px;
+    border-radius:3px;
+    box-shadow: 1px 5px 20px -5px rgba(0,0,0,0.4);
+    color: #fff;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.btn_find a{
+    color: white;
+}
+
+
+.pre_sign_up {
     position: relative;
     float: left;
     width: 50%;  
 }
 
-.cont_ba_opcitiy > h2 {
+.pre_content > h2 {
     font-weight: 400;
     color: #fff;
 }
 
-.cont_ba_opcitiy > p {
+.pre_content > p {
     font-weight: 400;
     margin-top: 15px;
     color: #fff;
@@ -216,7 +234,7 @@
 background text    
 ------------------------------------
 */
-.cont_ba_opcitiy {
+.pre_content {
     position: relative;
     background-color: rgba(120, 144, 156, 0.55);
     width: 80%;
@@ -236,7 +254,7 @@ background text
     margin-top: 10px;
     cursor: pointer;
 }
-.cont_forms_active_sign_up {
+.active_sign_up {
     z-index: 2;  
 }
 
@@ -291,7 +309,7 @@ background text
         -o-transform: scale(1.5);
         transform: scale(1.5); }
 }
-.cont_form_login {
+.form_login {
     position: absolute;
     opacity: 0;
     display: none;
@@ -303,12 +321,12 @@ background text
     transition: all 0.5s;
 }
 
-.cont_forms_active_login {
+.active_login {
     z-index: 2;  
 }
 
 
-.cont_form_sign_up {
+.form_sign_up {
     position: absolute;
     width: 320px;
     float: left;
@@ -322,7 +340,7 @@ background text
 }
 
 
-.cont_form_sign_up > input {
+.form_sign_up > input {
     text-align: left;
     padding: 15px 5px;
     margin-left: 10px;
@@ -332,14 +350,14 @@ background text
     color: #757575;
 }
 
-.cont_form_sign_up > h2 {
+.form_sign_up > h2 {
     margin-top: 50px; 
     font-weight: 400;
     color: #757575;
 }
 
 
-.cont_form_login > input {
+.form_login > input {
     padding: 15px 5px;
     margin-left: 10px;
     margin-top: 20px;
@@ -349,12 +367,12 @@ background text
     color: #757575;
 }
 
-.cont_form_login > h2 {
+.form_login > h2 {
     margin-top: 110px; 
     font-weight: 400;
     color: #757575;
 }
-.cont_form_login > a,.cont_form_sign_up > a  {
+.form_login > a,.form_sign_up > a  {
     color: #757575;
     position: relative;
     float: left;
@@ -362,6 +380,6 @@ background text
     margin-left: 30px;
 }
 
-.cont_form_sign_up .phone{
+.form_sign_up .phone{
     width: 70px;
 }
