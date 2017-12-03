@@ -1,0 +1,22 @@
+/* 임시 css파일 */
+.slide {
+    margin-left: auto;
+    margin-right: auto;
+}
+h1 {
+    font-size: 35pt;
+}
+h2 {
+    font-size: 25pt;
+}
+.picture img {
+    width: 500px;
+    height: 500px;
+}
+.picture {
+    clear: left;
+    overflow: hidden;
+}
+.one_two {
+    clear: right;
+}
