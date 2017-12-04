@@ -2,8 +2,8 @@ chef.sql
 DROP TABLE IF EXISTS `product`;
 CREATE TABLE `product`(
 	`product_id` VARCHAR(20) NOT NULL PRIMARY KEY ,
-	`brand` VARCHAR(20) NOT NULL,
-	`name` VARCHAR(20) NOT NULL,
+	`brand` VARCHAR(40) NOT NULL,
+	`name` VARCHAR(40) NOT NULL,
 	`price` INTEGER NOT NULL,
 	`count` INTEGER NOT NULL,
 	`kind` INTEGER NOT NULL,

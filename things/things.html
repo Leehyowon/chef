@@ -90,27 +90,28 @@
                     <p>5,900</p>
                     <p>배송비</p>
                     <p>2,500 원</p>-->
-
-                    <p>주문 수량  <!--form으로 받게 해야할거같음-->
-                        <select name="number">    <!--아직 form으로 숫자를 받아서 저장하는법을 몰라서 1~5중에서 선택하게 만들었음-->
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                        </select>
-                    </p>
-                    <!--form부분-->
-                    <p>소재 <!--근데 이건 form 사용해서 은이랑 금이랑 무니켈 사용선택할수 있게 해야할거같음-->
-                    <!--form부분-->
-                        <select name="ringoption">
-                            <option>골드</option>
-                            <option>실버</option>
-                            <option>무니켈</option>
-                        </select>
-                    </p>
-                    <!--주문하기 버튼을 눌렀을때 위에 변수 number와 ringoption을 데이터형식으로 저장할 수 있게 내보내는 방법을 찾아야 함ㅠ
-                    <input type="submit" name="put" value="주문하기" /> -->
+                    <form class="input">
+                        <p>주문 수량  <!--form으로 받게 해야할거같음-->
+                            <select name="number">    <!--아직 form으로 숫자를 받아서 저장하는법을 몰라서 1~5중에서 선택하게 만들었음-->
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </p>
+                        <!--form부분-->
+                        <p>소재 <!--근데 이건 form 사용해서 은이랑 금이랑 무니켈 사용선택할수 있게 해야할거같음-->
+                        <!--form부분-->
+                            <select name="ringoption">
+                                <option>골드</option>
+                                <option>실버</option>
+                                <option>무니켈</option>
+                            </select>
+                        </p>
+                        <!--주문하기 버튼을 눌렀을때 위에 변수 number와 ringoption을 데이터형식으로 저장할 수 있게 내보내는 방법을 찾아야 함ㅠ
+                        <input type="submit" name="put" value="주문하기" /> -->
+                    </form>
 
 
                     <p>&#35; 최소주문수량 1개 이상</p>

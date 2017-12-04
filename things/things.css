@@ -13,10 +13,19 @@ h2 {
     width: 500px;
     height: 500px;
 }
+article {
+    margin: auto;
+}
+.one_two .input p {
+    text-align: left;
+}
 .picture {
-    clear: left;
+    float: left;
+    margin-right: 20px;
     overflow: hidden;
 }
 .one_two {
+    text-align: right;
+    float: left;
     clear: right;
 }
