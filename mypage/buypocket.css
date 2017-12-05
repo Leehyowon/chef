@@ -1,0 +1,25 @@
+table {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    text-align: center;
+    border: 1px solid black;
+}
+th {
+    width: 100px;
+    padding: 10px;
+    border: 1px solid black;
+}
+td img {
+    width:80px;
+}
+#infor {
+    width: 250px;
+}
+button {
+    float: right;
+    margin-right: 30px;
+}
+article {
+    padding-bottom: 30px;
+}

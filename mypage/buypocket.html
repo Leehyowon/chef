@@ -6,8 +6,10 @@
         <title>CHEF</title>
         <link href="/chef/main/favicon.png" type="image/png" rel="shortcut icon"/>
         <link href="/chef/main/main.css" type="text/css" rel="stylesheet" />
-        <link href="/chef/imageSlider/nd_slider.css" rel="stylesheet" type="text/css" media="all">
-        <!-- <script src="http://malsup.github.com/jquary.cycle2.js"></script> -->
+        <link href="/chef/things/things.css" type="text/css" rel="stylesheet"> <!-- 임시 css파일 -->
+        <link href="/chef/mypage/buypocket.css" type="text/css" rel="stylesheet">
+        <script src="ThingFunc.js" type="text/javascript"></script>
+        <script src="http://malsup.github.com/jquary.cycle2.js"></script>
     </head>
     <body>
         <main>
@@ -34,7 +36,7 @@
                                 <li><a href="#">by Product</a>
                                     <ul>
                                         <li><a href="chef/things/things.html">Clothes</a></li>
-                                        <li><a href="#">Jewelry</a></li>
+                                        <li><a href="/chef/things/things.html">Jewelry</a></li>
                                         <li><a href="#">Slime</a></li>
                                     </ul>
                                 </li>
@@ -62,14 +64,35 @@
                 </div>
                 <h1>장바구니</h1>
                 <hr/>
-                <ul> <!--목록이 나오는 부분 바로 윗 attribute-->
+                <table>
+                    <th>상품이미지</th>
+                    <th id="infor">상품정보</th>
+                    <th>판매가</th>
+                    <th>수량</th>
+                    <th>선택</th>
+                    <th>배송정보</th>
+                    <!-- 아래꺼는 예시 -->
+                    <tr>
+                        <td>
+                            <img src="/chef/image/wootique/woo5.png" alt="chaindrop">
+                        </td>
+                        <td>체인드롭 귀걸이</td>
+                        <td>7,000</td>
+                        <td>1</td>
+                        <td> <input type="checkbox" /> </td>
+                        <td>미결제</td>
+                    </tr>
+                    
+                </table>
+                <button>구매하기</button>
+                <!--<ul>
                     <li>상품정보</li>
                     <li>판매가</li>
                     <li>수량</li>
                     <li>선택</li>
                     <li>배송정보</li>
                 </ul>
-                <!--목록부분-->
+                목록부분-->
             </article>
         </main>
 
