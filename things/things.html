@@ -20,21 +20,29 @@
                         <li><a href="/chef/main/index1.html">HOME</a></li>
                         <li><a href="#">SHOP</a>
                             <ul class="submenu">
-                                <li><a href="#">by Brand</a>
+                                <li><a href="brand.php?brand=wootique">by Brand</a>
                                     <ul>
-                                        <li><a href="#">Wootique</a></li>
-                                        <li><a href="#">Dalrang</a></li>
-                                        <li><a href="#">Clothes</a></li>
-                                        <li><a href="#">Slime</a></li>
+                                        <li><a href = "brand.php?brand=wootique">Wootique</a></li>
+                                        <li><a href = "brand.php?brand=dallrang">Dallrang</a></li>
+                                        <li><a href = "brand.php?brand=veneno">veneno</a></li>
+                                        <li><a href = "brand.php?brand=joy">joy</a></li>
+                                        <li><a href = "brand.php?brand=ringing">ringing</a></li>
+                                        <li><a href = "brand.php?brand=wingbling">wingbling</a></li>
+                                        <li><a href = "brand.php?brand=slime1">Slime1</a></li>
+                                        <li><a href = "brand.php?brand=slime2">Slime2</a></li>              
+                                        <li><a href = "brand.php?brand=slime3">Slime3</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="#">by Product</a>
                                     <ul>
                                         <li><a href="/chef/things/things.html">Clothes</a></li>
-                                        <li><a href="#">Jewelry</a></li>
+                                        <li><a href="/chef/things/things.html">Jewelry</a></li>
                                         <li><a href="#">Slime</a></li>
                                     </ul>
                                 </li>
+                                <li><a href="#">CUSTOMER CARE</a></li>
+                                <li><a href="/chef/mypage/mypage.php">MY PAGE</a></li>
+                                <li><a href="/chef/login/login.php">Sign In</a></li>
                             </ul>
                         </li>
                         <!-- <li>COMMUNITY
@@ -60,21 +68,13 @@
 
                 <h1>제품 설명</h1>
 
-                <!--<div class="cycle-slideshow"
-                    data-cycle-fx="scrollHorz"
-                    data-cycle-pause-on-hover="true"
-                    data-cycle-speed="200"
-                > 이미지를 슬라이드로 두개 보여줄려했는데 실패. 좀더 검색해봐야할 것 같음ㅠ
-                        <img src="chef/blob/master/image/wootique/링.png" alt="ring">밑에 김혜빈이랑 수평으로 배치
-                        <img src="https://github.com/hyemni/chef/blob/master/image/wootique/링2.png?raw=true" alt="ring">
-                </div> -->
                 <div class="picture">
-                    <img src="/chef/image/wootique/woo4.png" alt="ring">
+                    <img src="/chef/image/wootique/woo5.png" alt="ring">
                 </div>
 
 
                 <div class="one_two"> <!--귀걸이 상품들 정보를 모아 데이터베이스를 이용해서 불러와야 할 것 같음  -->
-                    <h2>링 귀걸이</h2>
+                    <h2>체인드롭 귀걸이</h2>
                     <hr/>
                     <ul>
                         <li>판매가</li>
@@ -84,33 +84,29 @@
                         <li>7,000</li>
                         <li>2,500</li>
                     </ul>
-                   <!-- <p>판매가</p>
-                    <p>7,000</p> 여기에 중간줄로 찍 그어야할거같음(할인가로 판매하니까)
-                    <p>할인가</p>
-                    <p>5,900</p>
-                    <p>배송비</p>
-                    <p>2,500 원</p>-->
                     <form class="input">
-                        <p>주문 수량  <!--form으로 받게 해야할거같음-->
-                            <select name="number">    <!--아직 form으로 숫자를 받아서 저장하는법을 몰라서 1~5중에서 선택하게 만들었음-->
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                            </select>
-                        </p>
-                        <!--form부분-->
-                        <p>소재 <!--근데 이건 form 사용해서 은이랑 금이랑 무니켈 사용선택할수 있게 해야할거같음-->
-                        <!--form부분-->
-                            <select name="ringoption">
-                                <option>골드</option>
-                                <option>실버</option>
-                                <option>무니켈</option>
-                            </select>
-                        </p>
-                        <!--주문하기 버튼을 눌렀을때 위에 변수 number와 ringoption을 데이터형식으로 저장할 수 있게 내보내는 방법을 찾아야 함ㅠ
-                        <input type="submit" name="put" value="주문하기" /> -->
+                        <ul>
+                            <li>주문 수량  <!--form으로 받게 해야할거같음-->
+                                <select name="number">    <!--아직 form으로 숫자를 받아서 저장하는법을 몰라서 1~5중에서 선택하게 만들었음-->
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </li>
+                            <!--form부분-->
+                            <li>소재 <!--근데 이건 form 사용해서 은이랑 금이랑 무니켈 사용선택할수 있게 해야할거같음-->
+                            <!--form부분-->
+                                <select name="ringoption">
+                                    <option>골드</option>
+                                    <option>실버</option>
+                                    <option>무니켈</option>
+                                </select>
+                            </li>
+                            <!--주문하기 버튼을 눌렀을때 위에 변수 number와 ringoption을 데이터형식으로 저장할 수 있게 내보내는 방법을 찾아야 함ㅠ
+                            <input type="submit" name="put" value="주문하기" /> -->
+                        </ul>
                     </form>
 
 
@@ -136,17 +132,20 @@
 
                 <div class="button">
                     <p><a href="">상세정보</a></p>
-                    <p><a href="./things_blog.html">제품후기</a></p>
+                    <p><a href="/chef/things/things_blog.html">제품후기</a></p>
                 </div>
 
                 <hr/>
 
                 <div class="thing_information"> <!--상세 정보-->
-                    <p>comment</p>
-                    <p>가볍고 깔끔한 링 드롭 디자인의 펨므.</p>
-                    <p>송알송알 맺힌 글라스가 사랑스럽습니다.</p>
+                    <h3>comment</h3>
+                    <p>가볍고 분위기 있는 드롭 디자인의 이어링.</p>
+                    <p>원형과 드롭 스틱에 어우러진 체인 추가</p>
+                    <img src="/chef/image/wootique/details/체인스틱2.png" alt="ChainStick">
+                    <p>알맞게 떨어지는 체인드롭이 매우 분위기 있습니다.</p>
+                    <img src="/chef/image/wootique/details/체인스틱착샷.png" alt="">
                     <p>유니크한 디자인에 깔끔하여 자꾸 눈이 가는 이어링이예요.</p>
-                    <p>평소에 가벼운 링 스타일을 찾으셨다면, 정말 추천드립니다.</p>
+                    <p>평소에 가벼운 드롭 스타일을 찾으셨다면, 정말 추천드립니다.</p>
                 </div>
 
                 <!--<div class="thing_blog"> 제품 후기

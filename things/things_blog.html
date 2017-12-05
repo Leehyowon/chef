@@ -6,6 +6,7 @@
         <title>CHEF</title>
         <link href="/chef/main/favicon.png" type="image/png" rel="shortcut icon"/>
         <link href="/chef/main/main.css" type="text/css" rel="stylesheet" />
+        <link href="/chef/things/things.css" type="text/css" rel="stylesheet"> <!-- 임시 css파일 -->
         <script src="ThingFunc.js" type="text/javascript"></script>
         <script src="http://malsup.github.com/jquary.cycle2.js"></script>
     </head>
@@ -18,18 +19,23 @@
                         <li><a href="/chef/main/index1.html">HOME</a></li>
                         <li><a href="#">SHOP</a>
                             <ul class="submenu">
-                                <li><a href="#">by Brand</a>
+                                <li><a href="brand.php?brand=wootique">by Brand</a>
                                     <ul>
-                                        <li><a href="#">Wootique</a></li>
-                                        <li><a href="#">Dalrang</a></li>
-                                        <li><a href="#">Clothes</a></li>
-                                        <li><a href="#">Slime</a></li>
+                                        <li><a href = "brand.php?brand=wootique">Wootique</a></li>
+                                        <li><a href = "brand.php?brand=dallrang">Dallrang</a></li>
+                                        <li><a href = "brand.php?brand=veneno">veneno</a></li>
+                                        <li><a href = "brand.php?brand=joy">joy</a></li>
+                                        <li><a href = "brand.php?brand=ringing">ringing</a></li>
+                                        <li><a href = "brand.php?brand=wingbling">wingbling</a></li>
+                                        <li><a href = "brand.php?brand=slime1">Slime1</a></li>
+                                        <li><a href = "brand.php?brand=slime2">Slime2</a></li>              
+                                        <li><a href = "brand.php?brand=slime3">Slime3</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="#">by Product</a>
                                     <ul>
                                         <li><a href="/chef/things/things.html">Clothes</a></li>
-                                        <li><a href="#">Jewelry</a></li>
+                                        <li><a href="/chef/things/things.html">Jewelry</a></li>
                                         <li><a href="#">Slime</a></li>
                                     </ul>
                                 </li>
@@ -58,13 +64,8 @@
 
                 <h1>제품 설명</h1>
 
-                <div class="cycle-slideshow"
-                    data-cycle-fx="scrollHorz"
-                    data-cycle-pause-on-hover="true"
-                    data-cycle-speed="200"
-                > <!--이미지를 슬라이드로 두개 보여줄려했는데 실패. 좀더 검색해봐야할 것 같음ㅠ-->
-                        <img src="https://github.com/hyemni/chef/blob/master/image/wootique/링.png?raw=true" alt="ring"> <!--밑에 김혜빈이랑 수평으로 배치-->
-                        <!--<img src="https://github.com/hyemni/chef/blob/master/image/wootique/링2.png?raw=true" alt="ring">-->
+                <div class="picture">
+                    <img src="/chef/image/wootique/woo5.png" alt="ring">
                 </div>
 
                 <div class="one_two">
@@ -114,30 +115,20 @@
                     </div>
                 </div>
 
+            </article>
+            <section>
                 <hr/>
-
                 <div class="button">
-                    <p><a href="file:///Users/kimhyebeen/Desktop/WebG/things/things.html">상세정보</a></p>
+                    <p><a href="/chef/things/things.html">상세정보</a></p>
                     <p><a href="">제품후기</a></p>
                 </div>
 
                 <hr/>
-
-                <!-- <div class="thing_information"> 상세 정보
-                    <p>comment</p>
-                    <p>가볍고 깔끔한 링 드롭 디자인의 펨므.</p>
-                    <p>송알송알 맺힌 글라스가 사랑스럽습니다.</p>
-                    <p>유니크한 디자인에 깔끔하여 자꾸 눈이 가는 이어링이예요.</p>
-                    <p>평소에 가벼운 링 스타일을 찾으셨다면, 정말 추천드립니다.</p>
-                </div> -->
-
                 <div class="thing_blog"> <!--제품 후기-->
-                    <!-- <p><a href="file:///Users/kimhyebeen/Desktop/WebG/things/writingblog.html">글 쓰기</a></p>
-                    (목록)-->
+                    
                     <button onclick="writing();" type="button" name="button">글 쓰기</button>
                 </div>
-
-            </article>
+            </section>
         </main>
 
         <footer>
