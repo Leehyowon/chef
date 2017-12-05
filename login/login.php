@@ -41,7 +41,7 @@
                         </li>                                                                                            
                         
                         <li><a href="#">CUSTOMER CARE</a></li>
-                        <li><a href="/chef/mypage">MY PAGE</a></li>
+                        <li><a href="/chef/mypage/mypage.php">MY PAGE</a></li>
                         <li><a href="/chef/login/login.php">Sign In</a></li>
                     </ul>
                 </div>           
@@ -50,8 +50,13 @@
             <article>
                 <section>
                     <div class="loginHtml">
+                        <?php
+                        session_start();
+                        
+                        if(!isset($_SESSION['user_id']) || !isset($_SESSION['user_name'])) {
+                        ?>
 						<h2>Log in</h2>						
-						<form method="post">
+						<form method="post" action="/chef/login/login_ok.php">
                             <div class="login">
                                 <input type="text" name="logid" placeholder="Your ID"/>
                             </div>
@@ -59,68 +64,27 @@
                                 <input type="password" name="logpw" placeholder="Your Password"/>
                             <div>
                             <div>
-                                <input type="submit" value="login" onclick="submit" id="submitButton"/>
+                                <input type="submit" value="login" id="submitButton"/>
                             </div>
                             <a href="/chef/login/signup.php">Sign Up</a> | <a href="/chef/login/findID.php">Find ID</a> | <a href="/chef/login/findpw.php">Find PW</a>
-                        </form>                        
+                        </form>
+
                     </div>
 
                     <div class="facebook">
                         <fb:login-button id="fbbnt" scope="public_profile,email" onlogin="checkLoginState();">페이스북으로 로그인</fb:login-button>
                     </div>
+                        <?php 
+                        }else{
+                            $user_id = $_SESSION['user_id'];
+                            $user_name = $_SESSION['user_name'];
+                        ?>
+                        <p>안녕하세요. <?= $user_name." (".$user_id.")" ?> 님</p>
+                        <p><a href='/chef/login/logout.php'>로그아웃</a></p>
+                            <?php
+                        }?>  
 
 					<div>
-					<?php
-                        $host = 'localhost';
-                        $user = 'chef';
-                        $pw = '1234';
-                        $dbName = 'chef';
-                        $mysqli = new mysqli($host, $user, $pw, $dbName);
-    
-                        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-							$logid = $_POST['logid'];
-							$logpw = $_POST['logpw'];
-						
-							$filename = file("id.txt");
-							$check = TRUE;
-
-                            $sql2 = "select * from consumer";
-                            $result = $mysqli->query($sql2);
-                            if ($result->num_rows > 0) {
-                                    // output data of each row
-                                while($row = $result->fetch_assoc()) {
-                                    if ($row["consumer_id"] == $logid && $row["pwd"] == $logpw){
-                                        $check = FALSE; 
-                                    }
-                                }
-                            } else {
-                                echo "0 results";
-                            }
-
-							// 빈칸확인
-							if (!isset($logid) || $logid=='' || !isset($logpw) || $logpw==''){
-							?>
-							<h1>Sorry</h1>
-							<p>You didn't fill out the form completely. </p>
-							
-							<?php 	// 아이디와 비밀번호 맞는지 확인
-							} else if ($check){
-							?>
-							<h1>Sorry</h1>
-							<p>Check your ID and PW. </p>
-							
-							<?php
-							} else {
-							?>
-							<h2>Your Information</h2>
-							<ul> 
-								<li>ID: <?= $logid ?></li>
-								<li>PW: <?= $logpw ?></li>
-							</ul>
-							<?php
-							}
-						}
-						?>
 					</div>
                 </section>
             </article>
