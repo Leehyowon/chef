@@ -96,7 +96,7 @@
                     </div>
                             
                     <div class="menu">
-                        <h3><a href="">WISH LIST 관심상품</a></h3>
+                        <h3><a href="/chef/mypage/want.html">WISH LIST 관심상품</a></h3>
                         <p>관심상품으로 등록하신 상품의 목록을 보여드립니다.</p>            
                     </div>
 
