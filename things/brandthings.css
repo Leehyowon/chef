@@ -28,7 +28,6 @@ article {
 }
 .imgg {
     text-align: center;
-    border: 1px solid black;
     margin-left: auto;
     margin-right: auto;
     width: 900px;
@@ -40,6 +39,10 @@ article {
     margin-left: 45px;
     margin-right: 45px;
     margin-top: 20px;
+}
+.slide img {
+    width: 1000px;
+    height: 400px;
 }
 .imgg .name {
     border: 1px solid black;

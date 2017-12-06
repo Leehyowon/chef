@@ -62,7 +62,7 @@
     <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ ARTICLE(dallang 예시) @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
             <article>
                 <div class = "slide">
-                    <img src="/chef/imageSlider/img/img01.jpg" alt="slide image" width = "1040px" />
+                    <img src="/chef/imageSlider/img/img01.jpg" alt="slide image" />
                 </div>
 
                 <h1>DALLANG</h1>
@@ -75,21 +75,11 @@
                     </select>
                 </div>
                 <div class="imgg">
-                    <?php
-                    $images = array("/chef/image/dallrang/dal1.png",
-                                    "/chef/image/dallrang/dal2.png",
-                                    "/chef/image/dallrang/dal3.png",
-                                    "/chef/image/dallrang/dal4.png",
-                                    "/chef/image/dallrang/dal5.png");
-                    ?>
-                    <?php for ($i=0; $i<count($images); $i++) { ?>
-                        <?php if ($i != 0 && $i%3==0) { ?>
+                    <?php for ($i=1; $i<=5; $i++) { ?>
+                        <a href="/chef/things/things.html"> <img src="/chef/image/dallrang/dal<?= $i ?>.png" alt="dal<?= $i ?>" /> </a>
+                        <?php if ($i%4==0) { ?>
                             <br />
                         <?php } ?>
-                        <a href="/chef/things/things.html"> <img src=<?= $images[$i] ?> alt="dal<?= $i+1 ?>" /> </a>
-                        <!-- <div class="name">
-                            dal<?= $i+1 ?>
-                        </div> -->
                     <?php } ?>
                 </div>
             </article>
