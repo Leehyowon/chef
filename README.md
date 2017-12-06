@@ -29,6 +29,10 @@
 **Hyowon Lee**
 * basis of main page : /main/main.css
 
+**Hyebeen Kim**
+* design of things*.html : /things/things.css
+* design of buypocket.html : /mypage/buypocket.css
+
 ## PHP
 **Jina Sung**
 * Log in : /login/login.php
