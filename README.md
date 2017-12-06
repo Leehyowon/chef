@@ -67,8 +67,7 @@
 * flush privileges;
 
 **If you want to log in, Use**
-ID : abc1001
-PW : def0110
+ID : abc1001 / PW : def0110
 <!-- # 제목
 ## 소제목
 **A**
