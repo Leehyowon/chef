@@ -14,6 +14,7 @@
 * new writing page of product review : /things/writingblog.html
 * We can look what I ordered; JANGBAGUNI : /mypage/buypocket.html
 * I can see mypage : /mypage/mypage.html
+* We can see wish list : /mypage/want.html
 
 **Hyowon Lee**
 * main page of CHEF : /main/index1.html
