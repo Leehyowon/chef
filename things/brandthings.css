@@ -1,0 +1,67 @@
+/* 임시 css파일 */
+.slide {
+    margin-left: auto;
+    margin-right: auto;
+}
+h1 {
+    border: 1px solid black;
+    font-size: 50pt;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 500px;
+}
+h2 {
+    text-align: center;
+    font-size: 23pt;
+}
+h3 {
+    font-size: 20pt;
+}
+article {
+    font-size: 12pt;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1000px;
+    background-color: #fff9f1;
+    padding-bottom: 30px;
+}
+.imgg {
+    text-align: center;
+    border: 1px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    width: 900px;
+    padding: 5px;
+}
+.imgg img {
+    width: 200px;
+    height: 200px;
+    margin-left: 45px;
+    margin-right: 45px;
+    margin-top: 20px;
+}
+.imgg .name {
+    border: 1px solid black;
+    width: 200px;
+    height: 50px;
+    margin-left: 45px;
+    margin-right: 45px;
+    margin-bottom: 45px;
+}
+.sort {
+    text-align: right;
+    margin-right: 110px;
+}
+.sort select {
+    font-size: 12pt;
+    text-align: center;
+    padding: 6px;
+    width: 120px; /* 원하는 너비설정 */
+    padding: .8em .5em; /* 여백으로 높이 설정 */
+    font-family: inherit; /* 폰트 상속 */
+    border: 1px solid #999;
+    /*-webkit-appearance: none;*/
+    -moz-appearance: none;
+    appearance: none;
+ }
