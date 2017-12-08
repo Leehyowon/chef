@@ -77,8 +77,15 @@
                 <div class="imgg">
                     <?php for ($i=1; $i<=5; $i++) { ?>
                         <a href="/chef/things/things.html"> <img src="/chef/image/dallrang/dal<?= $i ?>.png" alt="dal<?= $i ?>" /> </a>
-                        <?php if ($i%4==0) { ?>
+                        <!-- <p>dall<?= $i ?></p> -->
+                        <?php if ($i%3==0) { ?>
                             <br />
+                            <?php for ($j=$i-2;$j<=3;$j++) { ?>
+                                <div class="name">
+                                    <p>dall<?= $j ?></p>
+                                    <p>달랑이래요~</p>
+                                </div>
+                            <?php } ?>
                         <?php } ?>
                     <?php } ?>
                 </div>
