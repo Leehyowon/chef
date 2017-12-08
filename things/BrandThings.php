@@ -62,7 +62,7 @@
     <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ ARTICLE(dallang 예시) @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
             <article>
                 <div class = "slide">
-                    <img src="/chef/imageSlider/img/img01.jpg" alt="slide image" />
+                    <img src="/chef/imageSlider/img/ban01.jpg" alt="slide image" />
                 </div>
 
                 <h1>DALLANG</h1>

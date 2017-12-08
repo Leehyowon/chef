@@ -52,6 +52,22 @@
 **Chaeein Kwon**
 * create table & insert data : chef.sql
 
+# DATABASE
+**Create DB**
+* mysql -uroot -proot 
+* create database chef;
+* exit
+* mysql -uroot -proot  chef < chef.sql (drag file!!)
+
+**Create User**
+* mysql -uroot -proot
+* use mysql;
+* create user ‘chef’@‘%’ identified by ‘1234’;
+* grant all privileges on chef.* to chef@‘%’;
+* flush privileges;
+
+**If you want to log in, Use**
+ID : abc1001 / PW : def0110
 <!-- # 제목
 ## 소제목
 **A**
