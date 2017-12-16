@@ -1,5 +1,14 @@
 # CHEF - Centre of Hanyang univ.ERICA Foundation Club
 
+## Members
++ Kwon Chaeeun
++ Kim Hyebeen
++ Nam Hyemin
++ Sung Jina
++ Lee Hyowon
+
+## What is this 'CHEF' page?
+
 ## Data Collection
 * jewelry : /image/wootique ||dallrang
 
