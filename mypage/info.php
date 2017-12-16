@@ -1,16 +1,3 @@
-<!-- 마이페이지 -->
-<!DOCTYPE html>
-<?php
-    session_start();
-    if(!isset($_SESSION['user_id']) || !isset($_SESSION['user_name'])) {
-        echo "<script>alert('로그인 하셔야 합니다.');</script>";
-        echo "<meta http-equiv='refresh' content='0;url=http://localhost:8888/chef/login/signup.php'>";
-        // header("location : http://localhost:8888/login/login.php");
-        exit;
-    }
-    $user_id = $_SESSION['user_id'];
-    $user_name = $_SESSION['user_name'];
-?>
 <html>
     <head>
         <meta charset="utf-8">
@@ -21,6 +8,8 @@
 
         <link href="/chef/mypage/mypage.css" rel="stylesheet" type="text/css">
         <!-- <script src="http://malsup.github.com/jquary.cycle2.js"></script> -->
+        <script src="/chef/mypage/info.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/prototype/1.7.3.0/prototype.js" type="text/javascript"></script>
     </head>
     <body>
         <main>
@@ -64,53 +53,62 @@
             </nav>
 
             <article>
-
-                <h1>My Page</h1>
-            
-                <div class="point">
-                    <ul>
-                        <li>(<?=$user_name?>)님의</li>
-                        <li>가용적립금</li>
-                        <li>쿠폰</li>
-                        <li>총 주문</li>
-                    </ul>
-                </div>
-
-                <div class="my_menu"> 
-                    <div class="menu">
-                        <h3><a href="/chef/mypage/buypocket.html">POCKET 장바구니</a></h3>
-                        <p>고객님께서 장바구니에 등록한 상품들을 보실 수 있습니다.</p>
-                    </div>
-
-                    <div class="menu">
-                        <h3><a href="">ORDER 주문내역 조회</a></h3>
-                        <p>고객님께서 주문하신 상품의 주문내역을 확인하실 수 있습니다.
-                        비회원의 경우, 주문서의 주문번호와 비밀번호로 주문조회가 가능합니다.</p>
-                    </div>
-                                
-                    <div class="menu">
-                        <h3><a href="/chef/mypage/info.php">INFO 회원정보</a></h3>
-                        <p>회원이신 고객님의 개인정보를 관리하는 공간입니다.
-                        개인정보를 최신 정보로 유지하시면 보다 간편히 쇼핑을 즐기실 수 있습니다.</p>                                
-                        
-                    </div>
-                            
-                    <div class="menu">
-                        <h3><a href="/chef/mypage/want.html">WISH LIST 관심상품</a></h3>
-                        <p>관심상품으로 등록하신 상품의 목록을 보여드립니다.</p>            
-                    </div>
-
-                    <div class="menu">
-                        <h3><a href="">POINT 적립금</a></h3>
-                        <p>적립금은 상품 구매 시 사용하실 수 있습니다.
-                        적립된 금액은 현금으로 환불되지 않습니다.</p>                                                    
-                    </div>
+                <?php
+                    session_start();
+                    $user_id = $_SESSION['user_id'];
+                    $user_name = $_SESSION['user_name'];
                     
-                    <div class="menu">
-                        <h3><a href="">ADDRESS 배송 주소록 관리</a></h3>
-                        <p>자주 사용하는 배송지를 등록하고 관리하실 수 있습니다.</p>           
-                    </div>           
+                    $host = 'localhost';
+                    $user = 'chef';
+                    $pw = '1234';
+                    $dbName = 'chef';
+                    $mysqli = new mysqli($host, $user, $pw, $dbName);
+
+                    $sql = "SELECT * FROM consumer WHERE consumer_id='".$user_id."'";
+                    $result = $mysqli->query($sql);
+                    $info = array();
+                    if ($result->num_rows > 0) {
+                        $row = $result->fetch_assoc();
+                        // print_r($row);
+                    }
+                ?>
+                <h1><?=$user_id?> 님의 개인정보</h1>
+                <div class="before">
+                    <p>Name : <?=$row["name"]?></p>
+                    <p>PW : <?=$row["pwd"]?></p>
+                    <p>E-mail : <?=$row["email"]?> </p>
+                    <p>Phone : <?=$row["tel"]?></p>
+                    <p>Birth : <?=$row["birth"]?></p>
+                    <p>Gender : <?=$row["gender"]?></p>
+                    <button id="edit">Edit</button>
                 </div>
+                
+                <form method="post">
+                    <div class="after">
+                        <p>Name : <?=$row["name"]?> </p>
+                        <p>PW : <input type="text" name="pw" value="<?=$row["pwd"]?>" placeholder="<?=$row["pwd"]?>" /></p>
+                        <p>E-mail : <input type="text" name="email" value="<?=$row["email"]?>" placeholder="<?=$row["email"]?>" /></p>
+                        <p>Phone : <input type="text" name="phone" valud="<?=$row["tel"]?>" placeholder="<?=$row["tel"]?>" /></p>
+                        <p>Birth : <?=$row["birth"]?></p>
+                        <p>Gender : <?=$row["gender"]?></p>
+                        <input type="submit" name="changeInfo" value="Change" />
+                        <button id="cancel">Cancel</button>
+                    </div>
+                </form>
+            
+                <?php
+                    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                        $pw = $_POST['pw'];
+                        $email = $_POST['email'];
+                        $phone = $_POST['phone'];
+
+                        $sql = "UPDATE consumer SET pwd='".$pw."', email='".$email."', tel='".$phone."' WHERE consumer_id='".$user_id."'";
+                        $mysqli->query($sql);
+                ?>
+                <meta http-equiv='refresh' content='0;url=http://localhost:8888/chef/mypage/info.php'>
+                <?php
+                    }
+                ?>
             </article>
         </main>
 

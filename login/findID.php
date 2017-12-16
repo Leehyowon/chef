@@ -43,83 +43,81 @@
 
             
             <article>
-                <!-- <section>
-                    <div>
-						<h2>Find ID</h2>
-						<hr/>
-						<form method="post">
-						<p> Name : <input type="text" name="findname" /> </p>
-						<p>	E-mail : <input type="text" name="email" /> </p>
-						<p>
-							<div id="submitButton" >
-								<input type="submit" name="findid" value="findid" />
-							</div>
-						</p>
-						</form>
-					</div>
-					<div>
-						<?php
-                        $host = 'localhost';
-                        $user = 'chef';
-                        $pwd = '1234';
-                        $dbName = 'chef';
-                        
-                        $mysqli = new mysqli($host, $user, $pwd, $dbName);
-
-						if ($_SERVER["REQUEST_METHOD"] == "POST") {
-							$findname = $_POST['findname'];
-							$email = $_POST['email'];
-							
-							// 입력한 아이디와 등록된 아이디가 일치하는지, 해당 아이디에 따른 email 주소가 일치하는지 확인
-							$check = TRUE;					
-                            $sql2 = "select * from consumer";
-                            $result = $mysqli->query($sql2);
-                            if ($result->num_rows > 0) {
-                                    // output data of each row
-                                while($row = $result->fetch_assoc()) {
-                                    if ($row["name"] == $findname && $row["email"] == $email){
-                                        $check = FALSE; 
-                                    }
-                                }
-                            } else {
-                                echo "0 results";
-                            }
-
-							// 빈칸이 있는지 확인
-							if (!isset($findname) || $findname=='' || !isset($email) || $email==''){
-							?>
-							<h1>Sorry</h1>
-							<p>You didn't fill out the form completely. </p>
-							
-							<?php 	// 입력한 아이디와 등록된 아이디가 일치하는지, 해당 아이디에 따른 email 주소가 일치하는지 확인
-							} else if ($check){
-							?>
-							<h1>Sorry</h1>
-							<p>Check your Name and Email. </p>
-							
-							<?php
-							} else {
-							?>
-							<ul> 
-								<li>Name: <?= $findname ?></li>
-								<li>E-mail: <?= $email ?></li>
-							</ul>
-							<?php
-							}
-						}
-						?>
-					</div>
-                </section> -->
                 <section>
                     <div class="forms">
                         <!-- <div class="back_img_sec">
                             <img src="back.jpg" alt="" />
                         </div> -->
-                        <div class="form_login">
-                            <h2>Find ID</h2>					
-                            <input type="text" placeholder="Name" /></br>
-                            <input type="text" placeholder="Email" /></br>
-                            <button class="btn_login" onclick="">Find ID</button>               												
+                        <form method="post">
+                            <div class="form_login">
+                                <h2>Find ID</h2>					
+                                <input type="text" name="findname" placeholder="Name" /></br>
+                                <input type="text" name="email" placeholder="Email" /></br>
+                                <!-- <button class="btn_login" onclick="">Find ID</button> -->
+                                <input type="submit" name="findid" class="btn_login" value="Find Id" />               												
+                            </div>
+                        </form>
+                        <div>
+                        <?php
+                            $host = 'localhost';
+                            $user = 'chef';
+                            $pwd = '1234';
+                            $dbName = 'chef';
+                            
+                            $mysqli = new mysqli($host, $user, $pwd, $dbName);
+
+                            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                                $findname = $_POST['findname'];
+                                $email = $_POST['email'];
+                                
+                                // 입력한 아이디와 등록된 아이디가 일치하는지, 해당 아이디에 따른 email 주소가 일치하는지 확인
+                                $check = TRUE;                  
+                                $sql2 = "SELECT * FROM consumer";
+                                $result = $mysqli->query($sql2);
+                                if ($result->num_rows > 0) {
+                                        // output data of each row
+                                    while($row = $result->fetch_assoc()) {
+                                        if ($row["name"] == $findname && $row["email"] == $email){
+                                            $check = FALSE; 
+                                        }
+                                    }
+                                } else {
+                                    // echo "0 results";
+                                }
+
+                                // 빈칸이 있는지 확인
+                                if (!isset($findname) || $findname=='' || !isset($email) || $email==''){
+                                    echo "<script>alert('빈칸을 다 채워주세요.');history.back();</script>";
+                                    exit;
+                                ?>
+                                
+                                <?php   // 입력한 아이디와 등록된 아이디가 일치하는지, 해당 아이디에 따른 email 주소가 일치하는지 확인
+                                } else if ($check){
+                                    echo "<script>alert('이름 또는 이메일이 잘못되었습니다.');history.back();</script>";
+                                    exit;
+                                ?>
+                                
+                                <?php
+                                } else {
+                                ?>
+                                    <p><?=$findname?>님의 아이디 목록</p>
+                                <?php    
+                                    $sql = "SELECT consumer_id FROM consumer WHERE name = '".$findname."' and email='".$email."'";
+                                    $result = $mysqli->query($sql);
+                                    $consumerIDs = array();
+                                    if ($result->num_rows > 0) {
+                                        while($row = $result->fetch_assoc()) {
+                                            $consumerIDs[] = $row["consumer_id"];
+                                        } 
+                                    }
+                                    foreach ($consumerIDs as $consumerID) {
+                                ?>
+                                    <p><?=$consumerID?></p>
+                                <?php
+                                    }
+                                }
+                            }
+                        ?>
                         </div>
                     </div>
                 </section>

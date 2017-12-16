@@ -77,6 +77,7 @@ INSERT INTO `product` VALUES ('joy12', 'joy', '썬셋글라스드롭', 15800, 10
 
 
 INSERT INTO `consumer` VALUES ('abc1001','def0110','abc1001@naver.com','Jina','01012345678','1998-02-13','F');
+INSERT INTO `consumer` VALUES ('root','root','root@naver.com','Jina','01012345678','1998-02-13','F');
 
 
 INSERT INTO `buy` VALUES (0001,1,'abc1001','Ansan hanyang university','2017-10-29','credit');
