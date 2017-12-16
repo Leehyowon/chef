@@ -7,10 +7,6 @@ window.onload = function() {
     $("signup").onclick = sign_up;
 };
 
-// function alertF(){
-//     alert("yes");
-// }
-
 function login() {
     document.querySelector('.forms').className = "forms active_login";  
     document.querySelector('.form_login').style.display = "block";
@@ -43,7 +39,7 @@ function login_sign_up() {
 
     setTimeout(function(){
     document.querySelector('.form_sign_up').style.display = "none";
-    document.querySelector('.form_login').style.display = "none";
+    // document.querySelector('.form_login').style.display = "none";
     },500);  
 
 }

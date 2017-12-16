@@ -28,7 +28,8 @@
                                         <li><a href = "brand.php?brand=ringing">ringing</a></li>
                                         <li><a href = "brand.php?brand=wingbling">wingbling</a></li>
                                         <li><a href = "brand.php?brand=slime1">Slime1</a></li>
-                                        <li><a href = "brand.php?brand=slime2">Slime2</a></li>              <li><a href = "brand.php?brand=slime3">Slime3</a></li>
+                                        <li><a href = "brand.php?brand=slime2">Slime2</a></li>              
+                                        <li><a href = "brand.php?brand=slime3">Slime3</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="#">by Product</a>
@@ -40,206 +41,106 @@
                                 </li>
                             </ul>
                         </li>                                                                                            
-                        <!-- <li>COMMUNITY
-                            <ul>
-                                <li class="mincate"><a href = "/chef/board/notice.html"> Notice </a></li>
-                                <li class="mincate"><a href = "/chef/board/event.html"> Event </a></li>
-                                <li class="mincate"><a href = "/chef/board/qna.html"> QnA </a></li>
-                                <li class="mincate"><a href = "/chef/board/info.html"> Information </a></li>
-                            </ul>
-                        </li> -->
                         <li><a href="#">CUSTOMER CARE</a></li>
                         <li><a href="/chef/mypage/mypage.php">MY PAGE</a></li>
-                        <li><a href="/chef/login/login.php">Sign In</a></li>
+                        <li><a href="/chef/login/signup.php">Sign In</a></li>
                     </ul>
                 </div>           
             </nav>
 
-
-            <article>
-                <!-- <section>
-                    <div class="signup">
-                        <h2>Sign Up</h2>
-                        
-                        <form method="post">
-                            <table>
-                                <tr>
-                                    <td>ID</td>
-                                    <td><input type="text" name="id" /></td>
-                                </tr>
-                                <tr>
-                                    <td>PW</td>
-                                    <td><input type="password" name="pw" /></td>
-                                </tr>
-                                <tr>
-                                    <td>PW Check</td>
-                                    <td><input type="password" name="pwcheck" /></td>
-                                </tr>
-                                <tr>
-                                    <td>Name</td>
-                                    <td><input type="text" name="name" /></td>
-                                </tr>
-                                <tr>
-                                    <td>Address</td>
-                                    <td><input type="text" name="address" /></td>
-                                </tr>
-                                <tr>
-                                    <td>Phone</td>
-                                    <td>
-                                        <select name="Phonenumber">
-                                            <option selected="selected">010</option>
-                                            <option>011</option>
-                                            <option>016</option>
-                                            <option>017</option>
-                                            <option>018</option>
-                                            <option>019</option>
-                                        </select>-
-                                        <input type="text" name="phone_mid" />-<input type="text" name="phone_back" />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>E-mail</td>
-                                    <td>
-                                        <input type="text" name="e_mail_front" />@
-                                        <input type="text" name="e-mail_back" />
-                                        <select name="e-mail_back">
-                                            <option selected="selected">직접 입력</option>
-                                            <option value="naver.com">naver.com</option>
-                                            <option value="daum.net">daum.net</option>
-                                            <option value="nate.com">nate.com</option>
-                                            <option value="hotmail.com">hotmail.com</option>
-                                            <option value="yahoo.com">yahoo.com</option>
-                                            <option value="empas.com">empas.com</option>
-                                            <option value="korea.com">korea.com</option>
-                                            <option value="dreamwiz.com">dreamwiz.com</option>
-                                            <option value="gmail.com">gmail.com</option>
-                                        </select>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Gender</td>
-                                    <td><input type="text" name="gender" /></td>
-                                </tr>
-                            </table>
-
-                            <p>
-                                <div id="submitButton" >
-                                    <input type="submit" name="submit" value="submit" />
-                                </div>
-                            </p>
-                        </form>
-                    </div>
-                    <div>
-                        
-                    </div>
-                </section> -->
-<<<<<<< HEAD
-=======
-
-                
-
->>>>>>> abf7c7a48d36bb2ff5e25f963dbd55ce393eb06a
-                <!-- <div class="cotn_principal"> -->
-                    
-                    <div class="main_log">
-                        
-                        <div class="login">
-                            <?php
-                            session_start();
-                                
-                            if(!isset($_SESSION['user_id']) || !isset($_SESSION['user_name'])) {
-                            ?>
+            <article>    
+                <div class="main_log">
+                    <div class="login">
+                        <?php
+                        session_start();
                             
-                            <div class="log_sign_up">
-                                <div class="pre_login">
-                                    <div class="pre_content">                            
-                                        <h2>LOGIN</h2>  
-                                        <!-- <p>여기다 뭐라고 쓰면 좋을지 모르겠엄 친구들 :)</p>  -->
-                                        <button class="btn_login" onclick="login()">LOGIN</button>                                        
-                                    </div>  
-                                    <!--cont_ba_opcitiy -->
-                                </div>
-                                <div class="pre_sign_up">
-                                    <div class="pre_content">
-                                        <h2>SIGN UP</h2>                    
-                                        <!-- <p>여기도 뭐라고 써야할지 모르겠어 :)</p> -->
-                                        <button class="btn_sign_up" onclick="sign_up()">SIGN UP</button>
-                                    </div>
-                                </div>
-                            </div>
+                        if(!isset($_SESSION['user_id']) || !isset($_SESSION['user_name'])) {
+                        ?>
                         
-                            <div class="back_info">
-                                <div class="back_img">
-                                    <img src="https://images.unsplash.com/42/U7Fc1sy5SCUDIu4tlJY3_NY_by_PhilippHenzler_philmotion.de.jpg?ixlib=rb-0.3.5&q=50&fm=jpg&crop=entropy&s=7686972873678f32efaf2cd79671673d" alt="" />
-                                </div>                        
-                            </div>
-
-                            <div class="forms" >
-                                <div class="back_img_sec">
-                                    <img src="https://images.unsplash.com/42/U7Fc1sy5SCUDIu4tlJY3_NY_by_PhilippHenzler_philmotion.de.jpg?ixlib=rb-0.3.5&q=50&fm=jpg&crop=entropy&s=7686972873678f32efaf2cd79671673d" alt="" />
-                                </div>
-                                <div class="form_login">
-                                    <a href="#" class="login_sign_up"><i class="material-icons">&#xE5C4;</i></a>
-                                    <h2>LOGIN</h2>
-                                    <form method="post" action="/chef/login/login_ok.php">
-                                        <input type="text" name="logid" placeholder="Your ID"/>
-                                        <input type="password" name="logpw" placeholder="Your Password"/>
-                                            <!-- <button class="btn_login" onclick="login()">LOGIN</button> -->
-                                            <!-- HERE -->
-                                        <input type="submit" id="login" class="btn_login" value="LOGIN" />
-                                            <!-- HERE -->
-                                        <br/>
-                                    </form>
-                                    <button class="btn_find" onclick=""><a href="/chef/login/findID.php">FIND ID</a></button>
-                                    <button class="btn_find" onclick=""><a href="/chef/login/findpw.php">FIND PW</a></button>
+                        <div class="log_sign_up">
+                            <div class="pre_login">
+                                <div class="pre_content">                            
+                                    <h2>LOGIN</h2>  
                                     
+                                    <button class="btn_login" onclick="login()">LOGIN</button>                                        
+                                </div>  
+                            </div>
+                            <div class="pre_sign_up">
+                                <div class="pre_content">
+                                    <h2>SIGN UP</h2>                    
+                                    <!-- <p>여기도 뭐라고 써야할지 모르겠어 :)</p> -->
+                                    <button class="btn_sign_up" onclick="sign_up()">SIGN UP</button>
                                 </div>
+                            </div>
+                        </div>
                     
-                                <div class="form_sign_up">
-                                    <a href="#" class="login_sign_up"><i class="material-icons">&#xE5C4;</i></a>
-                                    <h2>SIGN UP</h2>    
-                                    <form method="post" action="/chef/login/signupCheck.php">
-                                        <input type="text" name="name" placeholder="Name" />
-                                        <input type="text" name="id" placeholder="Your ID" />
-                                        <input type="password" name="pw" placeholder="Password" />
-                                        <input type="password" name="pwcheck" placeholder="Confirm Password" />
-                                        <input type="text" name="phone" placeholder="Phone" class="phone"/>-<input type="text" name="phonemid" class="phone"/>-<input type="text" name="phoneback" class="phone"/>
-                                        <input type="text" name="address" placeholder="Address" />
-                                        <input type="text" name="e_mail" placeholder="E-mail" />
-                                        <!-- <button class="btn_sign_up" onclick="sign_up()">SIGN UP</button> -->
-                                        <!-- HERE -->
-                                        <input type="submit" id="signup" class="btn_sign_up" value="SIGN UP" id="submitButton" />
-                                    <!-- HERE -->
-                                    </form>
-                                </div>
-                            </div>    
-                            <?php    
-                            } else {
-                                $user_id = $_SESSION['user_id'];
-                                $user_name = $_SESSION['user_name'];
-                            ?>
 
-                                <!-- 여기.. -->
-                                <div class="logout_forms">
-                                    <div class="logout">
-                                        안녕하세요. <?= $user_name." (".$user_id.")" ?> 님</br>
-                                        <button><a href='/chef/login/logout.php'>LOGOUT</a></button>
-                                        
-                                    </div>
+                        <div class="forms" >
+                            <!-- <div class="back_img_sec">
+                                <img src="back.jpg" alt="" />
+                            </div> -->
+                            <div class="form_login">
+                                <a href="#" class="login_sign_up"><img src="arr.png"/></a>
+                                <h2>LOGIN</h2>
+                                <form method="post" action="/chef/login/login_ok.php">
+                                    <input type="text" name="logid" placeholder="Your ID"/>
+                                    <input type="password" name="logpw" placeholder="Your Password"/>
+                                        <!-- <button class="btn_login" onclick="login()">LOGIN</button> -->
+                                        <!-- HERE -->
+                                    <input type="submit" id="login" class="btn_login" value="LOGIN" />
+                                        <!-- HERE -->
+                                    <br/>
+                                </form>
+                                <button class="btn_find" onclick=""><a href="/chef/login/findID.php">FIND ID</a></button>
+                                <button class="btn_find" onclick=""><a href="/chef/login/findpw.php">FIND PW</a></button>
+                                
+                            </div>
+                
+                            <div class="form_sign_up">
+                                <a href="#" class="login_sign_up"><img src="arr.png"/></a>
+                                <h2>SIGN UP</h2>    
+                                <form method="post" action="/chef/login/signupCheck.php">
+                                    <input type="text" name="name" placeholder="Name" />
+                                    <input type="text" name="id" placeholder="Your ID" />
+                                    <input type="password" name="pw" placeholder="Password" />
+                                    <input type="password" name="pwcheck" placeholder="Confirm Password" />
+                                    <input type="text" name="phone" placeholder="Phone" class="phone"/>-<input type="text" name="phonemid" class="phone"/>-<input type="text" name="phoneback" class="phone"/>
+                                    <input type="text" name="address" placeholder="Address" />
+                                    <input type="text" name="e_mail" placeholder="E-mail" />
+                                    <!-- <button class="btn_sign_up" onclick="sign_up()">SIGN UP</button> -->
+                                    <!-- HERE -->
+                                    <input type="submit" id="signup" class="btn_sign_up" value="SIGN UP" id="submitButton" />
+                                <!-- HERE -->
+                                </form>
+                            </div>
+                        </div>    
+                        <?php    
+                        } else {
+                            $user_id = $_SESSION['user_id'];
+                            $user_name = $_SESSION['user_name'];
+                        ?>
+
+                            <!-- 여기.. -->
+                            <div class="logout_forms">
+                                <div class="logout">
+                                    안녕하세요. <?= $user_name." (".$user_id.")" ?> 님</br>
+                                    <button><a href='/chef/login/logout.php'>LOGOUT</a></button>
                                     
                                 </div>
                                 
-                                        
-                            <?php
-                            }?>                
-                        </div>
-                 
+                            </div>
+                            
+                                    
+                        <?php
+                        }?>                
                     </div>
-                    
-                    <!-- <div> -->
-                             
-                    <!-- </div> -->
+                
+                </div>
+                
+                <!-- <div> -->
+                            
                 <!-- </div> -->
+            <!-- </div> -->
             </article>
             
         </main>
