@@ -67,7 +67,23 @@
 						</form>
 					</div>
 					<div>
-						<?php
+						
+					</div>
+                </section> -->
+                <section>
+                     <div class="forms">
+                        <form method="post">
+                            <div class="form_pw">
+                                <h2>Find PW</h2>
+                                <input type="text" name="findid" placeholder="ID"/></br>
+                                <input type="text" name="findname_pw" placeholder="Name"/></br>
+                                <input type="text" name="email_pw" placeholder="E-mail"/></br>
+                                <!-- <button class="btn_pw" name="findpw" value="findpw" onclick="">Find PW</button>  -->
+                                <input type="submit" name="findpw" value="Find PW" />
+                            </div>
+                        </form>
+                    
+                    <?php
                         $host = 'localhost';
                         $user = 'chef';
                         $pwd = '1234';
@@ -75,12 +91,12 @@
                         
                         $mysqli = new mysqli($host, $user, $pwd, $dbName);
 
-						if ($_SERVER["REQUEST_METHOD"] == "POST") {
-							$id = $_POST['findid'];
-							$findname = $_POST['findname_pw'];
-							$email = $_POST['email_pw'];
-							$submit = $_POST['findpw'];
-														
+                        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                            $id = $_POST['findid'];
+                            $findname = $_POST['findname_pw'];
+                            $email = $_POST['email_pw'];
+                            $submit = $_POST['findpw'];
+                                                        
                             // 등록된 아이디와 입력한 아이디가 일치하는지, 해당 아이디에 따른 비밀번호와 email이 일치하는지.
                             $check = TRUE;                  
                             $sql2 = "select * from consumer";
@@ -96,43 +112,35 @@
                                 echo "0 results";
                             }
 
-							
-							// 빈칸 존재 확인
-							if (!isset($id) || $id=='' || !isset($findname) || $findname=='' || !isset($email) || $email==''){
-							?>
-							<h1>Sorry</h1>
-							<p>You didn't fill out the form completely. </p>
-							
-							<?php 	// 등록된 아이디와 입력한 아이디가 일치하는지, 해당 아이디에 따른 비밀번호와 email이 일치하는지.
-							} else if ($check){
-							?>
-							<h1>Sorry</h1>
-							<p>Check your ID,Name and Email. </p>
-							
-							<?php
-							} else {
-							?>
-							<ul> 
-								<li>ID: <?= $id ?></li>
-								<li>Name: <?= $findname ?></li>
-								<li>E-mail: <?= $email ?></li>
-							</ul>
-							<?php
-							}
-						}
-						?>
-					</div>
-                </section> -->
-                <section>
-                     <div class="forms">
-                         <div class="form_pw">
-                            <h2>Find PW</h2>
-                            <input type="text" name="findid" placeholder="ID"/></br>
-                            <input type="text" name="findname_pw" placeholder="Name"/></br>
-                            <input type="text" name="email_pw" placeholder="E-mail"/></br>
-                            <button class="btn_pw" name="findpw" value="findpw" onclick="">Find PW</button> 
-                        
-                        </div>
+                            
+                            // 빈칸 존재 확인
+                            if (!isset($id) || $id=='' || !isset($findname) || $findname=='' || !isset($email) || $email==''){
+                                echo "<script>alert('빈칸을 다 채워주세요.');history.back();</script>";
+                                exit;
+                            ?>
+                            
+                            <?php   // 등록된 아이디와 입력한 아이디가 일치하는지, 해당 아이디에 따른 비밀번호와 email이 일치하는지.
+                            } else if ($check){
+                                echo "<script>alert('아이디, 이름, 이메일에 일치하는 등록된 아이디가 없습니다.');history.back();</script>";
+                                exit;
+                            ?>
+                            
+                            <?php
+                            } else {
+                                $sql = "select pwd from consumer where consumer_id = '".$id."'";
+                                $result = $mysqli->query($sql);
+                                if ($result->num_rows > 0) {
+                                    while($row = $result->fetch_assoc()) {
+                                        $consumerPW = $row["pwd"];
+                                    } 
+                                }
+                            ?>
+
+                            <p><?=$id?> 님의 비밀번호는   <?=$consumerPW?> 입니다.</p>
+                            <?php
+                            }
+                        }
+                        ?>
                     </div>
                 </section>
             </article>
