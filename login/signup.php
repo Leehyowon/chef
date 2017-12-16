@@ -130,94 +130,15 @@
                         </form>
                     </div>
                     <div>
-                        <?php
-                        $host = 'localhost';
-                        $user = 'chef';
-                        $pwd = '1234';
-                        $dbName = 'chef';
                         
-                        $mysqli = new mysqli($host, $user, $pwd, $dbName);
-
-
-                        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                            $id = $_POST['id'];
-                            $pw = $_POST['pw'];
-                            $pwcheck = $_POST['pwcheck'];
-                            $name = $_POST['name'];
-                            $address = $_POST['address'];
-                            $phone = $_POST['phone'];
-                            $e_mail = $_POST['e_mail'];
-                            $gender = $_POST['gender']; 
-                            
-
-                            // 새로 입력한 아이디가 중복되는지 확인.
-                            $check = FALSE;
-                            
-                            $sql2 = "select * from consumer";
-                            $result = $mysqli->query($sql2);
-                            if ($result->num_rows > 0) {
-                                    // output data of each row
-                                while($row = $result->fetch_assoc()) {
-                                    // echo "id: " . $row["consumer_id"];
-                                    if ($row["consumer_id"] == $id){
-                                        $check = TRUE; 
-                                    }
-                                }
-                            } else {
-                                echo "0 results";
-                            }
-                            // $mysqli->close();
-              
-                            
-                            // 빈칸확인
-                            if (!isset($id) || $id=='' || !isset($pw) || $pw=='' || !isset($pwcheck) || $pwcheck=='' || !isset($name) || $name=='' || !isset($address) || $address=='' || !isset($phone) || $phone=='' || !isset($e_mail) || $e_mail==''){  
-                            ?>
-                            <h1>Sorry</h1>
-                            <p>You didn't fill out the form completely. </p>
-
-                            <?php   // 비밀번호와 비밀번호 확인란에 입력한 값 같은지.
-                            } else if ($pw != $pwcheck){    
-                            ?>
-                            <h1>Sorry</h1>
-                            <p>PW and PW Check aren't match. </p>
-
-                            <?php   // email 형식이 맞는지 확인.
-                            } else if (!preg_match("/^[A-Za-z0-9_%+-]+@[A-Za-z]+\.[A-Za-z]{2,}$/",$e_mail)) { 
-                            ?>
-                            <h1>Sorry</h1>
-                            <p>Write Correct E-mail Address. </p>
-
-                            <?php   // 아이디가 중복되었을 때
-                            } else if ($check) {
-                            ?>
-                            <h1>Sorry</h1>
-                            <p>Your ID exists. </p>
-
-                            <?php
-                            } else {
-                                
-                                $sql = "insert INTO consumer VALUES";
-                                $sql = $sql."('".$id."','".$pw."','".$e_mail."','".$name."','".$phone."',1998-02-13,'".$gender."')";
-                                $mysqli->query($sql);
-
-                            ?>
-                            <h2>Your Information</h2>
-                            <ul> 
-                                <li>ID: <?= $id ?></li>
-                                <li>PW: <?= $pw ?></li>
-                                <li>PW Check : <?= $pwcheck ?> </li>
-                                <li>Name : <?= $name ?> </li>
-                                <li>Address : <?= $address ?> </li>
-                                <li>Phone : <?= $phone ?> </li>
-                                <li>E-mail : <?= $e_mail ?> </li>
-                                <li>Gender : <?= $gender ?> </li>
-                            </ul>
-                            <?php
-                            }
-                        }
-                        ?>
                     </div>
                 </section> -->
+<<<<<<< HEAD
+=======
+
+                
+
+>>>>>>> abf7c7a48d36bb2ff5e25f963dbd55ce393eb06a
                 <!-- <div class="cotn_principal"> -->
                     
                     <div class="main_log">
@@ -258,14 +179,14 @@
                                     <img src="https://images.unsplash.com/42/U7Fc1sy5SCUDIu4tlJY3_NY_by_PhilippHenzler_philmotion.de.jpg?ixlib=rb-0.3.5&q=50&fm=jpg&crop=entropy&s=7686972873678f32efaf2cd79671673d" alt="" />
                                 </div>
                                 <div class="form_login">
-                                    <a href="#" id="login"><i class="material-icons">&#xE5C4;</i></a>
+                                    <a href="#" class="login_sign_up"><i class="material-icons">&#xE5C4;</i></a>
                                     <h2>LOGIN</h2>
                                     <form method="post" action="/chef/login/login_ok.php">
                                         <input type="text" name="logid" placeholder="Your ID"/>
                                         <input type="password" name="logpw" placeholder="Your Password"/>
                                             <!-- <button class="btn_login" onclick="login()">LOGIN</button> -->
                                             <!-- HERE -->
-                                        <input type="submit" class="btn_login" value="LOGIN" onclick="login()" />
+                                        <input type="submit" id="login" class="btn_login" value="LOGIN" />
                                             <!-- HERE -->
                                         <br/>
                                     </form>
@@ -275,18 +196,21 @@
                                 </div>
                     
                                 <div class="form_sign_up">
-                                    <a href="#" id="signup" onclick="login_sign_up()"><i class="material-icons">&#xE5C4;</i></a>
-                                    <h2>SIGN UP</h2>                                    
-                                    <input type="text" placeholder="Name" />
-                                    <input type="text" placeholder="Your ID" />
-                                    <input type="password" placeholder="Password" />
-                                    <input type="password" placeholder="Confirm Password" />
-                                    <input type="text" placeholder="Phone" class="phone"/>-<input type="text" class="phone"/>-<input type="text" class="phone"/>
-                                    <input type="text" placeholder="Address" />
-                                    <!-- <button class="btn_sign_up" onclick="sign_up()">SIGN UP</button> -->
+                                    <a href="#" class="login_sign_up"><i class="material-icons">&#xE5C4;</i></a>
+                                    <h2>SIGN UP</h2>    
+                                    <form method="post" action="/chef/login/signupCheck.php">
+                                        <input type="text" name="name" placeholder="Name" />
+                                        <input type="text" name="id" placeholder="Your ID" />
+                                        <input type="password" name="pw" placeholder="Password" />
+                                        <input type="password" name="pwcheck" placeholder="Confirm Password" />
+                                        <input type="text" name="phone" placeholder="Phone" class="phone"/>-<input type="text" name="phonemid" class="phone"/>-<input type="text" name="phoneback" class="phone"/>
+                                        <input type="text" name="address" placeholder="Address" />
+                                        <input type="text" name="e_mail" placeholder="E-mail" />
+                                        <!-- <button class="btn_sign_up" onclick="sign_up()">SIGN UP</button> -->
+                                        <!-- HERE -->
+                                        <input type="submit" id="signup" class="btn_sign_up" value="SIGN UP" id="submitButton" />
                                     <!-- HERE -->
-                                    <input type="submit" class="btn_sign_up" value="SIGN UP" id="submitButton" onclick="sign_up()" />
-                                    <!-- HERE -->
+                                    </form>
                                 </div>
                             </div>    
                             <?php    
@@ -315,6 +239,10 @@
                              
                     <!-- </div> -->
                 <!-- </div> -->
+<<<<<<< HEAD
+=======
+
+>>>>>>> abf7c7a48d36bb2ff5e25f963dbd55ce393eb06a
             </article>
             
         </main>

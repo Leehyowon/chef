@@ -1,9 +1,15 @@
 window.onload = function() {
-    var login = document.getElementById("login");
-    login.onclick = login_sign_up;
-    // $().onclick = login();
-    // $().onclick = sign_up();
+    var close = $$(".login_sign_up");
+    for (var i = 0; i < close.length; i++) {
+        close[i].onclick = login_sign_up;
+    }
+    $("login").onclick = login;
+    $("signup").onclick = sign_up;
 };
+
+// function alertF(){
+//     alert("yes");
+// }
 
 function login() {
     document.querySelector('.forms').className = "forms active_login";  
@@ -31,7 +37,6 @@ function sign_up(at) {
 }    
 
 function login_sign_up() {
-
     document.querySelector('.forms').className = "forms";  
     document.querySelector('.form_sign_up').style.opacity = "0";               
     document.querySelector('.form_login').style.opacity = "0"; 

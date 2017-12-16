@@ -3,7 +3,8 @@
 <?php
     session_start();
     if(!isset($_SESSION['user_id']) || !isset($_SESSION['user_name'])) {
-        echo "<meta http-equiv='refresh' content='0;url=http://localhost:8888/chef/login/login.php'>";
+        echo "<script>alert('로그인 하셔야 합니다.');</script>";
+        echo "<meta http-equiv='refresh' content='0;url=http://localhost:8888/chef/login/signup.php'>";
         // header("location : http://localhost:8888/login/login.php");
         exit;
     }
@@ -70,6 +71,7 @@
             
                 <div class="point">
                     <ul>
+                        <li>(<?=$user_name?>)님의</li>
                         <li>가용적립금</li>
                         <li>쿠폰</li>
                         <li>총 주문</li>
