@@ -360,3 +360,86 @@ background text
 .form_sign_up .phone{
     width: 70px;
 }
+
+.logout_forms {
+    margin: auto;
+    margin-top: 200px;
+    width: 400px;
+    height: 400px;
+    background-color: #f0f0f0;
+    box-shadow: 1px 5px 20px -5px rgba(0,0,0,0.4);
+    position: relative;
+    
+}
+.logout {
+    padding: 40px;
+    margin: auto;
+    text-align: center;
+    width: 320px;
+    height: 280px;
+
+}
+.logout p{
+    font-size: 20pt;
+    
+}
+
+/* .animation-box {
+    width: 75%;
+    height: 27.5rem;
+    background-color: blue;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+   */
+  
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+
+@keyframes bottomFadeOut {
+    0% {
+      position: absolute;
+      bottom: -0.3rem;
+      opacity: 0;
+    }
+  
+    100% {
+      position: absolute;
+      bottom: 10%;
+      opacity: 1;
+    }
+
+    
+}
+  
+  
+/* .logout {
+    font-size: 3.4rem;
+    top: 10.5rem;
+    left: 10%;
+
+    color: #F0A3BE;
+    animation-name: fadeIn;
+
+    animation-duration: 3s;
+} */
+
+.logout {
+    font-size: 20pt;
+
+    left: 5%;
+    bottom: 25%;
+    /* opacity: 0; */
+    color: #F0EBA3;
+    animation-name: bottomFadeOut;
+    animation-delay: 0.5s;
+    animation-duration: 2s;
+  }
+  

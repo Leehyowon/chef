@@ -218,61 +218,6 @@
                         ?>
                     </div>
                 </section> -->
-<<<<<<< HEAD
-                <div class="main_log">
-                    <div class="login">
-                        <div class="log_sign_up">
-                            <div class="pre_login">
-                                <div class="pre_content">                            
-                                    <h2>LOGIN</h2>  
-                                    <p>여기다 뭐라고 쓰면 좋을지 모르겠엄 친구들 :)</p> 
-                                    <button class="btn_login" onclick="login()">LOGIN</button>                                        
-                                </div>  <!--cont_ba_opcitiy -->
-                            </div>
-                            <div class="pre_sign_up">
-                                <div class="pre_content">
-                                    <h2>SIGN UP</h2>                    
-                                    <p>여기도 뭐라고 써야할지 모르겠어 :)</p>
-                                    <button class="btn_sign_up" onclick="sign_up()">SIGN UP</button>
-                                </div>
-                            </div>
-                        </div>
-                    
-                        <div class="back_info">
-                            <div class="back_img">
-                                <img src="back.jpg" alt="" />
-                            </div>                        
-                        </div>
-
-                        <div class="forms" >
-                            <div class="back_img_sec">
-                                <img src="back.jpg" alt="" />
-                            </div>
-                            <div class="form_login">
-                                <a href="#" onclick="login_sign_up()" ><i class="material-icons">&#xE5C4;</i></a>
-                                <h2>LOGIN</h2>
-                                <input type="text" placeholder="Email" />
-                                <input type="password" placeholder="Password" />
-                                <button class="btn_login" onclick="login()">LOGIN</button></br>
-                                <button class="btn_find" onclick=""><a href="/chef/login/findid.php">FIND ID</a></button>
-                                <button class="btn_find" onclick=""><a href="/chef/login/findpw.php">FIND PW</a></button>
-                            </div> 
-                
-                            <div class="form_sign_up">
-                                <a href="#" onclick="login_sign_up()"><i class="material-icons">&#xE5C4;</i></a>
-                                <h2>SIGN UP</h2>                                    
-                                <input type="text" placeholder="Name" />
-                                <input type="text" placeholder="Email" />
-                                <input type="password" placeholder="Password" />
-                                <input type="password" placeholder="Confirm Password" />
-                                <input type="text" placeholder="Phone" class="phone"/>-<input type="text" class="phone"/>-<input type="text" class="phone"/>
-                                <input type="text" placeholder="Address" />
-                                <button class="btn_sign_up" onclick="sign_up()">SIGN UP</button>
-                            </div>
-                        </div>                        
-                    </div>
-                </div>
-=======
                 <!-- <div class="cotn_principal"> -->
                     
                     <div class="main_log">
@@ -351,16 +296,14 @@
                             ?>
 
                                 <!-- 여기.. -->
-                                <br/>
-                                <br/>
-                                <br/>
-                                <br/>
-                                <br/>
-                                <br/>
-                                <br/>
-                                <br/>
-                                <h1 class="logout">안녕하세요. <?= $user_name." (".$user_id.")" ?> 님</h1>
-                                <h1 class="logout"><a href='/chef/login/logout.php'>로그아웃</a></h1>
+                                <div class="logout_forms">
+                                    <div class="logout">
+                                        안녕하세요. <?= $user_name." (".$user_id.")" ?> 님</br>
+                                        <a href='/chef/login/logout.php'>로그아웃</a>
+                                    </div>
+                                    
+                                </div>
+                                
                                         
                             <?php
                             }?>                
@@ -372,7 +315,6 @@
                              
                     <!-- </div> -->
                 <!-- </div> -->
->>>>>>> 4e640b4ed93cd7603d4129100fd6e8727ed68143
             </article>
             
         </main>
