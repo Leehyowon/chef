@@ -223,7 +223,8 @@
                                 <div class="logout_forms">
                                     <div class="logout">
                                         안녕하세요. <?= $user_name." (".$user_id.")" ?> 님</br>
-                                        <a href='/chef/login/logout.php'>로그아웃</a>
+                                        <button><a href='/chef/login/logout.php'>LOGOUT</a></button>
+                                        
                                     </div>
                                     
                                 </div>
@@ -239,10 +240,6 @@
                              
                     <!-- </div> -->
                 <!-- </div> -->
-<<<<<<< HEAD
-=======
-
->>>>>>> abf7c7a48d36bb2ff5e25f963dbd55ce393eb06a
             </article>
             
         </main>
