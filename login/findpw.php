@@ -99,7 +99,7 @@
                                                         
                             // 등록된 아이디와 입력한 아이디가 일치하는지, 해당 아이디에 따른 비밀번호와 email이 일치하는지.
                             $check = TRUE;                  
-                            $sql2 = "select * from consumer";
+                            $sql2 = "SELECT * from consumer";
                             $result = $mysqli->query($sql2);
                             if ($result->num_rows > 0) {
                                     // output data of each row
@@ -127,16 +127,17 @@
                             
                             <?php
                             } else {
-                                $sql = "select pwd from consumer where consumer_id = '".$id."'";
+                                $sql = "SELECT pwd FROM consumer WHERE consumer_id = '".$id."'";
                                 $result = $mysqli->query($sql);
                                 if ($result->num_rows > 0) {
-                                    while($row = $result->fetch_assoc()) {
-                                        $consumerPW = $row["pwd"];
-                                    } 
+                                    // while($row = $result->fetch_assoc()) {
+                                    //     $consumerPW = $row["pwd"];
+                                    // } 
+                                    $row = $result->fetch_assoc();
                                 }
                             ?>
 
-                            <p><?=$id?> 님의 비밀번호는   <?=$consumerPW?> 입니다.</p>
+                            <p><?=$id?> 님의 비밀번호는   <?=$row["pwd"]?> 입니다.</p>
                             <?php
                             }
                         }

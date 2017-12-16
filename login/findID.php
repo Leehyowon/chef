@@ -72,7 +72,7 @@
                                 
                                 // 입력한 아이디와 등록된 아이디가 일치하는지, 해당 아이디에 따른 email 주소가 일치하는지 확인
                                 $check = TRUE;                  
-                                $sql2 = "select * from consumer";
+                                $sql2 = "SELECT * FROM consumer";
                                 $result = $mysqli->query($sql2);
                                 if ($result->num_rows > 0) {
                                         // output data of each row
@@ -102,7 +102,7 @@
                                 ?>
                                     <p><?=$findname?>님의 아이디 목록</p>
                                 <?php    
-                                    $sql = "select consumer_id from consumer where name = '".$findname."' and email='".$email."'";
+                                    $sql = "SELECT consumer_id FROM consumer WHERE name = '".$findname."' and email='".$email."'";
                                     $result = $mysqli->query($sql);
                                     $consumerIDs = array();
                                     if ($result->num_rows > 0) {

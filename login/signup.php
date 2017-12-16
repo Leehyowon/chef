@@ -190,8 +190,8 @@
                                             <!-- HERE -->
                                         <br/>
                                     </form>
-                                    <button class="btn_find" onclick=""><a href="/chef/login/findID.php">FIND ID</a></button>
-                                    <button class="btn_find" onclick=""><a href="/chef/login/findpw.php">FIND PW</a></button>
+                                    <button class="btn_find"><a href="/chef/login/findID.php">FIND ID</a></button>
+                                    <button class="btn_find"><a href="/chef/login/findpw.php">FIND PW</a></button>
                                     
                                 </div>
                     
