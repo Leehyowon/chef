@@ -9,14 +9,16 @@
 
 ## What is this 'CHEF' page?
 
-## Data Collection
+## Detailed field
+
+### Data Collection
 * jewelry : /image/wootique ||dallrang
 
 **Hyowon Lee**
 * jewelry : /image/joy || veneno || wingbling || ringing
 * slime : /image/slime1 || slime2 || slime3 
 
-## HTML
+### HTML
 **Hyebeen Kim**
 * a product information (Wootique) : /things/things.html
 * product review page for above html : /things/things_blog.html
@@ -35,7 +37,7 @@
 * categories of QnA board : /board/category_qna/
 * categories of information board : /board/category_info/
 
-## CSS
+### CSS
 **Hyowon Lee**
 * basis of main page : /main/main.css
 
@@ -43,7 +45,7 @@
 * design of things*.html : /things/things.css
 * design of buypocket.html : /mypage/buypocket.css
 
-## PHP
+### PHP
 **Jina Sung**
 * Log in : /login/login.php
 * Sign Up : /login/signup.php
@@ -53,15 +55,15 @@
 **Chaeeun Kwon**
 * bybrand : bybrand.php
 
-## JavaScript
+### JavaScript
 **Hyebeen Kim**
 * thing's function information of javascript : /things/ThingFunc.js
 
-## Database
+### Database
 **Chaeein Kwon**
 * create table & insert data : chef.sql
 
-# DATABASE
+## DATABASE
 **Create DB**
 * mysql -uroot -proot 
 * create database chef;
