@@ -21,7 +21,7 @@ $mysqli = new mysqli($host, $user, $pw, $dbName);
             }
         }
     } else {
-        echo "0 results";
+        // echo "0 results";
     }
 
  
