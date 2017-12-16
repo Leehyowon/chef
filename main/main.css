@@ -6,7 +6,7 @@ body{
 }
 nav{
     height: 90px;
-    background-color: #535151;
+    background-color: #ffd5cb;
     text-align: center;
     position: fixed;
     width: 100%;
@@ -19,7 +19,7 @@ nav ul{
 	position:relative;
     margin:0;
     padding:0;
-    background-color: #535151;
+    background-color: #ffd5cb;
 
 }
 #mainpage{
@@ -29,7 +29,7 @@ nav ul{
 
 nav ul a{
 	display:block;
-	color:#a1a1a1;
+	color:#85755f;
 	text-decoration:none;
 	font-size:12px;
 	line-height:90px;
@@ -38,7 +38,7 @@ nav ul a{
 
 }
 nav ul a:hover{
-    color: #82bcca;
+    color: #f7f7f7;
 }
 
 /* menu */
@@ -88,7 +88,7 @@ article{
 }
 
 footer{
-    background-color: #a1a1a1;
+    background-color: #b8a995;
     height: 300px;
     display: flex;
     flex-flow: row wrap;

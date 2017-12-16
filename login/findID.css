@@ -1,0 +1,127 @@
+section{
+    width: 100%;
+    height: 550px;
+    padding-top: 18%;
+    background-image: url("ba.jpg");
+    background-size: 100% 840px;
+
+}
+.forms {
+    margin: auto;
+    width: 400px;
+    height: 350px;
+    background-color: #f0f0f0;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    box-shadow: 1px 5px 20px -5px rgba(0,0,0,0.4);
+    
+}
+
+.back_img_sec img{
+    width: 100%;
+    height: 50%;
+}
+.form_login {
+    padding: 40px;
+    margin: auto;
+    text-align: center;
+    width: 320px;
+    height: 280px;
+    -webkit-transition: all 0.8s;
+    -moz-transition: all 0.8s;
+    -ms-transition: all 0.8s;
+    -o-transition: all 0.8s;
+    transition: all 0.8s;
+}
+
+
+.form_login > input {
+    padding: 15px;
+    margin: 5px;
+    width: 200px;
+    text-align: left;
+    color: #757575;
+    border: none;
+}
+.form_login > button{
+    width: 200px;
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    background-color: #26C6DA;
+    color: white;
+}
+
+
+.form_login > h2 {
+    margin: 30px;
+    font-size: 25px;
+    font-weight: 30;
+    color: #757575;
+}
+
+/*
+.form_login > a,.form_sign_up > a  {
+    color: #757575;
+    float: left;
+    margin: 10px;
+    margin-left: 30px;
+}
+
+.btn_login { 
+    background-color: #26C6DA;
+    padding: 10px;
+    width: 200px;
+    border-radius:3px;
+    box-shadow: 1px 5px 20px -5px rgba(0,0,0,0.4);
+    color: #fff;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.forms {
+    /* overflow: hidden; */
+    /* top:300px; */
+    /* left: 0px; */
+    /* width: 320px; */
+    /* height: 400px;
+    background-color: #eee;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+} */
+
+/* .back_img_sec {
+    position: absolute;
+    width: 950px;
+    height: 550px;
+    /* top:-80px;
+    left: -116px; */
+/* }  */
+/*
+.back_img_sec > img {
+    width: 400px;
+    opacity: 0.3;
+    animation-name: animar_fondo;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    height: 350px;
+} */
+
+/* .back_info {  
+    position: relative;
+    float: left;
+    width: 640px;
+    height: 280px; */
+    /* overflow: hidden; */
+    /* background-color: #fff;
+    margin-top: 300px;
+    box-shadow: 1px 10px 30px -10px rgba(0,0,0,0.5);
+} */ 

@@ -217,61 +217,59 @@
                         ?>
                     </div>
                 </section> -->
-                <!-- <div class="cotn_principal"> -->
-                    <div class="main_log">
-                        <div class="login">
-                            <div class="log_sign_up">
-                                <div class="pre_login">
-                                    <div class="pre_content">                            
-                                        <h2>LOGIN</h2>  
-                                        <p>여기다 뭐라고 쓰면 좋을지 모르겠엄 친구들 :)</p> 
-                                        <button class="btn_login" onclick="login()">LOGIN</button>                                        
-                                    </div>  <!--cont_ba_opcitiy -->
-                                </div>
-                                <div class="pre_sign_up">
-                                    <div class="pre_content">
-                                        <h2>SIGN UP</h2>                    
-                                        <p>여기도 뭐라고 써야할지 모르겠어 :)</p>
-                                        <button class="btn_sign_up" onclick="sign_up()">SIGN UP</button>
-                                    </div>
-                                </div>
+                <div class="main_log">
+                    <div class="login">
+                        <div class="log_sign_up">
+                            <div class="pre_login">
+                                <div class="pre_content">                            
+                                    <h2>LOGIN</h2>  
+                                    <p>여기다 뭐라고 쓰면 좋을지 모르겠엄 친구들 :)</p> 
+                                    <button class="btn_login" onclick="login()">LOGIN</button>                                        
+                                </div>  <!--cont_ba_opcitiy -->
                             </div>
-                        
-                            <div class="back_info">
-                                <div class="back_img">
-                                    <img src="https://images.unsplash.com/42/U7Fc1sy5SCUDIu4tlJY3_NY_by_PhilippHenzler_philmotion.de.jpg?ixlib=rb-0.3.5&q=50&fm=jpg&crop=entropy&s=7686972873678f32efaf2cd79671673d" alt="" />
-                                </div>                        
-                            </div>
-
-                            <div class="forms" >
-                                <div class="back_img_sec">
-                                    <img src="https://images.unsplash.com/42/U7Fc1sy5SCUDIu4tlJY3_NY_by_PhilippHenzler_philmotion.de.jpg?ixlib=rb-0.3.5&q=50&fm=jpg&crop=entropy&s=7686972873678f32efaf2cd79671673d" alt="" />
-                                </div>
-                                <div class="form_login">
-                                    <a href="#" onclick="login_sign_up()" ><i class="material-icons">&#xE5C4;</i></a>
-                                    <h2>LOGIN</h2>
-                                    <input type="text" placeholder="Email" />
-                                    <input type="password" placeholder="Password" />
-                                    <button class="btn_login" onclick="login()">LOGIN</button></br>
-                                    <button class="btn_find" onclick=""><a href="/chef/login/findid.php">FIND ID</a></button>
-                                    <button class="btn_find" onclick=""><a href="/chef/login/findpw.php">FIND PW</a></button>
-                                </div>
-                    
-                                <div class="form_sign_up">
-                                    <a href="#" onclick="login_sign_up()"><i class="material-icons">&#xE5C4;</i></a>
-                                    <h2>SIGN UP</h2>                                    
-                                    <input type="text" placeholder="Name" />
-                                    <input type="text" placeholder="Email" />
-                                    <input type="password" placeholder="Password" />
-                                    <input type="password" placeholder="Confirm Password" />
-                                    <input type="text" placeholder="Phone" class="phone"/>-<input type="text" class="phone"/>-<input type="text" class="phone"/>
-                                    <input type="text" placeholder="Address" />
+                            <div class="pre_sign_up">
+                                <div class="pre_content">
+                                    <h2>SIGN UP</h2>                    
+                                    <p>여기도 뭐라고 써야할지 모르겠어 :)</p>
                                     <button class="btn_sign_up" onclick="sign_up()">SIGN UP</button>
                                 </div>
+                            </div>
+                        </div>
+                    
+                        <div class="back_info">
+                            <div class="back_img">
+                                <img src="back.jpg" alt="" />
                             </div>                        
                         </div>
+
+                        <div class="forms" >
+                            <div class="back_img_sec">
+                                <img src="back.jpg" alt="" />
+                            </div>
+                            <div class="form_login">
+                                <a href="#" onclick="login_sign_up()" ><i class="material-icons">&#xE5C4;</i></a>
+                                <h2>LOGIN</h2>
+                                <input type="text" placeholder="Email" />
+                                <input type="password" placeholder="Password" />
+                                <button class="btn_login" onclick="login()">LOGIN</button></br>
+                                <button class="btn_find" onclick=""><a href="/chef/login/findid.php">FIND ID</a></button>
+                                <button class="btn_find" onclick=""><a href="/chef/login/findpw.php">FIND PW</a></button>
+                            </div> 
+                
+                            <div class="form_sign_up">
+                                <a href="#" onclick="login_sign_up()"><i class="material-icons">&#xE5C4;</i></a>
+                                <h2>SIGN UP</h2>                                    
+                                <input type="text" placeholder="Name" />
+                                <input type="text" placeholder="Email" />
+                                <input type="password" placeholder="Password" />
+                                <input type="password" placeholder="Confirm Password" />
+                                <input type="text" placeholder="Phone" class="phone"/>-<input type="text" class="phone"/>-<input type="text" class="phone"/>
+                                <input type="text" placeholder="Address" />
+                                <button class="btn_sign_up" onclick="sign_up()">SIGN UP</button>
+                            </div>
+                        </div>                        
                     </div>
-                <!-- </div> -->
+                </div>
             </article>
         </main>
 

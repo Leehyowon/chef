@@ -5,6 +5,7 @@
 		<title>CHEF</title>
 		<link href="https://github.com/hyemni/chef/blob/master/image/HBpic.jpeg?raw=true" type="image/jpeg" rel="shortcut icon"/>
         <link href="/chef/main/main.css" type="text/css" rel="stylesheet" />
+        <link href="/chef/login/findID.css" type="text/css" rel="stylesheet" />
     </head>
 
     <body>
@@ -32,15 +33,7 @@
                                     </ul>
                                 </li>
                             </ul>
-                        </li>                                                                                            
-                        <!-- <li>COMMUNITY
-                            <ul>
-                                <li class="mincate"><a href = "/chef/board/notice.html"> Notice </a></li>
-                                <li class="mincate"><a href = "/chef/board/event.html"> Event </a></li>
-                                <li class="mincate"><a href = "/chef/board/qna.html"> QnA </a></li>
-                                <li class="mincate"><a href = "/chef/board/info.html"> Information </a></li>
-                            </ul>
-                        </li> -->
+                        </li>                                                                                                                    
                         <li><a href="#">CUSTOMER CARE</a></li>
                         <li><a href="#">MY PAGE</a></li>
                         <li><a href="/chef/login/login.php">Sign In</a></li>
@@ -50,12 +43,7 @@
 
             
             <article>
-                <div class = "slide">
-                    <img src="https://github.com/hyemni/chef/blob/master/main/image/slide1.png?raw=true" alt="slide image" 
-                    width = "1040px" height = "550px" />
-                </div>
-
-                <section>
+                <!-- <section>
                     <div>
 						<h2>Find ID</h2>
 						<hr/>
@@ -121,6 +109,19 @@
 						}
 						?>
 					</div>
+                </section> -->
+                <section>
+                    <div class="forms">
+                        <!-- <div class="back_img_sec">
+                            <img src="back.jpg" alt="" />
+                        </div> -->
+                        <div class="form_login">
+                            <h2>Find ID</h2>					
+                            <input type="text" placeholder="Name" /></br>
+                            <input type="text" placeholder="Email" /></br>
+                            <button class="btn_login" onclick="">Find ID</button>               												
+                        </div>
+                    </div>
                 </section>
             </article>
         </main>

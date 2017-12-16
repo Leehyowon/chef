@@ -5,6 +5,7 @@
 		<title>CHEF</title>
 		<link href="https://github.com/hyemni/chef/blob/master/image/HBpic.jpeg?raw=true" type="image/jpeg" rel="shortcut icon"/>
         <link href="/chef/main/main.css" type="text/css" rel="stylesheet" />
+        <link href="findpw.css" type="text/css" rel="stylesheet" />
     </head>
 
     <body>
@@ -49,12 +50,8 @@
             </nav>
 
             <article>
-                <div class = "slide">
-                    <img src="https://github.com/hyemni/chef/blob/master/main/image/slide1.png?raw=true" alt="slide image" 
-                    width = "1040px" height = "550px" />
-                </div>
 
-                <section>
+                <!-- <section>
                     <div>
 						<h2>Find PW</h2>
 						<hr/>
@@ -125,6 +122,18 @@
 						}
 						?>
 					</div>
+                </section> -->
+                <section>
+                     <div class="forms">
+                         <div class="form_pw">
+                            <h2>Find PW</h2>
+                            <input type="text" name="findid" placeholder="ID"/></br>
+                            <input type="text" name="findname_pw" placeholder="Name"/></br>
+                            <input type="text" name="email_pw" placeholder="E-mail"/></br>
+                            <button class="btn_pw" name="findpw" value="findpw" onclick="">Find PW</button> 
+                        
+                        </div>
+                    </div>
                 </section>
             </article>
         </main>
