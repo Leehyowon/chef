@@ -1,3 +1,10 @@
+window.onload = function() {
+    var login = document.getElementById("login");
+    login.onclick = login_sign_up;
+    // $().onclick = login();
+    // $().onclick = sign_up();
+};
+
 function login() {
     document.querySelector('.forms').className = "forms active_login";  
     document.querySelector('.form_login').style.display = "block";

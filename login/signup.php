@@ -7,6 +7,7 @@
         <link href="/chef/main/main.css" type="text/css" rel="stylesheet" />
         <link href="/chef/login/signup.css" type="text/css" rel="stylesheet" />
         <script src="/chef/login/signup.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/prototype/1.7.3.0/prototype.js" type="text/javascript"></script>
     </head>
 
     <body>
@@ -218,20 +219,29 @@
                     </div>
                 </section> -->
                 <!-- <div class="cotn_principal"> -->
+                    
                     <div class="main_log">
+                        
                         <div class="login">
+                            <?php
+                            session_start();
+                                
+                            if(!isset($_SESSION['user_id']) || !isset($_SESSION['user_name'])) {
+                            ?>
+                            
                             <div class="log_sign_up">
                                 <div class="pre_login">
                                     <div class="pre_content">                            
                                         <h2>LOGIN</h2>  
-                                        <p>여기다 뭐라고 쓰면 좋을지 모르겠엄 친구들 :)</p> 
+                                        <!-- <p>여기다 뭐라고 쓰면 좋을지 모르겠엄 친구들 :)</p>  -->
                                         <button class="btn_login" onclick="login()">LOGIN</button>                                        
-                                    </div>  <!--cont_ba_opcitiy -->
+                                    </div>  
+                                    <!--cont_ba_opcitiy -->
                                 </div>
                                 <div class="pre_sign_up">
                                     <div class="pre_content">
                                         <h2>SIGN UP</h2>                    
-                                        <p>여기도 뭐라고 써야할지 모르겠어 :)</p>
+                                        <!-- <p>여기도 뭐라고 써야할지 모르겠어 :)</p> -->
                                         <button class="btn_sign_up" onclick="sign_up()">SIGN UP</button>
                                     </div>
                                 </div>
@@ -248,31 +258,67 @@
                                     <img src="https://images.unsplash.com/42/U7Fc1sy5SCUDIu4tlJY3_NY_by_PhilippHenzler_philmotion.de.jpg?ixlib=rb-0.3.5&q=50&fm=jpg&crop=entropy&s=7686972873678f32efaf2cd79671673d" alt="" />
                                 </div>
                                 <div class="form_login">
-                                    <a href="#" onclick="login_sign_up()" ><i class="material-icons">&#xE5C4;</i></a>
+                                    <a href="#" id="login"><i class="material-icons">&#xE5C4;</i></a>
                                     <h2>LOGIN</h2>
-                                    <input type="text" placeholder="Email" />
-                                    <input type="password" placeholder="Password" />
-                                    <button class="btn_login" onclick="login()">LOGIN</button></br>
-                                    <button class="btn_find" onclick=""><a href="/chef/login/findid.php">FIND ID</a></button>
+                                    <form method="post" action="/chef/login/login_ok.php">
+                                        <input type="text" name="logid" placeholder="Your ID"/>
+                                        <input type="password" name="logpw" placeholder="Your Password"/>
+                                            <!-- <button class="btn_login" onclick="login()">LOGIN</button> -->
+                                            <!-- HERE -->
+                                        <input type="submit" class="btn_login" value="LOGIN" onclick="login()" />
+                                            <!-- HERE -->
+                                        <br/>
+                                    </form>
+                                    <button class="btn_find" onclick=""><a href="/chef/login/findID.php">FIND ID</a></button>
                                     <button class="btn_find" onclick=""><a href="/chef/login/findpw.php">FIND PW</a></button>
+                                    
                                 </div>
                     
                                 <div class="form_sign_up">
-                                    <a href="#" onclick="login_sign_up()"><i class="material-icons">&#xE5C4;</i></a>
+                                    <a href="#" id="signup" onclick="login_sign_up()"><i class="material-icons">&#xE5C4;</i></a>
                                     <h2>SIGN UP</h2>                                    
                                     <input type="text" placeholder="Name" />
-                                    <input type="text" placeholder="Email" />
+                                    <input type="text" placeholder="Your ID" />
                                     <input type="password" placeholder="Password" />
                                     <input type="password" placeholder="Confirm Password" />
                                     <input type="text" placeholder="Phone" class="phone"/>-<input type="text" class="phone"/>-<input type="text" class="phone"/>
                                     <input type="text" placeholder="Address" />
-                                    <button class="btn_sign_up" onclick="sign_up()">SIGN UP</button>
+                                    <!-- <button class="btn_sign_up" onclick="sign_up()">SIGN UP</button> -->
+                                    <!-- HERE -->
+                                    <input type="submit" class="btn_sign_up" value="SIGN UP" id="submitButton" onclick="sign_up()" />
+                                    <!-- HERE -->
                                 </div>
-                            </div>                        
+                            </div>    
+                            <?php    
+                            } else {
+                                $user_id = $_SESSION['user_id'];
+                                $user_name = $_SESSION['user_name'];
+                            ?>
+
+                                <!-- 여기.. -->
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <h1 class="logout">안녕하세요. <?= $user_name." (".$user_id.")" ?> 님</h1>
+                                <h1 class="logout"><a href='/chef/login/logout.php'>로그아웃</a></h1>
+                                        
+                            <?php
+                            }?>                
                         </div>
+                 
                     </div>
+                    
+                    <!-- <div> -->
+                             
+                    <!-- </div> -->
                 <!-- </div> -->
             </article>
+            
         </main>
 
         <footer>
@@ -292,7 +338,7 @@
                 <li>OUR STORE</li>
                 <li>회사 : (주)셰프</li>
                 <li>대표 : 김웹앱</li>
-                <li>주소 : 경기도 안산시 상록구 사동 1271 </br>
+                <li>주소 : 경기도 안산시 상록구 사동 1271 <br/>
                     한양대학교 제4공학관 SMaSH룸</li>
                 <li>제휴/제안 : info@hanyang.ac.kr</li>
             </ul>                
