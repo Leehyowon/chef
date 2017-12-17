@@ -57,41 +57,22 @@
                         if(!isset($_SESSION['user_id']) || !isset($_SESSION['user_name'])) {
                         ?>
                         
-<<<<<<< HEAD
+
                         <div class="log_sign_up">
                             <div class="pre_login">
                                 <div class="pre_content">                            
-                                    <h2>LOGIN</h2>  
-=======
-                            <div class="back_info">
-                                <div class="back_img">
-                                    <img src="https://images.unsplash.com/42/U7Fc1sy5SCUDIu4tlJY3_NY_by_PhilippHenzler_philmotion.de.jpg?ixlib=rb-0.3.5&q=50&fm=jpg&crop=entropy&s=7686972873678f32efaf2cd79671673d" alt="" />
-                                </div>                        
-                            </div>
+                                    <h2>LOGIN</h2> 
+                                    <button class="btn_login" onclick="login()">LOGIN</button>
+                                </div>
+                            </div> 
 
-                            <div class="forms" >
+                            <!-- <div class="back_info">
                                 <div class="back_img_sec">
                                     <img src="https://images.unsplash.com/42/U7Fc1sy5SCUDIu4tlJY3_NY_by_PhilippHenzler_philmotion.de.jpg?ixlib=rb-0.3.5&q=50&fm=jpg&crop=entropy&s=7686972873678f32efaf2cd79671673d" alt="" />
-                                </div>
-                                <div class="form_login">
-                                    <a href="#" class="login_sign_up"><i class="material-icons">&#xE5C4;</i></a>
-                                    <h2>LOGIN</h2>
-                                    <form method="post" action="/chef/login/login_ok.php">
-                                        <input type="text" name="logid" placeholder="Your ID"/>
-                                        <input type="password" name="logpw" placeholder="Your Password"/>
-                                            <!-- <button class="btn_login" onclick="login()">LOGIN</button> -->
-                                            <!-- HERE -->
-                                        <input type="submit" id="login" class="btn_login" value="LOGIN" />
-                                            <!-- HERE -->
-                                        <br/>
-                                    </form>
-                                    <button class="btn_find"><a href="/chef/login/findID.php">FIND ID</a></button>
-                                    <button class="btn_find"><a href="/chef/login/findpw.php">FIND PW</a></button>
->>>>>>> c996dd4e4dcc46e31e629104c6a1334bb6a0b10c
-                                    
-                                    <button class="btn_login" onclick="login()">LOGIN</button>                                        
-                                </div>  
-                            </div>
+                                </div>                        
+                            </div> -->
+
+                            
                             <div class="pre_sign_up">
                                 <div class="pre_content">
                                     <h2>SIGN UP</h2>                    
