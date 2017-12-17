@@ -53,7 +53,7 @@
                 $br = $_GET["brand"];
             ?>
             <div id="brandbox">
-                <img src="image/banner/<?= $br ?>.png">
+                <img src="/chef/image/banner/<?= $br ?>.png">
             </div>
 
             <?php
