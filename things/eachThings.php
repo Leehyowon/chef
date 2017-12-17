@@ -102,8 +102,12 @@ dallrang, veneno, joy만 이미지가 있나봄..-->
                         <p><?= $info["price"] ?></p>
                         <p>배송비 2,500</p>
                     </div>
+<<<<<<< HEAD
                     
                     <form class="input">
+=======
+                    <form method="post" class="input" action="/chef/things/buy.php">
+>>>>>>> af42a1a7a1c2b525d0b3a63a853fd1bab4133f0d
                         <ul>
                             <li>주문 수량</br> 
                                 <select name="number">
@@ -127,7 +131,21 @@ dallrang, veneno, joy만 이미지가 있나봄..-->
                         </ul>
 
                         <p>총 상품금액</p>
+<<<<<<< HEAD
                         <button id="buy" type="button" name="buy">구매하기</button>
+=======
+                    <!--이 부분도 php로 하는건가?-->
+
+                    <!-- <div> -->
+                        <!-- <p><a href="">구매하기</a></p>
+                        <p><a href="">장바구니</a></p> -->
+                        <!-- <form method="post"> -->
+                        <!-- <button id="buy" type="button" name="buy">구매하기</button> -->
+                        <input type="hidden" name="brand" value="<?=$brand?>" />   
+                        <input type="hidden" name="price" value="<?=$info["price"]?>" />    
+                        <input type="hidden" name="name" value="<?=$info["name"]?>" />  
+                        <input type="submit" value="구매하기" />
+>>>>>>> af42a1a7a1c2b525d0b3a63a853fd1bab4133f0d
                         <button id="pocket" type="button" name="pocket">장바구니</button>
                     </form>
                 </div>
@@ -138,7 +156,41 @@ dallrang, veneno, joy만 이미지가 있나봄..-->
                     </div>
                 </section>
             </article>
+<<<<<<< HEAD
             
+=======
+            <section>
+                <hr/>
+
+                <div class="button">
+                    <p><a href="">상세정보</a></p>
+                    <p><a href="/chef/things/things_blog.html">제품후기</a></p>
+                </div>
+
+                <hr/>
+
+                <?php
+                    $num = substr($productName,-1);
+                    // print_r($num);
+                ?>
+
+                <div class="thing_information"> <!--상세 정보-->
+                    <!-- <h3>comment</h3>
+                    <p>가볍고 분위기 있는 드롭 디자인의 이어링.</p>
+                    <p>원형과 드롭 스틱에 어우러진 체인 추가</p> -->
+                    <img src="/chef/image/<?=$brand?>/details/<?=$num?>_1.png" alt="ChainStick">
+                    <!-- <p>알맞게 떨어지는 체인드롭이 매우 분위기 있습니다.</p> -->
+                    <img src="/chef/image/<?=$brand?>/details/<?=$num?>_2.png" alt="">
+                    <!-- <p>유니크한 디자인에 깔끔하여 자꾸 눈이 가는 이어링이예요.</p>
+                    <p>평소에 가벼운 드롭 스타일을 찾으셨다면, 정말 추천드립니다.</p> -->
+                </div>
+
+                <!--<div class="thing_blog"> 제품 후기
+
+                </div>-->
+
+            </section>
+>>>>>>> af42a1a7a1c2b525d0b3a63a853fd1bab4133f0d
         </main>
 
         <footer>
