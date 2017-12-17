@@ -199,13 +199,18 @@ dallrang, veneno, joy만 이미지가 있나봄..-->
 
                 <hr/>
 
+                <?php
+                    $num = substr($productName,-1);
+                    // print_r($num);
+                ?>
+
                 <div class="thing_information"> <!--상세 정보-->
                     <!-- <h3>comment</h3>
                     <p>가볍고 분위기 있는 드롭 디자인의 이어링.</p>
                     <p>원형과 드롭 스틱에 어우러진 체인 추가</p> -->
-                    <img src="/chef/image/wootique/details/체인스틱2.png" alt="ChainStick">
+                    <img src="/chef/image/<?=$brand?>/details/<?=$num?>_1.png" alt="ChainStick">
                     <!-- <p>알맞게 떨어지는 체인드롭이 매우 분위기 있습니다.</p> -->
-                    <img src="/chef/image/wootique/details/체인스틱착샷.png" alt="">
+                    <img src="/chef/image/<?=$brand?>/details/<?=$num?>_2.png" alt="">
                     <!-- <p>유니크한 디자인에 깔끔하여 자꾸 눈이 가는 이어링이예요.</p>
                     <p>평소에 가벼운 드롭 스타일을 찾으셨다면, 정말 추천드립니다.</p> -->
                 </div>
