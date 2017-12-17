@@ -1,0 +1,47 @@
+article{
+    width: 800px;
+    margin: auto;
+    margin-top: 200px;
+    font-weight: 300;
+    margin-bottom: 200px;
+}
+
+h1{
+    font-size: 20pt;
+    margin-bottom: 50px;
+    text-align: center;
+    font-weight: 300;
+    font-family: 'Open Sans', sans-serif;
+}
+.hi p{
+    text-align: center;
+    font-size: 13pt;
+
+}
+hr{
+    margin: 50px;
+}
+
+.help{
+    float: left;
+    text-align: center;
+}
+
+.help p{
+    margin-left: 120px;
+    margin-right: 100px;
+    font-size: 13pt;
+}
+input{
+    width: 255px;
+    height: 25px;
+    margin-bottom: 3px;
+}
+button{
+    width: 50px;
+    height: 30px;
+    float: right;
+    border: none;
+    background-color: #ffd1b7;
+    margin-right: 85px;
+}
