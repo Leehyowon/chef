@@ -142,7 +142,7 @@ dallrang, veneno, joy만 이미지가 있나봄..-->
                         <p><?= $info["price"] ?></p>
                         <p>2,500</p>
                     </div>
-                    <form class="input">
+                    <form method="post" class="input" action="/chef/things/buy.php">
                         <ul>
                             <li>주문 수량  <!--form으로 받게 해야할거같음-->
                                 <select name="number">    <!--아직 form으로 숫자를 받아서 저장하는법을 몰라서 1~5중에서 선택하게 만들었음-->
@@ -179,7 +179,11 @@ dallrang, veneno, joy만 이미지가 있나봄..-->
                         <!-- <p><a href="">구매하기</a></p>
                         <p><a href="">장바구니</a></p> -->
                         <!-- <form method="post"> -->
-                        <button id="buy" type="button" name="buy">구매하기</button>
+                        <!-- <button id="buy" type="button" name="buy">구매하기</button> -->
+                        <input type="hidden" name="brand" value="<?=$brand?>" />   
+                        <input type="hidden" name="price" value="<?=$info["price"]?>" />    
+                        <input type="hidden" name="name" value="<?=$info["name"]?>" />  
+                        <input type="submit" value="구매하기" />
                         <button id="pocket" type="button" name="pocket">장바구니</button>
                     </form>
                     <!-- </div> -->
