@@ -2,7 +2,7 @@ window.onload = function() {
 	document.querySelector('.after').style.display = "none";
 	$("edit").onclick = edit;
 	$("cancel").onclick = cancel;
-}
+};
 
 function edit(){
 	document.querySelector('.before').style.display = "none";
