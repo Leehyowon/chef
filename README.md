@@ -7,9 +7,9 @@
 + 2016003609 Sung Jina
 + 2016003854 Lee Hyowon
 
-## What is this 'CHEF' page?
+## 2. What is this 'CHEF' page?
 
-## Detailed field
+## 3. Detailed field
 
 ### Data Collection
 * jewelry : /image/wootique ||dallrang
@@ -63,7 +63,7 @@
 **Chaeein Kwon**
 * create table & insert data : chef.sql
 
-## DATABASE
+## 4. DATABASE
 **Create DB**
 * mysql -uroot -proot 
 * create database chef;
