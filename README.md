@@ -11,16 +11,16 @@
 
 ## 3. Detailed field
 
-### Data Collection
+### - Data Collection
 * jewelry : /image/wootique ||dallrang
 
 **Hyowon Lee**
 * jewelry : /image/joy || veneno || wingbling || ringing
 * slime : /image/slime1 || slime2 || slime3 
 
-### HTML
+### - HTML
 **Hyebeen Kim**
-* a product information (Wootique) : /things/things.html
+* <Do not use> a product information (Wootique) : /things/things.html
 * product review page for above html : /things/things_blog.html
 * new writing page of product review : /things/writingblog.html
 * We can look what I ordered; JANGBAGUNI : /mypage/buypocket.html
@@ -37,7 +37,7 @@
 * categories of QnA board : /board/category_qna/
 * categories of information board : /board/category_info/
 
-### CSS
+### - CSS
 **Hyowon Lee**
 * basis of main page : /main/main.css
 
@@ -54,6 +54,9 @@
 
 **Chaeeun Kwon**
 * bybrand : bybrand.php
+
+**Hyebeen Kim**
+* each product's information shopping page : /things/eachThings.php
 
 ### JavaScript
 **Hyebeen Kim**
