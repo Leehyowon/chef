@@ -8,6 +8,11 @@
 + 2016003854 Lee Hyowon
 
 ## 2. What is this 'CHEF' page?
+This ‘**CHEF**’ page is Online Shopping Page.
+We don’t cell “own” clothes, earrings, necklaces and slimes.
+Many Foundation Club is in Hanyang univ.ERICA.
+There are many founding club for earrings, clothes, necklaces, and slimes in Hanyang university ERICA.
+So, we serve as brokers for many founding clubs through our online shopping page called ‘**CHEF**’.
 
 ## 3. Detailed field
 
