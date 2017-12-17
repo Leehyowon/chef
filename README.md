@@ -47,10 +47,13 @@ There are many founding club for earrings, clothes, necklaces, and slimes in Han
 
 ### - PHP
 **Jina Sung**
-  * Log in : /login/login.php
-  * Sign Up : /login/signup.php
+  * Sign Up & Log in : /login/signup.php , signupCheck.php , login_ok.php
+  * Log Out : /login/logout.php
   * Find ID : /login/findID.php
   * Find Password : /login/findpw.php
+  * User Info : /mypage/info.php
+  * Search : /main/search.php
+  * Details of Things : /things/eachThings.php
 
 **Chaeeun Kwon**
   * bybrand : bybrand.php
@@ -65,6 +68,9 @@ There are many founding club for earrings, clothes, necklaces, and slimes in Han
 **Hyemin Nam**
 * image slider of main page(reference of web)
 * login & signup & find id & find pw & current login status(reference of web)
+
+**Jina Sung**
+* search & User info & Search
 
 ### - Database
 **Chaeein Kwon**
@@ -85,7 +91,7 @@ There are many founding club for earrings, clothes, necklaces, and slimes in Han
   * flush privileges;
 
 **If you want to log in, Use**
-ID : abc1001 / PW : def0110
+ID : abc1001 / PW : def0110  or  ID : root / PW : root
 
 ## 5. REFERENCE & SOURCE OF PRODUCT PHOTO
 **Founding Clubs OF Hanyang univ.ERICA**
