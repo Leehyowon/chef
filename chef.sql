@@ -75,6 +75,20 @@ INSERT INTO `product` VALUES ('joy11', 'joy', '달진주언발', 14500, 100, 1, 
 INSERT INTO `product` VALUES ('joy12', 'joy', '썬셋글라스드롭', 15800, 100, 1, '2017-11-07');
 
 
+INSERT INTO `product` VALUES ('ven1', 'veneno', '달밤', 12500, 200, 1, '2017-10-27');
+INSERT INTO `product` VALUES ('ven2', 'veneno', '별밤', 10000, 150, 1, '2017-10-31');
+INSERT INTO `product` VALUES ('ven3', 'veneno', '무지개', 13000, 300, 1, '2017-11-01');
+INSERT INTO `product` VALUES ('ven4', 'veneno', '무화과', 10500, 100, 1, '2017-11-07');
+INSERT INTO `product` VALUES ('ven5', 'veneno', '프로젝트', 9500, 200, 1, '2017-11-08');
+INSERT INTO `product` VALUES ('ven6', 'veneno', '트리플링', 8500, 100, 1, '2017-11-11');
+INSERT INTO `product` VALUES ('ven7', 'veneno', '제주말', 12500, 99, 1, '2017-11-13');
+INSERT INTO `product` VALUES ('ven8', 'veneno', '못된고양이', 14500, 70, 1, '2017-11-15');
+INSERT INTO `product` VALUES ('ven9', 'veneno', '잘생긴치타', 12000, 100, 1, '2017-11-16');
+INSERT INTO `product` VALUES ('ven10', 'veneno', '진주', 9000, 200, 1, '2017-11-16');
+INSERT INTO `product` VALUES ('ven11', 'veneno', '릴리', 9000, 100, 1, '2017-11-20');
+INSERT INTO `product` VALUES ('ven12', 'veneno', '음표', 8000, 100, 1, '2017-11-21');
+
+
 
 INSERT INTO `consumer` VALUES ('abc1001','def0110','abc1001@naver.com','Jina','01012345678','1998-02-13','F');
 INSERT INTO `consumer` VALUES ('root','root','root@naver.com','Jina','01012345678','1998-02-13','F');
