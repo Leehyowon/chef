@@ -1,4 +1,4 @@
-# CHEF - Centre of Hanyang univ.ERICA Foundation Club
+# CHEF - Centre of Hanyang univ.ERICA Founding Club
 
 ## 1. Members
 + 2016003 Kwon Chaeeun
