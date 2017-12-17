@@ -1,14 +1,11 @@
-<!--상품 설명 페이지-->
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8">
+        <meta charset="utf-8" />
         <title>CHEF</title>
-        <link href="/chef/main/favicon.png" type="image/png" rel="shortcut icon"/>
+        <link href="https://github.com/hyemni/chef/blob/master/image/HBpic.jpeg?raw=true" type="image/jpeg" rel="shortcut icon"/>
         <link href="/chef/main/main.css" type="text/css" rel="stylesheet" />
-        <link href="/chef/things/brandthings.css" type="text/css" rel="stylesheet"> <!-- 임시 css파일 -->
-        <script src="ThingFunc.js" type="text/javascript"></script>
-        <script src="http://malsup.github.com/jquary.cycle2.js"></script>
+        <link href="/chef/product/product.css" type="text/css" rel="stylesheet" />
     </head>
 
     <body>
@@ -23,14 +20,14 @@
                                 <li><a href="/chef/brand.php?brand=wootique">by Brand</a>
                                     <ul>
                                         <li><a href = "/chef/brand/brand.php?brand=wootique">Wootique</a></li>
-                                        <li><a href = "/chef/things/BrandThings.php">Dallrang</a></li>
+                                        <li><a href = "/chef/brand/brand.php?brand=dallrang">Dallrang</a></li>
                                         <li><a href = "/chef/brand/brand.php?brand=veneno">veneno</a></li>
                                         <li><a href = "/chef/brand/brand.php?brand=joy">joy</a></li>
                                         <li><a href = "/chef/brand/brand.php?brand=ringing">ringing</a></li>
                                         <li><a href = "/chef/brand/brand.php?brand=wingbling">wingbling</a></li>
-                                        <li><a href = "/chef/brand/brand.php?brand=slime1">Slimingo</a></li>
-                                        <li><a href = "/chef/brand/brand.php?brand=slime2">Byslime</a></li>
-                                        <li><a href = "/chef/brand/brand.php?brand=slime3">Sliming</a></li>
+                                        <li><a href = "/chef/brand/brand.php?brand=slimingo">Slimingo</a></li>
+                                        <li><a href = "/chef/brand/brand.php?brand=beslime">Beslime</a></li>
+                                        <li><a href = "/chef/brand/brand.php?brand=sliming">Sliming</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="#">by Product</a>
@@ -50,40 +47,21 @@
                     </ul>
                 </div>
             </nav>
-    
             <article>
-                <div class = "slide">
-                    <img src="/chef/imageSlider/img/ban01.jpg" alt="slide image" />
-                </div>
+                <?php 
+                    $categ = $_GET["category"];
+                ?>
 
-                <h1>DALLANG</h1>
-                <h2>이어링</h2>
-                <hr />
-                <div class="sort">
-                    <select name="sort">
-                        <option value="가격높은순">가격높은순</option>
-                        <option value="가격낮은순">가격낮은순</option>
-                    </select>
-                </div>
-                <div class="imgg">
-                    <?php for ($i=1; $i<=5; $i++) { ?>
-                        <a href="/chef/things/things.html"> <img src="/chef/image/dallrang/dal<?= $i ?>.png" alt="dal<?= $i ?>" /> </a>
-                        <!-- <p>dall<?= $i ?></p> -->
-                        <?php if ($i%3==0) { ?>
-                            <br />
-                            <?php for ($j=$i-2;$j<=3;$j++) { ?>
-                                <div class="name">
-                                    <p>dall<?= $j ?></p>
-                                    <p>달랑이래요~</p>
-                                </div>
-                            <?php } ?>
-                        <?php } ?>
-                    <?php } ?>
-                </div>
+                <?php
+                    $db = new PDO("mysql:dbname=CHEF;host=localhost", "root", "root");
+                    $rows = $db -> query("SELECT product_id,brand,name FROM product WHERE kind = '$categ'");
+                    foreach ($rows as $row) {?>
+                        <div id="itembox">
+                            <img src="/chef/image/<?=$row["brand"]?>/<?=$row["product_id"]?>.png">
+                            <p><a href="">[<?=$br?>] <?=$row["name"]?></a></p>
+                        </div>       
+                    <?php } ?>                    
             </article>
-            <section>
-
-            </section>
         </main>
 
         <footer>

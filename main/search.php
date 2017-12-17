@@ -35,9 +35,9 @@
                                 </li>
                                 <li><a href="#">by Product</a>
                                     <ul>
-                                        <li><a href="/chef/things/BrandThings.php">Clothes</a></li>
-                                        <li><a href="/chef/things/BrandThings.php">Jewelry</a></li>
-                                        <li><a href="#">Slime</a></li>
+                                        <li><a href="/chef/product/categ.php?category=1">Clothes</a></li>
+                                        <li><a href="/chef/product/categ.php?category=2">Jewelry</a></li>
+                                        <li><a href="/chef/product/categ.php?category=3">Slime</a></li>
                                     </ul>
                                 </li>
                             </ul>
