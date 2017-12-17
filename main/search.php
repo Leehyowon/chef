@@ -5,7 +5,9 @@
 		<title>CHEF</title>
 		<link href="/chef/main/favicon.png" type="image/png" rel="shortcut icon"/>
         <link href="/chef/main/main.css" type="text/css" rel="stylesheet" />
-        <script src="/chef/main/search.js"></script>
+        <link href="/chef/main/search.css" type="text/css" rel="stylesheet" />
+        <script src="/chef/main/search.js" type="text/javascript"></script>
+        <script src="/chef/main/search2.js" type="text/javascript"></script>
         <script src="http://ajax.googleapis.com/ajax/libs/prototype/1.7.3.0/prototype.js" type="text/javascript"></script>
     </head>
 
@@ -52,19 +54,18 @@
             <article>
 
                 <section>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <p>요기</p> <!--here-->
-                    <form method="post">
+                    <!-- <form method="post">
                         <input type="text" name="searchName" id="search" placeholder="search" />
                         <input type="submit" name="search" value="search" />
+                    </form> -->
+                   
+                    <form>
+                        <input type="text" />
+                        <div class="after"></div>
+                        <input type="submit" />
                     </form>
+                    <h4>&nbsp;</h4>
+                    <p>Click search, Enter to submit</p>
                     <?php
                         $host = 'localhost';
                         $user = 'chef';
