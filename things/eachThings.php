@@ -68,7 +68,7 @@ dallrang, veneno, joy만 이미지가 있나봄..-->
                 $productName = $_GET["productName"];
 
                 $db = new PDO("mysql:dbname=CHEF;host=localhost", "root", "root");
-                $info = $db -> query("SELECT * FROM product WHERE brand = '$brand' AND name='$productName'");
+                $info = $db -> query("SELECT name,price FROM product WHERE brand = '$brand' AND name='$productName'");
             ?>
 
 
