@@ -2,7 +2,7 @@
 
 ## Members
 + Kwon Chaeeun
-+ Kim Hyebeen
++ 2016003454 Kim Hyebeen
 + Nam Hyemin
 + Sung Jina
 + Lee Hyowon
