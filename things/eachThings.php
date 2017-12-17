@@ -13,46 +13,43 @@
 
     <body>
         <main>
-        <nav>
-            <div>
-                <ul>
-                    <li><a href="/chef/main/index1.html" id="mainpage">CHEF</a></li>
-                    <li><a href="/chef/main/index1.html">HOME</a></li>
-                    <li><a href="#">SHOP</a>
-                        <ul class="submenu">
-                            <li><a href="/chef/brand.php?brand=wootique">by Brand</a>
-                                <ul>
-                                    <li><a href = "/chef/brand/brand.php?brand=wootique">Wootique</a></li>
-                                    <li><a href = "/chef/brand/brand.php?brand=dallrang">Dallrang</a></li>
-                                    <li><a href = "/chef/brand/brand.php?brand=veneno">veneno</a></li>
-                                    <li><a href = "/chef/brand/brand.php?brand=joy">joy</a></li>
-                                    <li><a href = "/chef/brand/brand.php?brand=ringing">ringing</a></li>
-                                    <li><a href = "/chef/brand/brand.php?brand=wingbling">wingbling</a></li>
-                                    <li><a href = "/chef/brand/brand.php?brand=slime1">Slimingo</a></li>
-                                    <li><a href = "/chef/brand/brand.php?brand=slime2">Byslime</a></li>
-                                    <li><a href = "/chef/brand/brand.php?brand=slime3">Sliming</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">by Product</a>
-                                <ul>
-                                    <li><a href="/chef/things/BrandThings.php">Clothes</a></li>
-                                    <li><a href="/chef/things/BrandThings.php">Jewelry</a></li>
-                                    <li><a href="#">Slime</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
+            <nav>
+                <div>
+                    <ul>
+                        <li><a href="/chef/main/index1.html" id="mainpage">CHEF</a></li>
+                        <li><a href="/chef/main/index1.html">HOME</a></li>
+                        <li><a href="#">SHOP</a>
+                            <ul class="submenu">
+                                <li><a href="/chef/brand.php?brand=wootique">by Brand</a>
+                                    <ul>
+                                        <li><a href = "/chef/brand/brand.php?brand=wootique">Wootique</a></li>
+                                        <li><a href = "/chef/brand/brand.php?brand=dallrang">Dallrang</a></li>
+                                        <li><a href = "/chef/brand/brand.php?brand=veneno">veneno</a></li>
+                                        <li><a href = "/chef/brand/brand.php?brand=joy">joy</a></li>
+                                        <li><a href = "/chef/brand/brand.php?brand=ringing">ringing</a></li>
+                                        <li><a href = "/chef/brand/brand.php?brand=wingbling">wingbling</a></li>
+                                        <li><a href = "/chef/brand/brand.php?brand=slimingo">Slimingo</a></li>
+                                        <li><a href = "/chef/brand/brand.php?brand=beslime">Beslime</a></li>
+                                        <li><a href = "/chef/brand/brand.php?brand=sliming">Sliming</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">by Product</a>
+                                    <ul>
+                                        <li><a href="/chef/things/BrandThings.php">Clothes</a></li>
+                                        <li><a href="/chef/things/BrandThings.php">Jewelry</a></li>
+                                        <li><a href="#">Slime</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
 
-                    <li><a href="#">CUSTOMER CARE</a></li>
-                    <li><a href="/chef/mypage/mypage.php">MY PAGE</a></li>
-                    <li><a href="/chef/login/signup.php">Sign In</a></li>
-                    <li><a href="/chef/main/search.php">Search</a></li>
-                </ul>
-            </div>
-        </nav>
-
-<!-- /things/eachThings.php?brand=***&productName=***
-dallrang, veneno, joy만 이미지가 있나봄..-->
+                        <li><a href="#">CUSTOMER CARE</a></li>
+                        <li><a href="/chef/mypage/mypage.php">MY PAGE</a></li>
+                        <li><a href="/chef/login/signup.php">Sign In</a></li>
+                        <li><a href="/chef/main/search.php">Search</a></li>
+                    </ul>
+                </div>
+            </nav>
 
             <?php
                 $brand = $_GET["brand"];
@@ -96,21 +93,16 @@ dallrang, veneno, joy만 이미지가 있나봄..-->
                 </div>
 
 
-                <div class="one_two"> <!--귀걸이 상품들 정보를 모아 데이터베이스를 이용해서 불러와야 할 것 같음  -->
+                <div class="one_two"> 
                     <h2><?= $info["name"] ?></h2>
                     <div class="price">
-                        <p><?= $info["price"] ?></p>
+                        <p>판매가 <?= $info["price"] ?></p>
                         <p>배송비 2,500</p>
                     </div>
-<<<<<<< HEAD
-                    
-                    <form class="input">
-=======
                     <form method="post" class="input" action="/chef/things/buy.php">
->>>>>>> af42a1a7a1c2b525d0b3a63a853fd1bab4133f0d
                         <ul>
-                            <li>주문 수량</br> 
-                                <select name="number">
+                            <li>주문 수량 </br> 
+                                <select name="number">  
                                     <option>1</option>
                                     <option>2</option>
                                     <option>3</option>
@@ -118,79 +110,40 @@ dallrang, veneno, joy만 이미지가 있나봄..-->
                                     <option>5</option>
                                 </select>
                             </li>
-                            
-                            <li>소재</br>                            
+                           
+                            <li>소재 </br>                           
                                 <select name="ringoption">
                                     <option>골드</option>
                                     <option>실버</option>
                                     <option>무니켈</option>
                                 </select>
                             </li>
-                            <!--주문하기 버튼을 눌렀을때 위에 변수 number와 ringoption을 데이터형식으로 저장할 수 있게 내보내는 방법을 찾아야 함ㅠ
-                            <input type="submit" name="put" value="주문하기" /> -->
+                            
                         </ul>
-
                         <p>총 상품금액</p>
-<<<<<<< HEAD
-                        <button id="buy" type="button" name="buy">구매하기</button>
-=======
-                    <!--이 부분도 php로 하는건가?-->
+            
 
-                    <!-- <div> -->
-                        <!-- <p><a href="">구매하기</a></p>
-                        <p><a href="">장바구니</a></p> -->
-                        <!-- <form method="post"> -->
-                        <!-- <button id="buy" type="button" name="buy">구매하기</button> -->
                         <input type="hidden" name="brand" value="<?=$brand?>" />   
                         <input type="hidden" name="price" value="<?=$info["price"]?>" />    
                         <input type="hidden" name="name" value="<?=$info["name"]?>" />  
-                        <input type="submit" value="구매하기" />
->>>>>>> af42a1a7a1c2b525d0b3a63a853fd1bab4133f0d
+                        <input type="submit" id="buy" value="구매하기" />
                         <button id="pocket" type="button" name="pocket">장바구니</button>
                     </form>
                 </div>
                 <section>
-                    <div class="thing_information"> <!--상세 정보-->
-                        <img src="/chef/image/wootique/details/2_1.png" alt="ChainStick">
-                        <img src="/chef/image/wootique/details/2_2.png" alt="">
+                    
+                    <?php
+                        $num = substr($productName,-1);
+                        // print_r($num);
+                    ?>
+
+                    <div class="thing_information">                    
+                        <img src="/chef/image/<?=$brand?>/details/<?=$num?>_1.png" alt="ChainStick">                    
+                        <img src="/chef/image/<?=$brand?>/details/<?=$num?>_2.png" alt="">
+                        
                     </div>
                 </section>
-            </article>
-<<<<<<< HEAD
-            
-=======
-            <section>
-                <hr/>
-
-                <div class="button">
-                    <p><a href="">상세정보</a></p>
-                    <p><a href="/chef/things/things_blog.html">제품후기</a></p>
-                </div>
-
-                <hr/>
-
-                <?php
-                    $num = substr($productName,-1);
-                    // print_r($num);
-                ?>
-
-                <div class="thing_information"> <!--상세 정보-->
-                    <!-- <h3>comment</h3>
-                    <p>가볍고 분위기 있는 드롭 디자인의 이어링.</p>
-                    <p>원형과 드롭 스틱에 어우러진 체인 추가</p> -->
-                    <img src="/chef/image/<?=$brand?>/details/<?=$num?>_1.png" alt="ChainStick">
-                    <!-- <p>알맞게 떨어지는 체인드롭이 매우 분위기 있습니다.</p> -->
-                    <img src="/chef/image/<?=$brand?>/details/<?=$num?>_2.png" alt="">
-                    <!-- <p>유니크한 디자인에 깔끔하여 자꾸 눈이 가는 이어링이예요.</p>
-                    <p>평소에 가벼운 드롭 스타일을 찾으셨다면, 정말 추천드립니다.</p> -->
-                </div>
-
-                <!--<div class="thing_blog"> 제품 후기
-
-                </div>-->
-
-            </section>
->>>>>>> af42a1a7a1c2b525d0b3a63a853fd1bab4133f0d
+            </article>            
         </main>
 
         <footer>
