@@ -3,7 +3,7 @@
 ## 1. Members
 + 2016003 Kwon Chaeeun
 + 2016003454 Kim Hyebeen
-+ 2016003 Nam Hyemin
++ 2016003463 Nam Hyemin
 + 2016003609 Sung Jina
 + 2016003854 Lee Hyowon
 
@@ -17,11 +17,13 @@ There are many founding club for earrings, clothes, necklaces, and slimes in Han
 ## 3. Detailed field
 
 ### - Data Collection
+**Hyemin Nam**
   * jewelry : /image/wootique ||dallrang
 
 **Hyowon Lee**
   * jewelry : /image/joy || veneno || wingbling || ringing
   * slime : /image/slime1 || slime2 || slime3
+  
 
 ### - HTML
 **Hyebeen Kim**
@@ -33,21 +35,15 @@ There are many founding club for earrings, clothes, necklaces, and slimes in Han
 
 **Hyowon Lee**
   * main page of CHEF : /main/index1.html
-  * notice board : /board/notice.html
-  * event board : /board/event.html
-  * QnA board : /board/qna.html
-  * information board : /board/info.html
-  * input format for QnA board : /board/write_qna.html
-  * categories of QnA board : /board/category_qna/
-  * categories of information board : /board/category_info/
+  
+**Hyemin Nam**
+* customer care : /customer/customer.html
+* nav of all pages
+* image slider of main page
 
 ### - CSS
-**Hyowon Lee**
-  * basis of main page : /main/main.css
-
-**Hyebeen Kim**
-  * design of things*.html : /things/things.css
-  * design of buypocket.html : /mypage/buypocket.css
+**Hyemin Nam**
+* all css file
 
 ### - PHP
 **Jina Sung**
@@ -65,6 +61,10 @@ There are many founding club for earrings, clothes, necklaces, and slimes in Han
 ### - JavaScript
 **Hyebeen Kim**
   * eachThings.php's function information of javascript : /things/ThingFunc.js
+  
+**Hyemin Nam**
+* image slider of main page(reference of web)
+* login & signup & find id & find pw & current login status(reference of web)
 
 ### - Database
 **Chaeein Kwon**
