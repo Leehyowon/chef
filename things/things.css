@@ -1,58 +1,14 @@
-/* 임시 css파일
-.slide {
-    margin-left: auto;
-    margin-right: auto;
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Open Sans', sans-serif;
 }
-h1 {
-    font-size: 35pt;
-    text-align: center;
-}
-h2 {
-    font-size: 25pt;
-}
-h3 {
-    font-size: 20pt;
-}
-.picture img {
-    width: 500px;
-    height: 500px;
-}
-section img {
-    width: 700px;
-}
-article, section {
-    font-size: 12pt;
-    margin-left: auto;
-    margin-right: auto;
-    width: 1000px;
-    background-color: #fff9f1;
-}
-section {
-    text-align: center;
-    padding-bottom: 30px;
-}
-article li {
-    list-style: none;
+#brandbox img{
     display: block;
-    margin-bottom: 4px;
-    overflow: hidden;
+    margin: auto;
+    margin-bottom:  50px;
 }
-.one_two .input p {
-    text-align: left;
-}
-.picture {
-    float: left;
-    margin-left: 30px;
-    overflow: hidden;
-}
-.one_two {
-    text-align: right;
-    margin-right: 30px;
-    float: right;
-    clear: right;
-} */
-
-article, section{
+article{
     width: 900px;
     margin: auto;
 }
@@ -64,4 +20,67 @@ article{
     width: 450px;
     height: 450px;
     float: left;
+    margin-right: 40px;
 }
+
+.one_two h2{
+    font-weight: 40;
+    font-size: 30pt;
+    font-weight: 100;
+    
+}
+
+.price{
+    margin: 50px;
+    font-size: 18pt;
+    color: gray;
+    font-weight: 100;
+}
+
+.input ul{
+    list-style: none;
+}
+
+.input li{
+    font-size: 13pt;
+    font-weight: 100;
+    margin: 20px;
+}
+
+.input select{
+    width: 200px;
+    height: 40px;
+    border: none;
+
+}
+
+button{
+    width: 100px;
+    height: 40px;
+    border: none;
+    color: white;
+}
+#buy{
+    background-color: #a1c9db;
+}
+#pocket{
+    background-color: #bfa1db;
+}
+
+section img{
+    display: block;
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    margin-bottom: 100px;
+}
+
+.one_two, section{
+    margin-bottom: 200px;
+}
+.one_two{
+    height: 450px;
+}
+
+
+
