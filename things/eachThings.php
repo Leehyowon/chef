@@ -133,7 +133,8 @@
                 <section>
                     
                     <?php
-                        $num = substr($productName,-1);
+                         $num = substr($productName,3);
+
                         // print_r($num);
                     ?>
 
