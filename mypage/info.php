@@ -88,7 +88,7 @@
                         <p>Name : <?=$row["name"]?> </p>
                         <p>PW : <input type="text" name="pw" value="<?=$row["pwd"]?>" placeholder="<?=$row["pwd"]?>" /></p>
                         <p>E-mail : <input type="text" name="email" value="<?=$row["email"]?>" placeholder="<?=$row["email"]?>" /></p>
-                        <p>Phone : <input type="text" name="phone" valud="<?=$row["tel"]?>" placeholder="<?=$row["tel"]?>" /></p>
+                        <p>Phone : <input type="text" name="phone" value="<?=$row["tel"]?>" placeholder="<?=$row["tel"]?>" /></p>
                         <p>Birth : <?=$row["birth"]?></p>
                         <p>Gender : <?=$row["gender"]?></p>
                         <input type="submit" name="changeInfo" value="Change" />
