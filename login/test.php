@@ -12,6 +12,7 @@
     	<form method="post">
         <p> ID : <input type="text" name="id" /> </p>
         <p> PW : <input type="password" name="pw" /> </p>
+        <p> Birth : <input type="date" name="birth" /> </p>
         <p>
             <div id="submitButton" >
               	<input type="submit" name="submit" value="submit" />
@@ -21,9 +22,9 @@
 
         <?php
             $host = 'localhost';
-            $user = 'chef';
-            $pw = '1234';
-            $dbName = 'testdb';
+            $user = 'root';
+            $pw = 'root';
+            $dbName = 'test';
             $mysqli = new mysqli($host, $user, $pw, $dbName);
             // if($mysqli){
             //     echo "MySQL 접속 성공";
@@ -31,59 +32,28 @@
             //     echo "MySQL 접속 실패";
             // }
 
-            $sql = "CREATE TABLE myclass_tb (";
-			$sql = $sql."id varchar(12) not null,";
-			$sql = $sql."name varchar(8) not null,";
-			$sql = $sql."sex char(2),";
-			$sql = $sql."age int,";
-			$sql = $sql."point int,";
-			$sql = $sql."address varchar(7),";
-			$sql = $sql."primary key(id));";
-			 
-			if($mysqli->query($sql)){
-			 echo '테이블 생성 완료';
-			}else{
-			 echo '테이블 생성 실패';
-			}
+            
 			$id = $_POST['id'];
             $pw = $_POST['pw'];  
-			 
-			$sql = "insert into myclass_tb values";
-			$sql = $sql."('".$id."', '둘리', '남', 10, 100, 'korea')";
-			$mysqli->query($sql);
+            $date = $_POST['birth'];
+   
+            $newformat = date('Y-m-d',strtotime($date));
 
- 
-			$sql = 'SELECT * FROM myClass_tb';
-			$res = $mysqli->query($sql);
-			 
-			echo 'count is '.$res->field_count;
+            $sql = "INSERT into TEST values('".$id."','".$pw."','".$newformat."')";
+            $mysqli->query($sql);
 
-
-                        
-   //          if ($_SERVER["REQUEST_METHOD"] == "POST") {
-   //              $id = $_POST['id'];
-   //              $pw = $_POST['pw'];      	
-                                  
-   //              $sql = "insert INTO `test` VALUES";
-   //              $sql = $sql."(".$id.",".$pw.");";
-   //              if($mysqli->query($sql)){
-   //              	echo "Success";
-   //              }
-
-   //             //  $select = "select * from consumer;";
-   //             //  $rows = $db->query($select);
-   //            	// foreach ($rows as $row){
-   //             //  ?>
-   //             //      <li>
-   //             //          <?php 
-   //             // 	        foreach ($row as $val){
-   //          	  //           print_r($val." ");
-   //            	//         } 
-   //             //          ?>      
-   //             //      </li>
-   //             //  <?php
-   //             //  }
-			// }
+            $sql2 = "SELECT * from test";
+			$result = $mysqli->query($sql2);
+            if ($result->num_rows > 0) {
+            // output data of each row
+                while($row = $result->fetch_assoc()) {
+                    // echo "id: " . $row["consumer_id"];
+                    print_r($row);
+                    print "";
+                }
+            } else {
+                echo "0 results";
+            }
             
         ?>
     </body>
