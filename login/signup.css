@@ -7,16 +7,16 @@
 
 body{
     display: block;
-    background-image: url("ba.jpg");
+    background-image: url("/chef/ba.jpg");
     background-repeat: no-repeat;
     background-size: 100% 800px;
 }
 
 .main_log {
     /* position: relative; */
-    /* float: left; */
+    float: left;
     width: 100%;
-    height: 600px;
+    height: 800px;
 }
 
 .login {

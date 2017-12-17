@@ -31,18 +31,23 @@
                         <li><a href="/chef/main/index1.html">HOME</a></li>
                         <li><a href="#">SHOP</a>
                             <ul class="submenu">
-                                <li><a href="#">by Brand</a>
+                                <li><a href="/chef/brand.php?brand=wootique">by Brand</a>
                                     <ul>
-                                        <li><a href="#">Wootique</a></li>
-                                        <li><a href="#">Dalrang</a></li>
-                                        <li><a href="#">Clothes</a></li>
-                                        <li><a href="#">Slime</a></li>
+                                        <li><a href = "/chef/brand/brand.php?brand=wootique">Wootique</a></li>
+                                        <li><a href = "/chef/brand/brand.php?brand=dallrang">Dallrang</a></li>
+                                        <li><a href = "/chef/brand/brand.php?brand=veneno">veneno</a></li>
+                                        <li><a href = "/chef/brand/brand.php?brand=joy">joy</a></li>
+                                        <li><a href = "/chef/brand/brand.php?brand=ringing">ringing</a></li>
+                                        <li><a href = "/chef/brand/brand.php?brand=wingbling">wingbling</a></li>
+                                        <li><a href = "/chef/brand/brand.php?brand=slime1">Slimingo</a></li>
+                                        <li><a href = "/chef/brand/brand.php?brand=slime2">Byslime</a></li>
+                                        <li><a href = "/chef/brand/brand.php?brand=slime3">Sliming</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="#">by Product</a>
                                     <ul>
-                                        <li><a href="#">Clothes</a></li>
-                                        <li><a href="#">Jewelry</a></li>
+                                        <li><a href="/chef/things/BrandThings.php">Clothes</a></li>
+                                        <li><a href="/chef/things/BrandThings.php">Jewelry</a></li>
                                         <li><a href="#">Slime</a></li>
                                     </ul>
                                 </li>

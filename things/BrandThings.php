@@ -50,7 +50,7 @@
                     </ul>
                 </div>
             </nav>
-    <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ ARTICLE(dallang 예시) @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+    
             <article>
                 <div class = "slide">
                     <img src="/chef/imageSlider/img/ban01.jpg" alt="slide image" />

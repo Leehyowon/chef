@@ -1,3 +1,10 @@
+body{
+	background-image: url("/chef/ba.jpg");
+	font-family: 'Open Sans', sans-serif;
+	background-repeat: no-repeat;
+	background-size: 100% 800px;
+}
+
 .none{
 	display: none;
 }
@@ -18,6 +25,7 @@ section{
 	height: 50px;
 	border: none;
 	border-bottom: 1px solid gray;
+	background: none;
 }
 
 #s{

@@ -1,5 +1,23 @@
 article{
     width: 900px;
+    /* height: 800px; */
     margin: auto;
-    margin-top: 300px;
+    margin-top: 150px;
+    margin-bottom: 150px;
+    text-align: center;
+}
+
+#itembox img{
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+}
+
+#itembox{
+    float: left;
+}
+
+#brandbox{
+    margin: 40px;
+    margin-bottom: 60px;
 }

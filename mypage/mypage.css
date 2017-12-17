@@ -27,7 +27,6 @@ h1{
 }
 
 .menu{
-    border: 1px solid #4d4d4d;
     box-sizing: border-box;
     width: 290px;
     height: 140px;
@@ -35,6 +34,7 @@ h1{
     margin: 5px;
     text-align: center;
     padding: 10px;
+    background-color: white;
 }
 
 .menu:hover{

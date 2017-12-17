@@ -21,7 +21,7 @@
                             <li><a href="/chef/brand.php?brand=wootique">by Brand</a>
                                 <ul>
                                     <li><a href = "/chef/brand/brand.php?brand=wootique">Wootique</a></li>
-                                    <li><a href = "/chef/things/BrandThings.php">Dallrang</a></li>
+                                    <li><a href = "/chef/brand/brand.php?brand=dallrang">Dallrang</a></li>
                                     <li><a href = "/chef/brand/brand.php?brand=veneno">veneno</a></li>
                                     <li><a href = "/chef/brand/brand.php?brand=joy">joy</a></li>
                                     <li><a href = "/chef/brand/brand.php?brand=ringing">ringing</a></li>
@@ -53,7 +53,7 @@
                 $br = $_GET["brand"];
             ?>
             <div id="brandbox">
-                <img src="image/banner/<?= $br ?>.png">
+                <img src="/chef/image/banner/<?= $br ?>.png">
             </div>
 
             <?php
