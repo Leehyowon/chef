@@ -78,8 +78,8 @@ There are many founding club for earrings, clothes, necklaces, and slimes in Han
   * create table & connect data : chef.sql
   
 ### - Every Path is...
-  * http://localhost:8888/chef/~ like this.
-  * It would be better to start with http://localhost:8888/chef/main/index1.html 
+* http://localhost:8888/chef/~ like this.  
+* It would be better to start with http://localhost:8888/chef/main/index1.html   
 
 ## 4. HOW TO CONNECT DATABASE
 **Create DB**
