@@ -34,42 +34,15 @@
                                 </li>
                             </ul>
                         </li>                                                                                            
-                        <!-- <li>COMMUNITY
-                            <ul>
-                                <li class="mincate"><a href = "/chef/board/notice.html"> Notice </a></li>
-                                <li class="mincate"><a href = "/chef/board/event.html"> Event </a></li>
-                                <li class="mincate"><a href = "/chef/board/qna.html"> QnA </a></li>
-                                <li class="mincate"><a href = "/chef/board/info.html"> Information </a></li>
-                            </ul>
-                        </li> -->
                         <li><a href="#">CUSTOMER CARE</a></li>
                         <li><a href="#">MY PAGE</a></li>
                         <li><a href="/chef/login/signup.php">Sign In</a></li>
+                        <li><a href="/chef/main/search.php">Search</a></li>
                     </ul>
                 </div>           
             </nav>
 
             <article>
-
-                <!-- <section>
-                    <div>
-						<h2>Find PW</h2>
-						<hr/>
-						<form method="post">
-						<p> ID : <input type="text" name="findid" /> </p>
-						<p> Name : <input type="text" name="findname_pw" /> </p>
-						<p>	E-mail : <input type="text" name="email_pw" /> </p>
-						<p>
-							<div id="submitButton" >
-								<input type="submit" name="findpw" value="findpw" />
-							</div>
-						</p>
-						</form>
-					</div>
-					<div>
-						
-					</div>
-                </section> -->
                 <section>
                      <div class="forms">
                         <form method="post">

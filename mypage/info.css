@@ -1,9 +1,16 @@
+body{
+    background-image: url("/chef/ba.jpg");
+    font-family: 'Open Sans', sans-serif;
+    background-repeat: no-repeat;
+    background-size: 100% 800px;
+}
 article{
     width: 500px;
-    height: 500px;
+    height: 600px;
     margin: auto;
     margin-top: 150px;
-    font-family: 'Open Sans', sans-serif;
+    padding-top: 50px;
+    
 }
 h1{
     font-weight: 40;

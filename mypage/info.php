@@ -38,6 +38,7 @@
                         <li><a href="#">CUSTOMER CARE</a></li>
                         <li><a href="/chef/mypage/mypage.php">MY PAGE</a></li>
                         <li><a href="/chef/login/signup.php">Sign In</a></li>
+                        <li><a href="/chef/main/search.php">Search</a></li>
                     </ul>
                 </div>
             </nav>
