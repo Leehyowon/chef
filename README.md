@@ -1,11 +1,11 @@
 # CHEF - Centre of Hanyang univ.ERICA Foundation Club
 
 ## Members
-+ Kwon Chaeeun
++ 2016003 Kwon Chaeeun
 + 2016003454 Kim Hyebeen
-+ Nam Hyemin
++ 2016003 Nam Hyemin
 + 2016003609 Sung Jina
-+ Lee Hyowon
++ 2016003854 Lee Hyowon
 
 ## What is this 'CHEF' page?
 
