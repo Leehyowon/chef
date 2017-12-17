@@ -62,7 +62,7 @@
                 foreach ($rows as $row) {?>
                     <div id="itembox">
                         <img src="/chef/image/<?= $br ?>/<?=$row["product_id"]?>.png">
-                        <p><a href="">[<?=$br?>] <?=$row["name"]?></a></p>
+                        <p><a href="/chef/things/eachThings.php?brand=<?=$br?>&productName=<?=$row["product_id"]?>">[<?=$br?>] <?=$row["name"]?></a></p>
                     </div> 
                 <?php } ?>
             </article>
