@@ -61,7 +61,7 @@
                 $rows = $db -> query("SELECT product_id,name FROM product WHERE brand = '$br'");
                 foreach ($rows as $row) {?>
                     <div id="itembox">
-                        <img src="image/<?= $br ?>/<?=$row["product_id"]?>.png">
+                        <img src="/chef/image/<?= $br ?>/<?=$row["product_id"]?>.png">
                         <p><a href="">[<?=$br?>] <?=$row["name"]?></a></p>
                     </div> 
                 <?php } ?>
