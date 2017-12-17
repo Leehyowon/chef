@@ -20,7 +20,7 @@
 
 ### - HTML
 **Hyebeen Kim**
-* <Do not use> a product information (Wootique) : /things/things.html
+* ((Do not use this html. It's not usefull)) a product information (Wootique) : /things/things.html
 * product review page for above html : /things/things_blog.html
 * new writing page of product review : /things/writingblog.html
 * We can look what I ordered; JANGBAGUNI : /mypage/buypocket.html
@@ -45,7 +45,7 @@
 * design of things*.html : /things/things.css
 * design of buypocket.html : /mypage/buypocket.css
 
-### PHP
+### - PHP
 **Jina Sung**
 * Log in : /login/login.php
 * Sign Up : /login/signup.php
@@ -58,11 +58,11 @@
 **Hyebeen Kim**
 * each product's information shopping page : /things/eachThings.php
 
-### JavaScript
+### - JavaScript
 **Hyebeen Kim**
 * thing's function information of javascript : /things/ThingFunc.js
 
-### Database
+### - Database
 **Chaeein Kwon**
 * create table & insert data : chef.sql
 
