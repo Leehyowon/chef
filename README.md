@@ -11,8 +11,8 @@
 <p> This ‘<strong>CHEF</strong>’ page is Online Shopping Page.
 We don’t cell “own” clothes, earrings, necklaces and slimes.</p>
 <p> Many Foundation Club is in Hanyang univ.ERICA.
-There are many founding club for earrings, clothes, necklaces, and slimes in Hanyang university ERICA.</p>
-<p> So, we serve as brokers for many founding clubs through our online shopping page called ‘<strong>CHEF</strong>’.</p>
+There are many founding club for earrings, clothes, necklaces, and slimes in Hanyang university ERICA. However, access to the founding clubs was low.</p>
+<p> So, To make up for this, we serve as brokers for many founding clubs through our online shopping page called ‘<strong>CHEF</strong>’.</p>
 
 ## 3. Detailed field
 
@@ -21,14 +21,13 @@ There are many founding club for earrings, clothes, necklaces, and slimes in Han
 
 **Hyowon Lee**
   * jewelry : /image/joy || veneno || wingbling || ringing
-  * slime : /image/slime1 || slime2 || slime3 
+  * slime : /image/slime1 || slime2 || slime3
 
 ### - HTML
 **Hyebeen Kim**
-  * ((Do not use this html. It's not usefull)) a product information (Wootique) : /things/things.html
   * product review page for above html : /things/things_blog.html
   * new writing page of product review : /things/writingblog.html
-  * We can look what I ordered; JANGBAGUNI : /mypage/buypocket.html
+  * We can look what I ordered;JANGBAGUNI : /mypage/buypocket.html
   * I can see mypage : /mypage/mypage.html
   * We can see wish list : /mypage/want.html
 
@@ -65,15 +64,15 @@ There are many founding club for earrings, clothes, necklaces, and slimes in Han
 
 ### - JavaScript
 **Hyebeen Kim**
-  * thing's function information of javascript : /things/ThingFunc.js
+  * eachThings.php's function information of javascript : /things/ThingFunc.js
 
 ### - Database
 **Chaeein Kwon**
   * create table & insert data : chef.sql
 
-## 4. DATABASE
+## 4. HOW TO CONNECT DATABASE
 **Create DB**
-  * mysql -uroot -proot 
+  * mysql -uroot -proot
   * create database chef;
   * exit
   * mysql -uroot -proot  chef < chef.sql (drag file!!)
@@ -87,13 +86,21 @@ There are many founding club for earrings, clothes, necklaces, and slimes in Han
 
 **If you want to log in, Use**
 ID : abc1001 / PW : def0110
-<!-- # 제목
-## 소제목
-**A**
-* a
-* a
-----------
-B
-* b
-* b -->
 
+## 5. REFERENCE & SOURCE OF PRODUCT PHOTO
+**Founding Clubs OF Hanyang univ.ERICA**
+  * dallrang
+  * wootique
+  * joy
+  * sliming
+  * beslime
+  * ringing
+  * veneno
+  * wingbling
+
+## 6. LANGUAGED USED & STRUCTURE
+    1. html
+    2. css
+    3. php
+    4. javascript
+    5. mysql
