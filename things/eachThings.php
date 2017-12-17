@@ -75,13 +75,18 @@ dallrang, veneno, joy만 이미지가 있나봄..-->
                 $mysqli = new mysqli($host, $user, $pwd, $dbName);
                 // $db = new PDO("mysql:dbname=CHEF;host=localhost", "chef", "1234");
 
-                $sql2 = "SELECT name,price FROM product WHERE brand = '$brand' AND name='$productName'";
+                $sql2 = "SELECT name,price FROM product WHERE brand = '".$brand."' AND product_id='".$productName."'";
                 // $info = $db -> query("SELECT name,price FROM product WHERE brand = '$brand' AND name='$productName'");
                 $result = $mysqli->query($sql2);
+                $info = array();
                 if ($result->num_rows > 0) {
                 // output data of each row
                     while($row = $result->fetch_assoc()) {
-                        print_r($row);
+                        // print_r($row);
+                        // echo "<script>alert();</script>";
+                        $info["name"] = $row["name"];
+                        $info["price"] = $row["price"];
+                        // print_r($row);
                     }
                 } else {
                     echo "0 results";
@@ -191,14 +196,14 @@ dallrang, veneno, joy만 이미지가 있나봄..-->
                 <hr/>
 
                 <div class="thing_information"> <!--상세 정보-->
-                    <h3>comment</h3>
+                    <!-- <h3>comment</h3>
                     <p>가볍고 분위기 있는 드롭 디자인의 이어링.</p>
-                    <p>원형과 드롭 스틱에 어우러진 체인 추가</p>
+                    <p>원형과 드롭 스틱에 어우러진 체인 추가</p> -->
                     <img src="/chef/image/wootique/details/체인스틱2.png" alt="ChainStick">
-                    <p>알맞게 떨어지는 체인드롭이 매우 분위기 있습니다.</p>
+                    <!-- <p>알맞게 떨어지는 체인드롭이 매우 분위기 있습니다.</p> -->
                     <img src="/chef/image/wootique/details/체인스틱착샷.png" alt="">
-                    <p>유니크한 디자인에 깔끔하여 자꾸 눈이 가는 이어링이예요.</p>
-                    <p>평소에 가벼운 드롭 스타일을 찾으셨다면, 정말 추천드립니다.</p>
+                    <!-- <p>유니크한 디자인에 깔끔하여 자꾸 눈이 가는 이어링이예요.</p>
+                    <p>평소에 가벼운 드롭 스타일을 찾으셨다면, 정말 추천드립니다.</p> -->
                 </div>
 
                 <!--<div class="thing_blog"> 제품 후기
