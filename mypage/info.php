@@ -4,9 +4,7 @@
         <title>CHEF</title>
         <link href="/chef/main/favicon.png" type="image/png" rel="shortcut icon"/>
         <link href="/chef/main/main.css" type="text/css" rel="stylesheet" />
-        <link href="/chef/imageSlider/nd_slider.css" rel="stylesheet" type="text/css" media="all">
-
-        <link href="/chef/mypage/mypage.css" rel="stylesheet" type="text/css">
+        <link href="/chef/mypage/info.css" type="text/css" rel="stylesheet" />
         <!-- <script src="http://malsup.github.com/jquary.cycle2.js"></script> -->
         <script src="/chef/mypage/info.js"></script>
         <script src="http://ajax.googleapis.com/ajax/libs/prototype/1.7.3.0/prototype.js" type="text/javascript"></script>
@@ -37,14 +35,6 @@
                                 </li>
                             </ul>
                         </li>
-                        <!-- <li>COMMUNITY
-                            <ul>
-                                <li class="mincate"><a href = "/chef/board/notice.html"> Notice </a></li>
-                                <li class="mincate"><a href = "/chef/board/event.html"> Event </a></li>
-                                <li class="mincate"><a href = "/chef/board/qna.html"> QnA </a></li>
-                                <li class="mincate"><a href = "/chef/board/info.html"> Information </a></li>
-                            </ul>
-                        </li> -->
                         <li><a href="#">CUSTOMER CARE</a></li>
                         <li><a href="/chef/mypage/mypage.php">MY PAGE</a></li>
                         <li><a href="/chef/login/signup.php">Sign In</a></li>

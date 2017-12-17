@@ -1,0 +1,24 @@
+section{
+    width: 900px;
+    height: 600px;
+    margin: auto;
+    margin-top: 60px;
+    text-align: center;
+}
+.best{
+    font-size: 30pt;
+}
+
+section img{
+    width: 280px;
+    height: 280px;
+    margin: 10px;
+}
+
+.bestitem{
+    margin-top: 60px;
+}
+.item{
+    float: left;
+    font-size: 15pt;
+}
