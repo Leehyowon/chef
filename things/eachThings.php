@@ -67,40 +67,57 @@ dallrang, veneno, joy만 이미지가 있나봄..-->
                 $brand = $_GET["brand"];
                 $productName = $_GET["productName"];
 
-                $db = new PDO("mysql:dbname=CHEF;host=localhost", "chef", "1234");
-                $info = $db -> query("SELECT name,price FROM product WHERE brand = '$brand' AND name='$productName'");
+                $host = 'localhost';
+                $user = 'chef';
+                $pwd = '1234';
+                $dbName = 'chef';
+                                    
+                $mysqli = new mysqli($host, $user, $pwd, $dbName);
+                // $db = new PDO("mysql:dbname=CHEF;host=localhost", "chef", "1234");
+
+                $sql2 = "SELECT name,price FROM product WHERE brand = '$brand' AND name='$productName'";
+                // $info = $db -> query("SELECT name,price FROM product WHERE brand = '$brand' AND name='$productName'");
+                $result = $mysqli->query($sql2);
+                if ($result->num_rows > 0) {
+                // output data of each row
+                    while($row = $result->fetch_assoc()) {
+                        print_r($row);
+                    }
+                } else {
+                    echo "0 results";
+                }
+
             ?>
 
 
             <article>
-            <?php
+            <?php 
             if ($brand == 'dallrang') { ?>
                 <div class = "slide">
                     <img src="/chef/imageSlider/img/dallrang.jpg" alt="slide image"
                     width = "1040px" height = "550px" />
                 </div>
-            <?php } ?>
-            <?php
-            elseif ($brand == 'veneno') { ?>
+            <?php 
+            } else if ($brand == 'veneno') { ?>
                 <div class = "slide">
                     <img src="/chef/imageSlider/img/veneno.jpg" alt="slide image"
                     width = "1040px" height = "550px" />
                 </div>
-            <?php } ?>
-            <?php
-            elseif ($brand == 'joy') { ?>
+            <?php 
+            } else if ($brand == 'joy') { ?>
                 <div class = "slide">
                     <img src="/chef/imageSlider/img/joy.jpg" alt="slide image"
                     width = "1040px" height = "550px" />
                 </div>
-            <?php } ?>
-            <?php
-            else { ?>
+            <?php 
+            } else { ?>
                 <div class = "slide">
                     <img src="https://github.com/hyemni/chef/blob/master/main/image/slide1.png?raw=true" alt="slide image"
                     width = "1040px" height = "550px" />
                 </div>
-            <?php } ?>
+            <?php 
+            } 
+            ?>
 
 
                 <h1>제품 설명</h1>
@@ -112,14 +129,14 @@ dallrang, veneno, joy만 이미지가 있나봄..-->
                 <div class="one_two"> <!--귀걸이 상품들 정보를 모아 데이터베이스를 이용해서 불러와야 할 것 같음  -->
                     <h2><?= $info["name"] ?></h2>
                     <hr/>
-                    <ul>
-                        <li>판매가</li>
-                        <li>배송비</li>
-                    </ul>
-                    <ul>
-                        <li><?= $info["price"] ?></li>
-                        <li>2,500</li>
-                    </ul>
+                    <div>
+                        <p>판매가</p>
+                        <p>배송비</p>
+                    </div>
+                    <div>
+                        <p><?= $info["price"] ?></p>
+                        <p>2,500</p>
+                    </div>
                     <form class="input">
                         <ul>
                             <li>주문 수량  <!--form으로 받게 해야할거같음-->
@@ -143,24 +160,24 @@ dallrang, veneno, joy만 이미지가 있나봄..-->
                             <!--주문하기 버튼을 눌렀을때 위에 변수 number와 ringoption을 데이터형식으로 저장할 수 있게 내보내는 방법을 찾아야 함ㅠ
                             <input type="submit" name="put" value="주문하기" /> -->
                         </ul>
-                    </form>
+                    <!-- </form> -->
 
 
-                    <p>&#35; 최소주문수량 1개 이상</p>
-                    <p>&#35; 최대주문수량 5개 이하</p>
-                    <p>&#35; 옵션선택 박스를 선택하시면 아래에 상품이 추가됩니다.</p>
+                        <p>&#35; 최소주문수량 1개 이상</p>
+                        <p>&#35; 최대주문수량 5개 이하</p>
+                        <p>&#35; 옵션선택 박스를 선택하시면 아래에 상품이 추가됩니다.</p>
 
-                    <p>총 상품금액</p>
+                        <p>총 상품금액</p>
                     <!--이 부분도 php로 하는건가?-->
 
-                    <div>
+                    <!-- <div> -->
                         <!-- <p><a href="">구매하기</a></p>
                         <p><a href="">장바구니</a></p> -->
-                        <form action="">
-                            <button id="buy" type="button" name="buy">구매하기</button>
-                            <button id="pocket" type="button" name="pocket">장바구니</button>
-                        </form>
-                    </div>
+                        <!-- <form method="post"> -->
+                        <button id="buy" type="button" name="buy">구매하기</button>
+                        <button id="pocket" type="button" name="pocket">장바구니</button>
+                    </form>
+                    <!-- </div> -->
                 </div>
             </article>
             <section>
