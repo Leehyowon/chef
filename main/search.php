@@ -102,26 +102,27 @@
                     <?php
                         if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             $name = $_POST['searchName'];
-                        }
+                        
 
-                        $sql = "SELECT name FROM product WHERE name like '%".$name."%'";
-                        $result = $mysqli->query($sql);
-                        $info = array();
-                        if ($result->num_rows > 0) {
-                            while($row = $result->fetch_assoc()){
-                                $info[] = $row["name"];
-                            }
-                            foreach ($info as $inform) {
+                            $sql = "SELECT name FROM product WHERE name like '%".$name."%'";
+                            $result = $mysqli->query($sql);
+                            $info = array();
+                            if ($result->num_rows > 0) {
+                                while($row = $result->fetch_assoc()){
+                                    $info[] = $row["name"];
+                                }
+                                foreach ($info as $inform) {
                     ?>
 
-                            <!-- 검색(enter)한 후 나오는 결과값 -->
-                            <li><a href="#"><?=$inform?></a></li>
-                            <!-- 여기까지 -->
+                                <!-- 검색(enter)한 후 나오는 결과값 -->
+                                <li><a href="#"><?=$inform?></a></li>
+                                <!-- 여기까지 -->
 
                     <?php
+                                }
+                            } else {
+                                print "검색결과 없음";
                             }
-                        } else {
-                            print "검색결과 없음";
                         }
                     ?>
                 </section>
