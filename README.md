@@ -4,7 +4,7 @@
 + Kwon Chaeeun
 + 2016003454 Kim Hyebeen
 + Nam Hyemin
-+ Sung Jina
++ 2016003609 Sung Jina
 + Lee Hyowon
 
 ## What is this 'CHEF' page?
