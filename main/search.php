@@ -94,21 +94,28 @@
                             $name = $_POST['searchName'];
                         
 
-                            $sql = "SELECT name FROM product WHERE name like '%".$name."%'";
+                            $sql = "SELECT * FROM product WHERE name like '%".$name."%'";
                             $result = $mysqli->query($sql);
                             $info = array();
+                            $brand = array();
+                            $productName = array();
+                            $index = 0;
                             if ($result->num_rows > 0) {
                                 while($row = $result->fetch_assoc()){
                                     $info[] = $row["name"];
+                                    $brand[] = $row["brand"];
+                                    $productName[] = $row["product_id"];
                                 }
+
                                 foreach ($info as $inform) {
                     ?>
 
                                 <!-- 검색(enter)한 후 나오는 결과값 -->
-                                <li><a href="#"><?=$inform?></a></li>
+                                <li><a href="/chef/things/eachThings.php?brand=<?=$brand[$index]?>&productName=<?=$productName[$index]?>"><?=$inform?></a></li>
                                 <!-- 여기까지 -->
 
                     <?php
+                                    $index = $index +1;
                                 }
                             } else {
                                 print "검색결과 없음";

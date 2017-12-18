@@ -73,3 +73,11 @@ section{
     text-align: center;
 }
 
+.none{
+    display: none;
+}
+
+.block{
+    display: block;
+}
+

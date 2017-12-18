@@ -57,7 +57,7 @@
                         <!-- <div class="back_img_sec">
                             <img src="back.jpg" alt="" />
                         </div> -->
-                        <div id="find1">
+                        <div id="find1" class="find1">
                             <form method="post">
                                 <div class="form_login">
                                     <h2>Find ID</h2>					
