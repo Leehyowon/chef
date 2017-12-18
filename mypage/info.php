@@ -26,9 +26,9 @@
                                         <li><a href = "/chef/brand/brand.php?brand=joy">joy</a></li>
                                         <li><a href = "/chef/brand/brand.php?brand=ringing">ringing</a></li>
                                         <li><a href = "/chef/brand/brand.php?brand=wingbling">wingbling</a></li>
-                                        <li><a href = "/chef/brand/brand.php?brand=slime1">Slimingo</a></li>
-                                        <li><a href = "/chef/brand/brand.php?brand=slime2">Byslime</a></li>
-                                        <li><a href = "/chef/brand/brand.php?brand=slime3">Sliming</a></li>
+                                        <li><a href = "/chef/brand/brand.php?brand=slimingo">Slimingo</a></li>
+                                        <li><a href = "/chef/brand/brand.php?brand=beslime">Beslime</a></li>
+                                        <li><a href = "/chef/brand/brand.php?brand=sliming">Sliming</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="#">by Product</a>
