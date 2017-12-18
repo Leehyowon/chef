@@ -66,50 +66,7 @@
 
                 <h1>My Page</h1>
             
-                <div class="point">
-                    <ul>
-                        <li>(<?=$user_name?>)님의</li>
-                        <li>가용적립금</li>
-                        <li>쿠폰</li>
-                        <li>총 주문</li>
-                    </ul>
-                </div>
-
-                <div class="my_menu"> 
-                    <div class="menu">
-                        <h3><a href="/chef/mypage/buypocket.php">POCKET 장바구니</a></h3>
-                        <p>고객님께서 장바구니에 등록한 상품들을 보실 수 있습니다.</p>
-                    </div>
-
-                    <div class="menu">
-                        <h3><a href="/chef/mypage/order.php">ORDER 주문내역 조회</a></h3>
-                        <p>고객님께서 주문하신 상품의 주문내역을 확인하실 수 있습니다.
-                        비회원의 경우, 주문서의 주문번호와 비밀번호로 주문조회가 가능합니다.</p>
-                    </div>
-                                
-                    <div class="menu">
-                        <h3><a href="/chef/mypage/info.php">INFO 회원정보</a></h3>
-                        <p>회원이신 고객님의 개인정보를 관리하는 공간입니다.
-                        개인정보를 최신 정보로 유지하시면 보다 간편히 쇼핑을 즐기실 수 있습니다.</p>                                
-                        
-                    </div>
-                            
-                    <div class="menu">
-                        <h3><a href="/chef/mypage/want.html">WISH LIST 관심상품</a></h3>
-                        <p>관심상품으로 등록하신 상품의 목록을 보여드립니다.</p>            
-                    </div>
-
-                    <div class="menu">
-                        <h3><a href="">POINT 적립금</a></h3>
-                        <p>적립금은 상품 구매 시 사용하실 수 있습니다.
-                        적립된 금액은 현금으로 환불되지 않습니다.</p>                                                    
-                    </div>
-                    
-                    <div class="menu">
-                        <h3><a href="">ADDRESS 배송 주소록 관리</a></h3>
-                        <p>자주 사용하는 배송지를 등록하고 관리하실 수 있습니다.</p>           
-                    </div>           
-                </div>
+                
             </article>
         </main>
 
