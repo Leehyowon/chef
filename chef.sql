@@ -155,11 +155,11 @@ INSERT INTO `product` VALUES ('bes12', 'beslime', '마지막', 11500, 200, 3, '2
 
 
 
-INSERT INTO `consumer` VALUES ('abc1001','def0110','abc1001@naver.com','Jina','01012345678','1998-02-13','F');
-INSERT INTO `consumer` VALUES ('root','root','root@naver.com','Jina','01012345678','1998-02-13','F');
+INSERT INTO `consumer` VALUES ('abc1001','def0110','abc1001@naver.com','Jina','01012345678','1998-02-13','안산','F');
+INSERT INTO `consumer` VALUES ('root','root','root@naver.com','Jina','01012345678','1998-02-13','안산','F');
 
 
-INSERT INTO `buy` VALUES (0001,'woo1','root','Ansan hanyang university','2017-10-29','credit',2000);
+INSERT INTO `buy` VALUES (0001,'woo1','root','2017-10-29','credit',2000);
 
 INSERT INTO `buyPocket` VALUES (0001,'wootique','woo1','에뜨','root','credit',3000,1);
 

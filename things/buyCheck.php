@@ -147,11 +147,11 @@
                     if (!isset($consumer_id)){
                         print "비회원";
                         $consumer_id = "비회원";
-                        $sql2 = "INSERT INTO buy VALUES (".$order_id.",'".$id."','".$consumer_id."','안산','2017-10-11','".$credit."',".$price*$number.")";
+                        $sql2 = "INSERT INTO buy VALUES (".$order_id.",'".$id."','".$consumer_id."','2017-10-11','".$credit."',".$price*$number.")";
                         $mysqli->query($sql2);
                     } 
                     else {
-                        $sql2 = "INSERT INTO buy VALUES (".$order_id.",'".$id."','".$consumer_id."','안산','2017-10-11','".$credit."',".$price*$number.")";
+                        $sql2 = "INSERT INTO buy VALUES (".$order_id.",'".$id."','".$consumer_id."','2017-10-11','".$credit."',".$price*$number.")";
                         $mysqli->query($sql2);
                     }
                     
