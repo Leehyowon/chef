@@ -74,7 +74,7 @@
                     $mysqli = new mysqli($host, $user, $pwd, $dbName);
                     $consumer_id = $user_id;
 
-                    $sql2 = "SELECT * from buy where consumer_id='".$consumer_id."'";
+                    $sql2 = "SELECT * from buy NATURAL JOIN product where consumer_id='".$consumer_id."'";
                     $result = $mysqli->query($sql2);
 
                         // $pocket_number;
@@ -82,7 +82,14 @@
                         // output data of each row
                         while($row = $result->fetch_assoc()) {
                     ?>
-                            <!-- <li><?=$row[""]?></li> -->
+                        <tr>
+                            <td>
+                                <img src="/chef/image/<?= $row["brand"] ?>/<?=$row["product_id"]?>.png">
+                            </td>
+                            <td><li><?=$row["name"]?></li></td>
+                            <td><li><?=$row["o_date"]?></li></td>
+                            <td><li><?=$row["tot_price"]?></li></td>
+                        </tr>
                     <?php
                         }
                     }
