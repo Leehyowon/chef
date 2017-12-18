@@ -42,7 +42,7 @@
 
                         <li><a href="/chef/customer/customer.html">CUSTOMER CARE</a></li>
                         <li><a href="/chef/mypage/buypocket.html">MY PAGE</a></li>
-                        <li><a href="/chef/login/login.php">Sign In</a></li>
+                        <li><a href="/chef/login/signup.php">Sign In</a></li>
                         <li><a href="/chef/main/search.php">Search</a></li>
                     </ul>
                 </div>
