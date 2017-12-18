@@ -21,6 +21,7 @@ CREATE TABLE `consumer`(
 	`name` VARCHAR(20) NOT NULL,
 	`tel` VARCHAR(20) NOT NULL,
 	`birth` DATE NOT NULL,
+	`address` VARCHAR(100) NOT NULL,
 	`gender` VARCHAR(5) NOT NULL
 )character set utf8;
 
@@ -29,7 +30,6 @@ CREATE TABLE `buy`(
 	`order_id` INTEGER NOT NULL PRIMARY KEY,
 	`product_id` VARCHAR(20) NOT NULL,
 	`consumer_id` VARCHAR(30) NOT NULL,
-	`address` VARCHAR(100) NOT NULL,
 	`o_date` DATE NOT NULL,
 	`payment` VARCHAR(10) NOT NULL,
 	`price` INTEGER NOT NULL
