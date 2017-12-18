@@ -92,9 +92,9 @@
                         $name = $_POST["name"];
                         $number = $_POST["number"];
                         $id = $_POST["id"];
-                        $credit = $_POST["credit"];
-                        $order_id = $_POST["order_id"];
-                        // $consumer_id = $_POST["consumer_id"];
+                        // $credit = $_POST["credit"];
+                        // $order_id = $_POST["order_id"];
+                        $consumer_id = $_POST["consumer_id"];
                         // echo "<script>alert();</script>";
                         
 
@@ -106,6 +106,9 @@
                         // output data of each row
                             while($row = $result->fetch_assoc()) {
                                 $pocket_number = $row["pocket_id"] + 1;
+                                // $sql = "INSERT INTO buyPocket VALUES (".$pocket_number.",'".$brand."','".$id."','".$name."','".$consumer_id."','credit',".$price.",".$number.")";
+                                // $result = $mysqli->query($sql);
+                                print_r($pocket_number);
                             }
                         } else {
                             // echo "0 results";
