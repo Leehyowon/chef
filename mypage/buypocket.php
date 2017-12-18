@@ -30,7 +30,7 @@
                         <li><a href="/chef/main/index1.html">HOME</a></li>
                         <li><a href="#">SHOP</a>
                             <ul class="submenu">
-                                <li><a href="brand.php?brand=wootique">by Brand</a>
+                                <li><a href="/chef/brand.php?brand=wootique">by Brand</a>
                                     <ul>
                                         <li><a href = "/chef/brand/brand.php?brand=wootique">Wootique</a></li>
                                         <li><a href = "/chef/brand/brand.php?brand=dallrang">Dallrang</a></li>
@@ -45,8 +45,8 @@
                                 </li>
                                 <li><a href="#">by Product</a>
                                     <ul>
-                                        <li><a href="/chef/product/categ.php?category=1">Clothes</a></li>
-                                        <li><a href="/chef/product/categ.php?category=2">Jewelry</a></li>
+                                        <li><a href="/chef/product/categ.php?category=1">earring</a></li>
+                                        <li><a href="/chef/product/categ.php?category=2">necklace&ring</a></li>
                                         <li><a href="/chef/product/categ.php?category=3">Slime</a></li>
                                     </ul>
                                 </li>

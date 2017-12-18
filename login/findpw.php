@@ -116,15 +116,17 @@
                                 // }
 
                             ?>
-
-                            <form method="post" action="/chef/login/newPW.php">
-                                <p><?=$id?> 님! 비밀번호를 변경하시겠어요?</p>
-                                <!-- <input type="hidden" name="brand" value="<?=$brand?>" />    -->
-                                <!-- <input type="hidden" name="price" value="<?=$info["price"]?>" />     -->
-                                <input type="hidden" name="id" value="<?=$id?>" />  
-                                <!-- <input type="hidden" name="id" value="<?=$productName?>" /> -->
-                                <button id="change">변경하기</button>
-                            </form>
+                            <div class="changepw">
+                                <form method="post" action="/chef/login/newPW.php">
+                                    <p><?=$id?> 님! 비밀번호를 변경하시겠어요?</p>
+                                    <!-- <input type="hidden" name="brand" value="<?=$brand?>" />    -->
+                                    <!-- <input type="hidden" name="price" value="<?=$info["price"]?>" />     -->
+                                    <input type="hidden" name="id" value="<?=$id?>" />  
+                                    <!-- <input type="hidden" name="id" value="<?=$productName?>" /> -->
+                                    <button id="change">변경하기</button>
+                                </form>
+                            </div>
+                            
                             <?php
                             }
                             ?>

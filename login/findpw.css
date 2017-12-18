@@ -81,3 +81,28 @@ section{
     display: block;
 }
 
+.changepw{
+    position: absolute;
+    top: 260px;
+    width: 400px;
+    height: 400px;
+    background-color: white;
+    text-align: center;
+    background-color: #c0e9ee;
+}
+
+.changepw form{
+    margin-top: 150px;
+    font-size: 14pt;
+    font-weight: 300;
+}
+#change{
+    width: 150px;
+    height: 30px;
+    border: none;
+    background-color: rgb(255, 176, 176);
+    color: white;
+    font-size: 11pt;
+    font-weight: 300;
+}
+

@@ -111,8 +111,9 @@
                                 <?php
                                 } else {
                                 ?>
+
                                 <div id="find2">
-                                    <p><?=$findname?>님의 아이디 목록</p>
+                                    <p class="idlist"><?=$findname?>님의 아이디 목록</p>
                                 <?php    
                                     $sql = "SELECT consumer_id FROM consumer WHERE name = '".$findname."' and email='".$email."'";
                                     $result = $mysqli->query($sql);

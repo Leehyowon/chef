@@ -76,65 +76,22 @@ section{
 .none{
     display: "none";
 }
-/*
-.form_login > a,.form_sign_up > a  {
-    color: #757575;
-    float: left;
-    margin: 10px;
-    margin-left: 30px;
-}
-
-.btn_login { 
-    background-color: #26C6DA;
-    padding: 10px;
-    width: 200px;
-    border-radius:3px;
-    box-shadow: 1px 5px 20px -5px rgba(0,0,0,0.4);
-    color: #fff;
-    margin-top: 10px;
-    cursor: pointer;
-}
-
-.forms {
-    /* overflow: hidden; */
-    /* top:300px; */
-    /* left: 0px; */
-    /* width: 320px; */
-    /* height: 400px;
-    background-color: #eee;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    -ms-transition: all 0.5s;
-    -o-transition: all 0.5s;
-    transition: all 0.5s;
-} */
-
-/* .back_img_sec {
+#find2{
     position: absolute;
-    width: 950px;
-    height: 550px;
-    /* top:-80px;
-    left: -116px; */
-/* }  */
-/*
-.back_img_sec > img {
+    top: 260px;
     width: 400px;
-    opacity: 0.3;
-    animation-name: animar_fondo;
-    animation-duration: 20s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
     height: 350px;
-} */
+    background-color: white;
+    text-align: center;
+    background-color: #c0e9ee;
+}
 
-/* .back_info {  
-    position: relative;
-    float: left;
-    width: 640px;
-    height: 280px; */
-    /* overflow: hidden; */
-    /* background-color: #fff;
-    margin-top: 300px;
-    box-shadow: 1px 10px 30px -10px rgba(0,0,0,0.5);
-} */ 
+#find2 .idlist{
+    margin-top: 150px;
+    font-size: 15pt;
+    font-weight: 300;
+}
+#find2{
+    font-size: 15pt;
+    font-weight: 300;
+}

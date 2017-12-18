@@ -39,3 +39,9 @@ select{
     border: none;
     color: black;
 }
+
+.ok{
+    text-align: center;
+    margin-top: 200px;
+    margin-bottom: 200px;
+}
