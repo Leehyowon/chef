@@ -94,7 +94,10 @@ There are many founding club for earrings, clothes, necklaces, and slimes in Han
   * create user ‘chef’@‘%’ identified by ‘1234’;
   * grant all privileges on chef.* to chef@‘%’;
   * flush privileges;
-
+  
+**Do not copy**
+ * Copying may cause errors. Please type directly.
+ 
 **If you want to log in, Use**
 ID : abc1001 / PW : def0110  or  ID : root / PW : root
 
