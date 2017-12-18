@@ -30,7 +30,7 @@
                         <li><a href="/chef/main/index1.html">HOME</a></li>
                         <li><a href="#">SHOP</a>
                             <ul class="submenu">
-                                <li><a href="/chef/brand.php?brand=wootique">by Brand</a>
+                                <li><a href="brand.php?brand=wootique">by Brand</a>
                                     <ul>
                                         <li><a href = "/chef/brand/brand.php?brand=wootique">Wootique</a></li>
                                         <li><a href = "/chef/brand/brand.php?brand=dallrang">Dallrang</a></li>
@@ -45,8 +45,8 @@
                                 </li>
                                 <li><a href="#">by Product</a>
                                     <ul>
-                                        <li><a href="/chef/product/categ.php?category=1">earring</a></li>
-                                        <li><a href="/chef/product/categ.php?category=2">necklace&ring</a></li>
+                                        <li><a href="/chef/product/categ.php?category=1">Clothes</a></li>
+                                        <li><a href="/chef/product/categ.php?category=2">Jewelry</a></li>
                                         <li><a href="/chef/product/categ.php?category=3">Slime</a></li>
                                     </ul>
                                 </li>
@@ -63,6 +63,7 @@
 
             <article>
                 <h1>장바구니</h1>
+                <form method="post" action="buypocketcheck.php">
                 <table>
                     <th>상품이미지</th>
                     <th id="infor">상품정보</th>
@@ -89,6 +90,7 @@
                         while($row = $result->fetch_assoc()) {
 
                         ?>
+                        
                         <tr>
                             <td>
                                 <img src="/chef/image/<?=$row["brand"]?>/<?=$row["product_id"]?>.png" alt="chaindrop">
@@ -96,9 +98,10 @@
                             <td><?=$row["name"]?></td>
                             <td><?=$row["price"]?></td>
                             <td><?=$row["number"]?></td>
-                            <td> <input type="checkbox" /> </td>
+                            <td> <input type="checkbox" name="<?=$row["product_id"]?>"/> </td>
                             <td>미결제</td>
                         </tr>
+                        
                             <?php
                         }
                     } else {
@@ -106,7 +109,8 @@
                     
                     ?>
                 </table>
-                <button>구매하기</button>
+                <input type="submit" id="buyReal" value="구매하기" />
+                </form>
             </article>
         </main>
 

@@ -26,6 +26,7 @@ h1{
     background-color: #e771ff;
     color: white;
     font-size: 10pt;
+    margin-left: 50px;
 }
 table{
     margin: auto;
@@ -41,7 +42,7 @@ td{
     padding: 10px;
 }
 .t{
-    color: #999999;
+    color: #6d6060;
 }
 
 .after input{
@@ -64,4 +65,8 @@ td{
     color: white;
     font-size: 10pt;
 }
-
+.infor{
+    background-color: rgba(255, 193, 193, 0.562);
+    padding: 30px;
+    box-shadow: 1px 5px 20px -5px rgba(0,0,0,0.4);
+}

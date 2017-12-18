@@ -69,37 +69,41 @@
                         // print_r($row);
                     }
                 ?>
-                <h1><?=$user_id?> 님의 개인정보</h1>
-                <div class="before">
-                    <table>
-                        <tr><td class="t">NAME</td><td><?=$row["name"]?></td></tr>
-                        <tr><td class="t">PW</td><td><?=$row["pwd"]?></td></tr>
-                        <tr><td class="t">E-mail</td><td><?=$row["email"]?></td></tr>
-                        <tr><td class="t">PHONE</td><td><?=$row["tel"]?></td></tr>
-                        <tr><td class="t">BIRTH</td><td><?=$row["birth"]?></td></tr>
-                        <tr><td class="t">GENDER</td><td><?=$row["gender"]?></td></tr>
-                    </table>                 
-                    <button id="edit">Edit</button>
-                </div>
-
-                
-                <form method="post">
-                    <div class="after">
+                <div class="infor">
+                    <h1><?=$user_id?> 님의 개인정보</h1>
+                    <div class="before">
                         <table>
                             <tr><td class="t">NAME</td><td><?=$row["name"]?></td></tr>
-                            <tr><td class="t">PW</td><td><input type="text" name="pw" value="<?=$row["pwd"]?>" placeholder="<?=$row["pwd"]?>" /></td></tr>
-                            <tr><td class="t">E-mail</td><td><input type="text" name="email" value="<?=$row["email"]?>" placeholder="<?=$row["email"]?>" /></td></tr>
-                            <tr><td class="t">PHONE</td><td><input type="text" name="phone" value="<?=$row["tel"]?>" placeholder="<?=$row["tel"]?>" /></td></tr>
+                            <tr><td class="t">PW</td><td><?=$row["pwd"]?></td></tr>
+                            <tr><td class="t">E-mail</td><td><?=$row["email"]?></td></tr>
+                            <tr><td class="t">PHONE</td><td><?=$row["tel"]?></td></tr>
                             <tr><td class="t">BIRTH</td><td><?=$row["birth"]?></td></tr>
                             <tr><td class="t">GENDER</td><td><?=$row["gender"]?></td></tr>
-                        </table>   
-                        <div class="btn">
-                            <input id="change" type="submit" name="changeInfo" value="Change" />
-                            <button id="cancel">Cancel</button>
-                        </div>
+                        </table>                 
+                        <button id="edit">Edit</button>
                     </div>
+                    <form method="post">
+                        <div class="after">
+                            <table>
+                                <tr><td class="t">NAME</td><td><?=$row["name"]?></td></tr>
+                                <tr><td class="t">PW</td><td><input type="text" name="pw" value="<?=$row["pwd"]?>" placeholder="<?=$row["pwd"]?>" /></td></tr>
+                                <tr><td class="t">E-mail</td><td><input type="text" name="email" value="<?=$row["email"]?>" placeholder="<?=$row["email"]?>" /></td></tr>
+                                <tr><td class="t">PHONE</td><td><input type="text" name="phone" value="<?=$row["tel"]?>" placeholder="<?=$row["tel"]?>" /></td></tr>
+                                <tr><td class="t">BIRTH</td><td><?=$row["birth"]?></td></tr>
+                                <tr><td class="t">GENDER</td><td><?=$row["gender"]?></td></tr>
+                            </table>   
+                            <div class="btn">
+                                <input id="change" type="submit" name="changeInfo" value="Change" />
+                                <button id="cancel">Cancel</button>
+                            </div>
+                        </div>
                         
-                </form>
+                    </form>
+                </div>
+                
+
+                
+                
             
                 <?php
                     if ($_SERVER["REQUEST_METHOD"] == "POST") {
