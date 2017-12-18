@@ -15,7 +15,7 @@ function pocket() {
 // var pock = document.getElementById("pocket");
 function pocket2() {
     if (pock == true) {
-        document.getElementById("search-theme-form").action = "/chef/mypage/buypocket.php";
+        document.getElementById("search-theme-form").action = "/chef/mypage/buypockerC.php";
         location.href="../mypage/buypocket.php";
     }
 }

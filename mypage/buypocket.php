@@ -85,69 +85,77 @@
                     $dbName = 'chef';
                                             
                     $mysqli = new mysqli($host, $user, $pwd, $dbName);
+                    $consumer_id = $user_id;
                     
-                    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                        $brand = $_POST["brand"];
-                        $price = $_POST["price"];
-                        $name = $_POST["name"];
-                        $number = $_POST["number"];
-                        $id = $_POST["id"];
-                        // $credit = $_POST["credit"];
-                        // $order_id = $_POST["order_id"];
-                        $consumer_id = $_POST["consumer_id"];
-                        // echo "<script>alert();</script>";
+                    // if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                    //     $brand = $_POST["brand"];
+                    //     $price = $_POST["price"];
+                    //     $name = $_POST["name"];
+                    //     $number = $_POST["number"];
+                    //     $id = $_POST["id"];
+                    //     // $credit = $_POST["credit"];
+                    //     // $order_id = $_POST["order_id"];
+                    //     // $consumer_id = $_POST["consumer_id"];
+                    //     // echo "<script>alert();</script>";
                         
 
-                        $sql2 = "SELECT pocket_id FROM buyPocket order by pocket_id desc limit 1";
-                        $result = $mysqli->query($sql2);
+                    //     $sql2 = "SELECT pocket_id FROM buyPocket order by pocket_id desc limit 1";
+                    //     $result = $mysqli->query($sql2);
 
-                        $pocket_number;
-                        if ($result->num_rows > 0) {
-                        // output data of each row
-                            while($row = $result->fetch_assoc()) {
-                                $pocket_number = $row["pocket_id"] + 1;
-                                // $sql = "INSERT INTO buyPocket VALUES (".$pocket_number.",'".$brand."','".$id."','".$name."','".$consumer_id."','credit',".$price.",".$number.")";
-                                // $result = $mysqli->query($sql);
-                                print_r($pocket_number);
-                            }
-                        } else {
-                            // echo "0 results";
-                        }
-                    } 
+                    //     $pocket_number;
+                    //     if ($result->num_rows > 0) {
+                    //     // output data of each row
+                    //         while($row = $result->fetch_assoc()) {
+                    //             $pocket_number = $row["pocket_id"] + 1;
+                    //             // $sql = "INSERT INTO buyPocket VALUES (".$pocket_number.",'".$brand."','".$id."','".$name."','".$consumer_id."','credit',".$price.",".$number.")";
+                    //             // $result = $mysqli->query($sql);
+                    //             print_r($pocket_number);
+                    //         }
+                    //     } else {
+                    //         // echo "0 results";
+                    //     }
+                        ?>
+                        <!-- <meta http-equiv='refresh' content='0;url=http://localhost:8888/chef/mypage/buypocket.php'> -->
+                        <?php
+                    // }
+                    ?>
+
+                    
+                    <?php
                         // session_start();
-                        $consumer_id = $user_id;
+                    $consumer_id = $user_id;
                         // echo "<script>alert('$consumer_id');</script>";
 
-                        $sql2 = "select * from buyPocket where consumer_id='".$consumer_id."'";
-                        $result = $mysqli->query($sql2);
+                    $sql2 = "select * from buyPocket where consumer_id='".$consumer_id."'";
+                    $result = $mysqli->query($sql2);
 
                         // $pocket_number;
-                        if ($result->num_rows > 0) {
+                    if ($result->num_rows > 0) {
                         // output data of each row
-                            while($row = $result->fetch_assoc()) {
+                        while($row = $result->fetch_assoc()) {
 
-                                print_r($row);
+                            // print_r($row);
 
-                                // echo "<script>alert();</script>"
-                                ?>
-                            <tr>
-                                <td>
-                                    <img src="/chef/image/<?=$row["brand"]?>/<?=$row["product_id"]?>.png" alt="chaindrop">
-                                </td>
-                                <td><?=$row["name"]?></td>
-                                <td><?=$row["price"]?></td>
-                                <td><?=$row["number"]?></td>
-                                <td> <input type="checkbox" /> </td>
-                                <td>미결제</td>
-                            </tr>
+                                    // echo "<script>alert();</script>"
+                        ?>
+                        <tr>
+                            <td>
+                                <img src="/chef/image/<?=$row["brand"]?>/<?=$row["product_id"]?>.png" alt="chaindrop">
+                            </td>
+                            <td><?=$row["name"]?></td>
+                            <td><?=$row["price"]?></td>
+                            <td><?=$row["number"]?></td>
+                            <td> <input type="checkbox" /> </td>
+                            <td>미결제</td>
+                        </tr>
                     
                 
                                 <!-- <h2><?php print_r($row); ?></h2> -->
-                                <?php
-                            }
-                        } else {
-                            echo "0 results";
+                            <?php
                         }
+                    } else {
+                        echo "0 results";
+                    }
                     
                     ?>
                 </table>
