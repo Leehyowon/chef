@@ -77,7 +77,7 @@ There are many founding club for earrings, clothes, necklaces, and slimes in Han
 * search & User info & Search
 
 ### - Database
-**Chaeein Kwon**
+**Chaeeun Kwon**
   * create table & connect data : chef.sql
   
 ### - Every Path is...
