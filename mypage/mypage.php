@@ -77,7 +77,7 @@
 
                 <div class="my_menu"> 
                     <div class="menu">
-                        <h3><a href="/chef/mypage/buypocket.html">POCKET 장바구니</a></h3>
+                        <h3><a href="/chef/mypage/buypocket.php">POCKET 장바구니</a></h3>
                         <p>고객님께서 장바구니에 등록한 상품들을 보실 수 있습니다.</p>
                     </div>
 

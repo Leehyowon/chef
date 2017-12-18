@@ -54,7 +54,7 @@
                             </ul>
                         </li> -->
                         <li><a href="#">CUSTOMER CARE</a></li>
-                        <li><a href="/chef/mypage/mypage.html">MY PAGE</a></li>
+                        <li><a href="/chef/mypage/mypage.php">MY PAGE</a></li>
                         <li><a href="/chef/login/login.php">Sign In</a></li>
                     </ul>
                 </div>
@@ -135,6 +135,7 @@
                     <input type="hidden" name="number" value="<?=$number?>" />  
                     <input type="hidden" name="name" value="<?=$name?>" />  
                     <input type="hidden" name="id" value="<?=$id?>" /> 
+                    <input type="hidden" name="consumer_id" value="<?=$consumer_id?>" /> 
                     <input type="hidden" name="order_id" value="<?=$order_number?>" /> 
                     <!-- <input type="hidden" name="consumer_id" value="<?=$consumer_id?>" />  -->
                     <input type="submit" id="buyReal" value="구매확정" />
@@ -146,11 +147,11 @@
                     if (!isset($consumer_id)){
                         print "비회원";
                         $consumer_id = "비회원";
-                        $sql2 = "INSERT INTO buy VALUES (".$order_id.",'".$id."','".$consumer_id."','안산','2017-10-11','".$credit."')";
+                        $sql2 = "INSERT INTO buy VALUES (".$order_id.",'".$id."','".$consumer_id."','안산','2017-10-11','".$credit."',".$price*$number.")";
                         $mysqli->query($sql2);
                     } 
                     else {
-                        $sql2 = "INSERT INTO buy VALUES (".$order_id.",'".$id."','".$consumer_id."','안산','2017-10-11','".$credit."')";
+                        $sql2 = "INSERT INTO buy VALUES (".$order_id.",'".$id."','".$consumer_id."','안산','2017-10-11','".$credit."',".$price*$number.")";
                         $mysqli->query($sql2);
                     }
                     

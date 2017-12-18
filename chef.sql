@@ -31,9 +31,22 @@ CREATE TABLE `buy`(
 	`consumer_id` VARCHAR(30) NOT NULL,
 	`address` VARCHAR(100) NOT NULL,
 	`o_date` DATE NOT NULL,
-	`payment` VARCHAR(10) NOT NULL
+	`payment` VARCHAR(10) NOT NULL,
+	`price` INTEGER NOT NULL
 )character set utf8;
 -- o_date : order date
+
+DROP TABLE IF EXISTS `buyPocket`;
+CREATE TABLE `buyPocket`(
+	`pocket_id` INTEGER NOT NULL PRIMARY KEY,
+	`brand` VARCHAR(20) NOT NULL,
+	`product_id` VARCHAR(20) NOT NULL,
+	`name` VARCHAR(40) NOT NULL,
+	`consumer_id` VARCHAR(30) NOT NULL,
+	`payment` VARCHAR(10) NOT NULL,
+	`price` INTEGER NOT NULL,
+	`number` INTEGER NOT NULL
+)character set utf8;
 
 INSERT INTO `product` VALUES ('woo1', 'wootique','에뜨', 9000, 100, 1,'2017-10-11');
 INSERT INTO `product` VALUES ('woo2', 'wootique','드림캐쳐', 18000, 100, 1,'2017-10-11');
@@ -146,4 +159,7 @@ INSERT INTO `consumer` VALUES ('abc1001','def0110','abc1001@naver.com','Jina','0
 INSERT INTO `consumer` VALUES ('root','root','root@naver.com','Jina','01012345678','1998-02-13','F');
 
 
-INSERT INTO `buy` VALUES (0001,1,'abc1001','Ansan hanyang university','2017-10-29','credit');
+INSERT INTO `buy` VALUES (0001,'woo1','root','Ansan hanyang university','2017-10-29','credit',2000);
+
+INSERT INTO `buyPocket` VALUES (0001,'wootique','woo1','에뜨','root','credit',3000,1);
+

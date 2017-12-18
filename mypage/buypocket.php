@@ -1,5 +1,16 @@
 <!--장바구니 페이지-->
 <!DOCTYPE html>
+<?php
+    session_start();
+    if(!isset($_SESSION['user_id']) || !isset($_SESSION['user_name'])) {
+        echo "<script>alert('로그인 하셔야 합니다.');</script>";
+        echo "<meta http-equiv='refresh' content='0;url=http://localhost:8888/chef/login/signup.php'>";
+        // header("location : http://localhost:8888/login/login.php");
+        exit;
+    }
+    $user_id = $_SESSION['user_id'];
+    $user_name = $_SESSION['user_name'];
+?>
 <html>
     <head>
         <meta charset="utf-8">
@@ -57,7 +68,6 @@
                     width = "1040px" height = "550px" />
                 </div>
                 <h1>장바구니</h1>
-                <hr/>
                 <table>
                     <th>상품이미지</th>
                     <th id="infor">상품정보</th>
@@ -65,18 +75,78 @@
                     <th>수량</th>
                     <th>선택</th>
                     <th>배송정보</th>
-                    <!-- 아래꺼는 예시 -->
-                    <tr>
-                        <td>
-                            <img src="/chef/image/wootique/woo5.png" alt="chaindrop">
-                        </td>
-                        <td>체인드롭 귀걸이</td>
-                        <td>7,000</td>
-                        <td>1</td>
-                        <td> <input type="checkbox" /> </td>
-                        <td>미결제</td>
-                    </tr>
                     
+                <hr/>
+                
+                    <?php
+                    $host = 'localhost';
+                    $user = 'chef';
+                    $pwd = '1234';
+                    $dbName = 'chef';
+                                            
+                    $mysqli = new mysqli($host, $user, $pwd, $dbName);
+                    
+                    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                        $brand = $_POST["brand"];
+                        $price = $_POST["price"];
+                        $name = $_POST["name"];
+                        $number = $_POST["number"];
+                        $id = $_POST["id"];
+                        $credit = $_POST["credit"];
+                        $order_id = $_POST["order_id"];
+                        // $consumer_id = $_POST["consumer_id"];
+                        // echo "<script>alert();</script>";
+                        
+
+                        $sql2 = "SELECT pocket_id FROM buyPocket order by pocket_id desc limit 1";
+                        $result = $mysqli->query($sql2);
+
+                        $pocket_number;
+                        if ($result->num_rows > 0) {
+                        // output data of each row
+                            while($row = $result->fetch_assoc()) {
+                                $pocket_number = $row["pocket_id"] + 1;
+                            }
+                        } else {
+                            // echo "0 results";
+                        }
+                    } 
+                        // session_start();
+                        $consumer_id = $user_id;
+                        // echo "<script>alert('$consumer_id');</script>";
+
+                        $sql2 = "select * from buyPocket where consumer_id='".$consumer_id."'";
+                        $result = $mysqli->query($sql2);
+
+                        // $pocket_number;
+                        if ($result->num_rows > 0) {
+                        // output data of each row
+                            while($row = $result->fetch_assoc()) {
+
+                                print_r($row);
+
+                                // echo "<script>alert();</script>"
+                                ?>
+                            <tr>
+                                <td>
+                                    <img src="/chef/image/<?=$row["brand"]?>/<?=$row["product_id"]?>.png" alt="chaindrop">
+                                </td>
+                                <td><?=$row["name"]?></td>
+                                <td><?=$row["price"]?></td>
+                                <td><?=$row["number"]?></td>
+                                <td> <input type="checkbox" /> </td>
+                                <td>미결제</td>
+                            </tr>
+                    
+                
+                                <!-- <h2><?php print_r($row); ?></h2> -->
+                                <?php
+                            }
+                        } else {
+                            echo "0 results";
+                        }
+                    
+                    ?>
                 </table>
                 <button>구매하기</button>
                 <!--<ul>

@@ -99,7 +99,7 @@
                         <p>판매가 <?= $info["price"] ?></p>
                         <p>배송비 2,500</p>
                     </div>
-                    <form method="post" class="input" action="/chef/things/buyCheck.php">
+                    <form method="post" class="input" id="search-theme-form" action="/chef/things/buyCheck.php">
                         <ul>
                             <li>주문 수량 </br> 
                                 <select name="number">  
@@ -128,7 +128,8 @@
                         <input type="hidden" name="name" value="<?=$info["name"]?>" />  
                         <input type="hidden" name="id" value="<?=$productName?>" /> 
                         <input type="submit" id="buy" value="구매하기" />
-                        <button id="pocket" type="button" name="pocket">장바구니</button>
+                        <!-- <button id="pocket" type="button" name="pocket">장바구니</button> -->
+                        <input type="submit" id="pocket" value="장바구니" />
                     </form>
                 </div>
                 <section>
