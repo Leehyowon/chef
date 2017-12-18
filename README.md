@@ -50,14 +50,17 @@ There are many founding club for earrings, clothes, necklaces, and slimes in Han
   * Sign Up & Log in : /login/signup.php , signupCheck.php , login_ok.php
   * Log Out : /login/logout.php
   * Find ID : /login/findID.php
-  * Find Password : /login/findpw.php
+  * Find Password : /login/findpw.php, newPW.php
   * User Info : /mypage/info.php
+  * Buy Pocket : /mypage/buypocket.php, buypockerC.php
+  * Buy : /things/buyCheck.php
   * Search : /main/search.php
   * Details of Things : /things/eachThings.php
 
 **Chaeeun Kwon**
   * bybrand : brand.php
   * bycategory : categ.php
+  * Order Info : order.php
 
 **Hyebeen Kim**
   * each product's information shopping page : /things/eachThings.php
