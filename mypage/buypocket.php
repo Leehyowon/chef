@@ -33,15 +33,15 @@
                             <ul class="submenu">
                                 <li><a href="brand.php?brand=wootique">by Brand</a>
                                     <ul>
-                                        <li><a href = "brand.php?brand=wootique">Wootique</a></li>
-                                        <li><a href = "brand.php?brand=dallrang">Dallrang</a></li>
-                                        <li><a href = "brand.php?brand=veneno">veneno</a></li>
-                                        <li><a href = "brand.php?brand=joy">joy</a></li>
-                                        <li><a href = "brand.php?brand=ringing">ringing</a></li>
-                                        <li><a href = "brand.php?brand=wingbling">wingbling</a></li>
-                                        <li><a href = "brand.php?brand=slime1">Slime1</a></li>
-                                        <li><a href = "brand.php?brand=slime2">Slime2</a></li>              
-                                        <li><a href = "brand.php?brand=slime3">Slime3</a></li>
+                                        <li><a href = "/chef/brand/brand.php?brand=wootique">Wootique</a></li>
+                                        <li><a href = "/chef/brand/brand.php?brand=dallrang">Dallrang</a></li>
+                                        <li><a href = "/chef/brand/brand.php?brand=veneno">veneno</a></li>
+                                        <li><a href = "/chef/brand/brand.php?brand=joy">joy</a></li>
+                                        <li><a href = "/chef/brand/brand.php?brand=ringing">ringing</a></li>
+                                        <li><a href = "/chef/brand/brand.php?brand=wingbling">wingbling</a></li>
+                                        <li><a href = "/chef/brand/brand.php?brand=slimingo">Slimingo</a></li>
+                                        <li><a href = "/chef/brand/brand.php?brand=beslime">Beslime</a></li>
+                                        <li><a href = "/chef/brand/brand.php?brand=sliming">Sliming</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="#">by Product</a>
@@ -86,45 +86,6 @@
                                             
                     $mysqli = new mysqli($host, $user, $pwd, $dbName);
                     $consumer_id = $user_id;
-                    
-                    // if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                    //     $brand = $_POST["brand"];
-                    //     $price = $_POST["price"];
-                    //     $name = $_POST["name"];
-                    //     $number = $_POST["number"];
-                    //     $id = $_POST["id"];
-                    //     // $credit = $_POST["credit"];
-                    //     // $order_id = $_POST["order_id"];
-                    //     // $consumer_id = $_POST["consumer_id"];
-                    //     // echo "<script>alert();</script>";
-                        
-
-                    //     $sql2 = "SELECT pocket_id FROM buyPocket order by pocket_id desc limit 1";
-                    //     $result = $mysqli->query($sql2);
-
-                    //     $pocket_number;
-                    //     if ($result->num_rows > 0) {
-                    //     // output data of each row
-                    //         while($row = $result->fetch_assoc()) {
-                    //             $pocket_number = $row["pocket_id"] + 1;
-                    //             // $sql = "INSERT INTO buyPocket VALUES (".$pocket_number.",'".$brand."','".$id."','".$name."','".$consumer_id."','credit',".$price.",".$number.")";
-                    //             // $result = $mysqli->query($sql);
-                    //             print_r($pocket_number);
-                    //         }
-                    //     } else {
-                    //         // echo "0 results";
-                    //     }
-                        ?>
-                        <!-- <meta http-equiv='refresh' content='0;url=http://localhost:8888/chef/mypage/buypocket.php'> -->
-                        <?php
-                    // }
-                    ?>
-
-                    
-                    <?php
-                        // session_start();
-                    $consumer_id = $user_id;
-                        // echo "<script>alert('$consumer_id');</script>";
 
                     $sql2 = "select * from buyPocket where consumer_id='".$consumer_id."'";
                     $result = $mysqli->query($sql2);
@@ -134,9 +95,6 @@
                         // output data of each row
                         while($row = $result->fetch_assoc()) {
 
-                            // print_r($row);
-
-                                    // echo "<script>alert();</script>"
                         ?>
                         <tr>
                             <td>
@@ -148,26 +106,14 @@
                             <td> <input type="checkbox" /> </td>
                             <td>미결제</td>
                         </tr>
-                    
-                
-                                <!-- <h2><?php print_r($row); ?></h2> -->
                             <?php
                         }
                     } else {
-                        echo "0 results";
                     }
                     
                     ?>
                 </table>
                 <button>구매하기</button>
-                <!--<ul>
-                    <li>상품정보</li>
-                    <li>판매가</li>
-                    <li>수량</li>
-                    <li>선택</li>
-                    <li>배송정보</li>
-                </ul>
-                목록부분-->
             </article>
         </main>
 

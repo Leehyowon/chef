@@ -1,5 +1,11 @@
 <?php
 session_start();
+if(!isset($_SESSION['user_id']) || !isset($_SESSION['user_name'])) {
+    echo "<script>alert('로그인 하셔야 합니다.');</script>";
+    echo "<meta http-equiv='refresh' content='0;url=http://localhost:8888/chef/login/signup.php'>";
+        // header("location : http://localhost:8888/login/login.php");
+    exit;
+}
 $user_id = $_SESSION['user_id'];
 $host = 'localhost';
 $user = 'chef';
@@ -15,10 +21,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_POST["name"];
     $number = $_POST["number"];
     $id = $_POST["id"];
-                        // $credit = $_POST["credit"];
-                        // $order_id = $_POST["order_id"];
-                        // $consumer_id = $_POST["consumer_id"];
-                        // echo "<script>alert();</script>";
                         
     $sql2 = "SELECT pocket_id FROM buyPocket order by pocket_id desc limit 1";
     $result = $mysqli->query($sql2);
@@ -28,13 +30,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         // output data of each row
         while($row = $result->fetch_assoc()) {
             $pocket_number = $row["pocket_id"] + 1;
-            $sql = "INSERT INTO buyPocket VALUES (".$pocket_number.",'".$brand."','".$id."','".$name."','".$consumer_id."','credit',".$price.",".$number.")";
-            $result = $mysqli->query($sql);
-                                // print_r($pocket_number);
         }
     } else {
-                            // echo "0 results";
     }
-}
+    $sql = "INSERT INTO buyPocket VALUES (".$pocket_number.",'".$brand."','".$id."','".$name."','".$consumer_id."','credit',".$price.",".$number.")";
+    $mysqli->query($sql);
 ?>
 <meta http-equiv='refresh' content='0;url=http://localhost:8888/chef/mypage/buypocket.php'>
+<?php
+    exit;
+}
+?>
