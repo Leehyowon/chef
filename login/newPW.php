@@ -5,7 +5,7 @@
 		<title>CHEF</title>
 		<link href="https://github.com/hyemni/chef/blob/master/image/HBpic.jpeg?raw=true" type="image/jpeg" rel="shortcut icon"/>
         <link href="/chef/main/main.css" type="text/css" rel="stylesheet" />
-        <link href="findpw.css" type="text/css" rel="stylesheet" />
+        <link href="/chef/login/findpw.css" type="text/css" rel="stylesheet" />
         <!-- <script src="/chef/login/findpw.js"></script> -->
         <!-- <script src="http://ajax.googleapis.com/ajax/libs/prototype/1.7.3.0/prototype.js" type="text/javascript"></script> -->
     </head>
