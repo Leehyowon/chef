@@ -5,7 +5,7 @@
 		<title>CHEF</title>
 		<link href="https://github.com/hyemni/chef/blob/master/image/HBpic.jpeg?raw=true" type="image/jpeg" rel="shortcut icon"/>
         <link href="/chef/main/main.css" type="text/css" rel="stylesheet" />
-        <link href="findpw.css" type="text/css" rel="stylesheet" />
+        
     </head>
 
     <body>
@@ -51,7 +51,7 @@
             <article>
                 <section>
                      <div class="forms">
-                        <form method="post">
+                        <form class="before" method="post">
                             <div class="form_pw">
                                 <h2>Find PW</h2>
                                 <input type="text" name="findid" placeholder="ID"/></br>
@@ -88,7 +88,7 @@
                                     }
                                 }
                             } else {
-                                echo "0 results";
+                                // echo "0 results";
                             }
 
                             
@@ -106,19 +106,32 @@
                             
                             <?php
                             } else {
-                                $sql = "SELECT pwd FROM consumer WHERE consumer_id = '".$id."'";
-                                $result = $mysqli->query($sql);
-                                if ($result->num_rows > 0) {
-                                    // while($row = $result->fetch_assoc()) {
-                                    //     $consumerPW = $row["pwd"];
-                                    // } 
-                                    $row = $result->fetch_assoc();
-                                }
+                                // $sql = "SELECT pwd FROM consumer WHERE consumer_id = '".$id."'";
+                                // $result = $mysqli->query($sql);
+                                // if ($result->num_rows > 0) {
+                                //     // while($row = $result->fetch_assoc()) {
+                                //     //     $consumerPW = $row["pwd"];
+                                //     // } 
+                                //     $row = $result->fetch_assoc();
+                                // }
+
                             ?>
 
-                            <p><?=$id?> 님의 비밀번호는   <?=$row["pwd"]?> 입니다.</p>
+                            <form method="post" action="/chef/login/newPW.php">
+                                <p><?=$id?> 님! 비밀번호를 변경하시겠어요?</p>
+                                <!-- <input type="hidden" name="brand" value="<?=$brand?>" />    -->
+                                <!-- <input type="hidden" name="price" value="<?=$info["price"]?>" />     -->
+                                <input type="hidden" name="id" value="<?=$id?>" />  
+                                <!-- <input type="hidden" name="id" value="<?=$productName?>" /> -->
+                                <button id="change">변경하기</button>
+                            </form>
                             <?php
                             }
+                            ?>
+                            <!-- <form class="after">
+                                <p>hi</p>
+                            </form> -->
+                            <?php
                         }
                         ?>
                     </div>
