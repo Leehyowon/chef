@@ -42,111 +42,131 @@
                                 </li>
                             </ul>
                         </li>
+<<<<<<< HEAD:things/buy.php
 
                         <li><a href="/chef/customer/customer.html">CUSTOMER CARE</a></li>
                         <li><a href="/chef/mypage/mypage.php">MY PAGE</a></li>
                         <li><a href="/chef/login/signup.php">Sign In</a></li>
                         <li><a href="/chef/main/search.php">Search</a></li>
+=======
+                        <!-- <li>COMMUNITY
+                            <ul>
+                                <li class="mincate"><a href = "/chef/board/notice.html"> Notice </a></li>
+                                <li class="mincate"><a href = "/chef/board/event.html"> Event </a></li>
+                                <li class="mincate"><a href = "/chef/board/qna.html"> QnA </a></li>
+                                <li class="mincate"><a href = "/chef/board/info.html"> Information </a></li>
+                            </ul>
+                        </li> -->
+                        <li><a href="#">CUSTOMER CARE</a></li>
+                        <li><a href="/chef/mypage/mypage.php">MY PAGE</a></li>
+                        <li><a href="/chef/login/login.php">Sign In</a></li>
+>>>>>>> d52e02cf498ab42826b1deb6d01f41c91267982d:things/buyCheck.php
                     </ul>
                 </div>
             </nav>
 
+            <article>
             <?php
-                $brand = $_GET["brand"];
-                $productName = $_GET["productName"];
-
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                $brand = $_POST["brand"];
+                $price = $_POST["price"];
+                $name = $_POST["name"];
+                $number = $_POST["number"];
+                $id = $_POST["id"];
+                $credit = $_POST["credit"];
+                $order_id = $_POST["order_id"];
+                $consumer_id = $_POST["consumer_id"];
+                // print_r($brand);
+            
                 $host = 'localhost';
                 $user = 'chef';
                 $pwd = '1234';
                 $dbName = 'chef';
                                     
                 $mysqli = new mysqli($host, $user, $pwd, $dbName);
-                // $db = new PDO("mysql:dbname=CHEF;host=localhost", "chef", "1234");
 
-                $sql2 = "SELECT name,price FROM product WHERE brand = '".$brand."' AND product_id='".$productName."'";
-                // $info = $db -> query("SELECT name,price FROM product WHERE brand = '$brand' AND name='$productName'");
+                $sql2 = "SELECT order_id FROM buy order by order_id desc limit 1";
                 $result = $mysqli->query($sql2);
-                $info = array();
+
+                $order_number;
                 if ($result->num_rows > 0) {
                 // output data of each row
                     while($row = $result->fetch_assoc()) {
                         // print_r($row);
+                        $order_number = $row["order_id"] + 1;
+                        // print_r($order_number);
                         // echo "<script>alert();</script>";
-                        $info["name"] = $row["name"];
-                        $info["price"] = $row["price"];
+                        // $info["name"] = $row["name"];
+                        // $info["price"] = $row["price"];
                         // print_r($row);
                     }
                 } else {
                     echo "0 results";
                 }
+                if (!isset($credit)){
 
             ?>
 
+                <h2>구매하시겠습니까?</h2>
+                <p>정보</p>
+                <img src="/chef/image/<?=$brand?>/<?= $id ?>.png" alt="ring">
 
-            <article>
-                <div id="brandbox">
-                    <img src="/chef/image/banner/<?= $brand ?>.png">
-                </div>
+                <p>브랜드 : <?=$brand?></p>
+                <p>이름 : <?= $name ?></p>
+                <p>가격 : <?=$price*$number?></p>
+                <!-- <p>id : <?= $id ?></p> -->
+                <form method="post">
+                    <select name="credit">
+                        <option>신용카드</option>
+                        <option>계좌이체</option>
+                        <option>무통장입금</option>
+                    </select>
+                    <?php 
 
-                <div class="picture">
-                    <img src="/chef/image/<?= $brand ?>/<?= $productName ?>.png" alt="ring">
-                </div>
-
-
-                <div class="one_two"> 
-                    <h2><?= $info["name"] ?></h2>
-                    <div class="price">
-                        <p>판매가 <?= $info["price"] ?></p>
-                        <p>배송비 2,500</p>
-                    </div>
-                    <form method="post" class="input" id="search-theme-form" action="/chef/things/buyCheck.php">
-                        <ul>
-                            <li>주문 수량 </br> 
-                                <select name="number">  
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5</option>
-                                </select>
-                            </li>
-                           
-                            <li>소재 </br>                           
-                                <select name="ringoption">
-                                    <option>골드</option>
-                                    <option>실버</option>
-                                    <option>무니켈</option>
-                                </select>
-                            </li>
-                            
-                        </ul>
-                        <p>총 상품금액</p>
-            
-
-                        <input type="hidden" name="brand" value="<?=$brand?>" />   
-                        <input type="hidden" name="price" value="<?=$info["price"]?>" />    
-                        <input type="hidden" name="name" value="<?=$info["name"]?>" />  
-                        <input type="hidden" name="id" value="<?=$productName?>" /> 
-                        <input type="submit" id="buy" value="구매하기" />
-                        <!-- <button id="pocket" type="button" name="pocket">장바구니</button> -->
-                        <input type="submit" id="pocket" value="장바구니" />
-                    </form>
-                </div>
-                <section>
-                    
+                        session_start();
+                        if(!isset($_SESSION['user_id']) || !isset($_SESSION['user_name'])) {
+                    ?>
+                        <p>회원님은 비로그인 중입니다. 구매시 일시적인 아이디를 저희가 랜덤하게 생성할 예정입니다.</p>
                     <?php
-                         $num = substr($productName,3);
-
-                        // print_r($num);
+                        } else {
+                            $consumer_id = $_SESSION['user_id'];
                     ?>
 
-                    <div class="thing_information">                    
-                        <img src="/chef/image/<?=$brand?>/details/<?=$num?>_1.png" alt="ChainStick">                    
-                        <img src="/chef/image/<?=$brand?>/details/<?=$num?>_2.png" alt="">
-                        
-                    </div>
-                </section>
-            </article>            
+                    <?php
+                        }
+                    ?>
+                    <input type="hidden" name="brand" value="<?=$brand?>" />   
+                    <input type="hidden" name="price" value="<?=$price?>" />   
+                    <input type="hidden" name="number" value="<?=$number?>" />  
+                    <input type="hidden" name="name" value="<?=$name?>" />  
+                    <input type="hidden" name="id" value="<?=$id?>" /> 
+                    <input type="hidden" name="consumer_id" value="<?=$consumer_id?>" /> 
+                    <input type="hidden" name="order_id" value="<?=$order_number?>" /> 
+                    <!-- <input type="hidden" name="consumer_id" value="<?=$consumer_id?>" />  -->
+                    <input type="submit" id="buyReal" value="구매확정" />
+                </form>
+
+            <?php 
+                } else {
+                    
+                    if (!isset($consumer_id)){
+                        print "비회원";
+                        $consumer_id = "비회원";
+                        $sql2 = "INSERT INTO buy VALUES (".$order_id.",'".$id."','".$consumer_id."','2017-10-11','".$credit."',".$price*$number.")";
+                        $mysqli->query($sql2);
+                    } 
+                    else {
+                        $sql2 = "INSERT INTO buy VALUES (".$order_id.",'".$id."','".$consumer_id."','2017-10-11','".$credit."',".$price*$number.")";
+                        $mysqli->query($sql2);
+                    }
+                    
+            ?>
+                <p>구매되었습니다.</p>
+            <?php
+                }
+            }
+            ?>
+            </article>
         </main>
 
         <footer>

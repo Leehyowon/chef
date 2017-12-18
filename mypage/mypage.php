@@ -39,9 +39,9 @@
                                         <li><a href = "/chef/brand/brand.php?brand=joy">joy</a></li>
                                         <li><a href = "/chef/brand/brand.php?brand=ringing">ringing</a></li>
                                         <li><a href = "/chef/brand/brand.php?brand=wingbling">wingbling</a></li>
-                                        <li><a href = "/chef/brand/brand.php?brand=slime1">Slimingo</a></li>
-                                        <li><a href = "/chef/brand/brand.php?brand=slime2">Byslime</a></li>
-                                        <li><a href = "/chef/brand/brand.php?brand=slime3">Sliming</a></li>
+                                        <li><a href = "/chef/brand/brand.php?brand=slimingo">Slimingo</a></li>
+                                        <li><a href = "/chef/brand/brand.php?brand=beslime">Beslime</a></li>
+                                        <li><a href = "/chef/brand/brand.php?brand=sliming">Sliming</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="#">by Product</a>
@@ -77,14 +77,13 @@
 
                 <div class="my_menu"> 
                     <div class="menu">
-                        <h3><a href="/chef/mypage/buypocket.html">POCKET 장바구니</a></h3>
+                        <h3><a href="/chef/mypage/buypocket.php">POCKET 장바구니</a></h3>
                         <p>고객님께서 장바구니에 등록한 상품들을 보실 수 있습니다.</p>
                     </div>
 
                     <div class="menu">
-                        <h3><a href="">ORDER 주문내역 조회</a></h3>
-                        <p>고객님께서 주문하신 상품의 주문내역을 확인하실 수 있습니다.
-                        비회원의 경우, 주문서의 주문번호와 비밀번호로 주문조회가 가능합니다.</p>
+                        <h3><a href="/chef/mypage/order.php">ORDER 주문내역 조회</a></h3>
+                        <p>고객님께서 주문하신 상품의 주문내역을 확인하실 수 있습니다.</p>
                     </div>
                                 
                     <div class="menu">

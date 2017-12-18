@@ -1,5 +1,12 @@
 -- chef.sql
+
+DROP TABLE IF EXISTS `buy`;
+DROP TABLE IF EXISTS `buyPocket`;
 DROP TABLE IF EXISTS `product`;
+DROP TABLE IF EXISTS `consumer`;
+
+
+
 CREATE TABLE `product`(
 	`product_id` VARCHAR(20) NOT NULL PRIMARY KEY ,
 	`brand` VARCHAR(40) NOT NULL,
@@ -21,19 +28,35 @@ CREATE TABLE `consumer`(
 	`name` VARCHAR(20) NOT NULL,
 	`tel` VARCHAR(20) NOT NULL,
 	`birth` DATE NOT NULL,
+	`address` VARCHAR(100) NOT NULL,
 	`gender` VARCHAR(5) NOT NULL
 )character set utf8;
 
-DROP TABLE IF EXISTS `buy`;
 CREATE TABLE `buy`(
 	`order_id` INTEGER NOT NULL PRIMARY KEY,
-	`product_id` INTEGER NOT NULL,
+	`product_id` VARCHAR(20) NOT NULL,
 	`consumer_id` VARCHAR(30) NOT NULL,
-	`address` VARCHAR(100) NOT NULL,
 	`o_date` DATE NOT NULL,
-	`payment` VARCHAR(10) NOT NULL
+	`payment` VARCHAR(10) NOT NULL,
+	`tot_price` INTEGER NOT NULL,
+	FOREIGN KEY(`product_id`) REFERENCES `product`(`product_id`),
+	FOREIGN KEY(`consumer_id`) REFERENCES `consumer`(`consumer_id`)
 )character set utf8;
 -- o_date : order date
+
+CREATE TABLE `buyPocket`(
+	`pocket_id` INTEGER NOT NULL PRIMARY KEY,
+	-- `brand` VARCHAR(20) NOT NULL,
+	`product_id` VARCHAR(20) NOT NULL,
+	-- `name` VARCHAR(40) NOT NULL,
+	`consumer_id` VARCHAR(30) NOT NULL,
+	`payment` VARCHAR(10) NOT NULL,
+	-- `price` INTEGER NOT NULL,
+	`number` INTEGER NOT NULL,
+	FOREIGN KEY(`product_id`) REFERENCES `product`(`product_id`),
+	FOREIGN KEY(`consumer_id`) REFERENCES `consumer`(`consumer_id`)
+)character set utf8;
+
 
 INSERT INTO `product` VALUES ('woo1', 'wootique','에뜨', 9000, 100, 1,'2017-10-11');
 INSERT INTO `product` VALUES ('woo2', 'wootique','드림캐쳐', 18000, 100, 1,'2017-10-11');
@@ -88,62 +111,66 @@ INSERT INTO `product` VALUES ('ven10', 'veneno', '진주', 9000, 200, 1, '2017-1
 INSERT INTO `product` VALUES ('ven11', 'veneno', '릴리', 9000, 100, 1, '2017-11-20');
 INSERT INTO `product` VALUES ('ven12', 'veneno', '음표', 8000, 100, 1, '2017-11-21');
 
-INSERT INTO `product` VALUES ('rin1', 'ringing', '달빛한모금', 13000, 200, 5, '2017-10-24');
-INSERT INTO `product` VALUES ('rin2', 'ringing', '체리블라썸', 12500, 99, 5, '2017-10-26');
-INSERT INTO `product` VALUES ('rin3', 'ringing', '도깨비방망이', 12000, 199, 5, '2017-10-27');
-INSERT INTO `product` VALUES ('rin4', 'ringing', '그림자', 15000, 300, 5, '2017-10-28');
-INSERT INTO `product` VALUES ('rin5', 'ringing', '아름다운', 12500, 200, 5, '2017-11-01');
-INSERT INTO `product` VALUES ('rin6', 'ringing', '전주비빔밥', 12500, 100, 5, '2017-11-02');
-INSERT INTO `product` VALUES ('rin7', 'ringing', '곰세마리', 10500, 20, 5, '2017-11-04');
-INSERT INTO `product` VALUES ('rin8', 'ringing', '지우개', 9500, 100, 5, '2017-11-05');
-INSERT INTO `product` VALUES ('rin9', 'ringing', '몽땅연필', 8000, 300, 5, '2017-11-10');
-INSERT INTO `product` VALUES ('rin10', 'ringing', '거친생각', 12000, 200, 5, '2017-11-11');
-INSERT INTO `product` VALUES ('rin11', 'ringing', '불안한눈빛', 13000, 150, 5, '2017-11-12');
-INSERT INTO `product` VALUES ('rin12', 'ringing', '시계', 12500, 200, 5, '2017-11-15');
+INSERT INTO `product` VALUES ('rin1', 'ringing', '달빛한모금', 13000, 200, 2, '2017-10-24');
+INSERT INTO `product` VALUES ('rin2', 'ringing', '체리블라썸', 12500, 99, 2, '2017-10-26');
+INSERT INTO `product` VALUES ('rin3', 'ringing', '도깨비방망이', 12000, 199, 2, '2017-10-27');
+INSERT INTO `product` VALUES ('rin4', 'ringing', '그림자', 15000, 300, 2, '2017-10-28');
+INSERT INTO `product` VALUES ('rin5', 'ringing', '아름다운', 12500, 200, 2, '2017-11-01');
+INSERT INTO `product` VALUES ('rin6', 'ringing', '전주비빔밥', 12500, 100, 2, '2017-11-02');
+INSERT INTO `product` VALUES ('rin7', 'ringing', '곰세마리', 10500, 20, 2, '2017-11-04');
+INSERT INTO `product` VALUES ('rin8', 'ringing', '지우개', 9500, 100, 2, '2017-11-05');
+INSERT INTO `product` VALUES ('rin9', 'ringing', '몽땅연필', 8000, 300, 2, '2017-11-10');
+INSERT INTO `product` VALUES ('rin10', 'ringing', '거친생각', 12000, 200, 2, '2017-11-11');
+INSERT INTO `product` VALUES ('rin11', 'ringing', '불안한눈빛', 13000, 150, 2, '2017-11-12');
+INSERT INTO `product` VALUES ('rin12', 'ringing', '시계', 12500, 200, 2, '2017-11-15');
 
-INSERT INTO `product` VALUES ('slim1', 'sliming', '우주', 5000, 200, 4, '2017-11-15');
-INSERT INTO `product` VALUES ('slim2', 'sliming', '지구', 10000, 200, 4, '2017-11-15');
-INSERT INTO `product` VALUES ('slim3', 'sliming', '태양', 12500, 200, 4, '2017-11-15');
-INSERT INTO `product` VALUES ('slim4', 'sliming', '액체괴물', 9500, 200, 4, '2017-11-15');
-INSERT INTO `product` VALUES ('slim5', 'sliming', '기기괴괴', 7500, 200, 4, '2017-11-15');
-INSERT INTO `product` VALUES ('slim6', 'sliming', '인생', 4500, 200, 4, '2017-11-15');
-INSERT INTO `product` VALUES ('slim7', 'sliming', '태양아래', 6500, 200, 4, '2017-11-15');
-INSERT INTO `product` VALUES ('slim8', 'sliming', '같은그림자', 8000, 200, 4, '2017-11-15');
-INSERT INTO `product` VALUES ('slim9', 'sliming', '같은시계', 8000, 200, 4, '2017-11-15');
-INSERT INTO `product` VALUES ('slim10', 'sliming', '지구지킴이', 9000, 200, 4, '2017-11-15');
-INSERT INTO `product` VALUES ('slim11', 'sliming', '괴종시계', 12500, 200, 4, '2017-11-15');
-INSERT INTO `product` VALUES ('slim12', 'sliming', '구두방', 11500, 200, 4, '2017-11-15');
+INSERT INTO `product` VALUES ('slim1', 'sliming', '우주', 5000, 200, 3, '2017-11-15');
+INSERT INTO `product` VALUES ('slim2', 'sliming', '지구', 10000, 200, 3, '2017-11-15');
+INSERT INTO `product` VALUES ('slim3', 'sliming', '태양', 12500, 200, 3, '2017-11-15');
+INSERT INTO `product` VALUES ('slim4', 'sliming', '액체괴물', 9500, 200, 3, '2017-11-15');
+INSERT INTO `product` VALUES ('slim5', 'sliming', '기기괴괴', 7500, 200, 3, '2017-11-15');
+INSERT INTO `product` VALUES ('slim6', 'sliming', '인생', 4500, 200, 3, '2017-11-15');
+INSERT INTO `product` VALUES ('slim7', 'sliming', '태양아래', 6500, 200, 3, '2017-11-15');
+INSERT INTO `product` VALUES ('slim8', 'sliming', '같은그림자', 8000, 200, 3, '2017-11-15');
+INSERT INTO `product` VALUES ('slim9', 'sliming', '같은시계', 8000, 200, 3, '2017-11-15');
+INSERT INTO `product` VALUES ('slim10', 'sliming', '지구지킴이', 9000, 200, 3, '2017-11-15');
+INSERT INTO `product` VALUES ('slim11', 'sliming', '괴종시계', 12500, 200, 3, '2017-11-15');
+INSERT INTO `product` VALUES ('slim12', 'sliming', '구두방', 11500, 200, 3, '2017-11-15');
 
-INSERT INTO `product` VALUES ('slimgo1', 'slimingo', '우주인', 5000, 200, 4, '2017-11-15');
-INSERT INTO `product` VALUES ('slimgo2', 'slimingo', '지구별', 10000, 200, 4, '2017-11-15');
-INSERT INTO `product` VALUES ('slimgo3', 'slimingo', '태양에너지', 12500, 200, 4, '2017-11-15');
-INSERT INTO `product` VALUES ('slimgo4', 'slimingo', '괴이현상', 9500, 200, 4, '2017-11-15');
-INSERT INTO `product` VALUES ('slimgo5', 'slimingo', '만화방', 7500, 200, 4, '2017-11-15');
-INSERT INTO `product` VALUES ('slimgo6', 'slimingo', '도서관', 4500, 200, 4, '2017-11-15');
-INSERT INTO `product` VALUES ('slimgo7', 'slimingo', '착한고양이', 6500, 200, 4, '2017-11-15');
-INSERT INTO `product` VALUES ('slimgo8', 'slimingo', '사자머리', 8000, 200, 4, '2017-11-15');
-INSERT INTO `product` VALUES ('slimgo9', 'slimingo', '초코송이', 8000, 200, 4, '2017-11-15');
-INSERT INTO `product` VALUES ('slimgo10', 'slimingo', '마우스', 9000, 200, 4, '2017-11-15');
-INSERT INTO `product` VALUES ('slimgo11', 'slimingo', '한해', 12500, 200, 4, '2017-11-15');
-INSERT INTO `product` VALUES ('slimgo12', 'slimingo', '교통', 11500, 200, 4, '2017-11-15');
+INSERT INTO `product` VALUES ('slimgo1', 'slimingo', '우주인', 5000, 200, 3, '2017-11-15');
+INSERT INTO `product` VALUES ('slimgo2', 'slimingo', '지구별', 10000, 200, 3, '2017-11-15');
+INSERT INTO `product` VALUES ('slimgo3', 'slimingo', '태양에너지', 12500, 200, 3, '2017-11-15');
+INSERT INTO `product` VALUES ('slimgo4', 'slimingo', '괴이현상', 9500, 200, 3, '2017-11-15');
+INSERT INTO `product` VALUES ('slimgo5', 'slimingo', '만화방', 7500, 200, 3, '2017-11-15');
+INSERT INTO `product` VALUES ('slimgo6', 'slimingo', '도서관', 4500, 200, 3, '2017-11-15');
+INSERT INTO `product` VALUES ('slimgo7', 'slimingo', '착한고양이', 6500, 200, 3, '2017-11-15');
+INSERT INTO `product` VALUES ('slimgo8', 'slimingo', '사자머리', 8000, 200, 3, '2017-11-15');
+INSERT INTO `product` VALUES ('slimgo9', 'slimingo', '초코송이', 8000, 200, 3, '2017-11-15');
+INSERT INTO `product` VALUES ('slimgo10', 'slimingo', '마우스', 9000, 200, 3, '2017-11-15');
+INSERT INTO `product` VALUES ('slimgo11', 'slimingo', '한해', 12500, 200, 3, '2017-11-15');
+INSERT INTO `product` VALUES ('slimgo12', 'slimingo', '교통', 11500, 200, 3, '2017-11-15');
 
-INSERT INTO `product` VALUES ('bes1', 'beslime', '새벽하늘', 5000, 200, 4, '2017-11-15');
-INSERT INTO `product` VALUES ('bes2', 'beslime', '노을빛', 10000, 200, 4, '2017-11-15');
-INSERT INTO `product` VALUES ('bes3', 'beslime', '동양의꽃', 12500, 200, 4, '2017-11-15');
-INSERT INTO `product` VALUES ('bes4', 'beslime', '따뜻한햇빛', 9500, 200, 4, '2017-11-15');
-INSERT INTO `product` VALUES ('bes5', 'beslime', '뒷산', 7500, 200, 4, '2017-11-15');
-INSERT INTO `product` VALUES ('bes6', 'beslime', '뒷뜰', 4500, 200, 4, '2017-11-15');
-INSERT INTO `product` VALUES ('bes7', 'beslime', '초록괴물', 6500, 200, 4, '2017-11-15');
-INSERT INTO `product` VALUES ('bes8', 'beslime', '기억', 8000, 200, 4, '2017-11-15');
-INSERT INTO `product` VALUES ('bes9', 'beslime', '추억', 8000, 200, 4, '2017-11-15');
-INSERT INTO `product` VALUES ('bes10', 'beslime', '겨울냄새', 9000, 200, 4, '2017-11-15');
-INSERT INTO `product` VALUES ('bes11', 'beslime', '안개', 12500, 200, 4, '2017-11-15');
-INSERT INTO `product` VALUES ('bes12', 'beslime', '마지막', 11500, 200, 4, '2017-11-15');
-
-
-
-INSERT INTO `consumer` VALUES ('abc1001','def0110','abc1001@naver.com','Jina','01012345678','1998-02-13','F');
-INSERT INTO `consumer` VALUES ('root','root','root@naver.com','Jina','01012345678','1998-02-13','F');
+INSERT INTO `product` VALUES ('bes1', 'beslime', '새벽하늘', 5000, 200, 3, '2017-11-15');
+INSERT INTO `product` VALUES ('bes2', 'beslime', '노을빛', 10000, 200, 3, '2017-11-15');
+INSERT INTO `product` VALUES ('bes3', 'beslime', '동양의꽃', 12500, 200, 3, '2017-11-15');
+INSERT INTO `product` VALUES ('bes4', 'beslime', '따뜻한햇빛', 9500, 200, 3, '2017-11-15');
+INSERT INTO `product` VALUES ('bes5', 'beslime', '뒷산', 7500, 200, 3, '2017-11-15');
+INSERT INTO `product` VALUES ('bes6', 'beslime', '뒷뜰', 4500, 200, 3, '2017-11-15');
+INSERT INTO `product` VALUES ('bes7', 'beslime', '초록괴물', 6500, 200, 3, '2017-11-15');
+INSERT INTO `product` VALUES ('bes8', 'beslime', '기억', 8000, 200, 3, '2017-11-15');
+INSERT INTO `product` VALUES ('bes9', 'beslime', '추억', 8000, 200, 3, '2017-11-15');
+INSERT INTO `product` VALUES ('bes10', 'beslime', '겨울냄새', 9000, 200, 3, '2017-11-15');
+INSERT INTO `product` VALUES ('bes11', 'beslime', '안개', 12500, 200, 3, '2017-11-15');
+INSERT INTO `product` VALUES ('bes12', 'beslime', '마지막', 11500, 200, 3, '2017-11-15');
 
 
-INSERT INTO `buy` VALUES (0001,1,'abc1001','Ansan hanyang university','2017-10-29','credit');
+
+INSERT INTO `consumer` VALUES ('abc1001','def0110','abc1001@naver.com','Jina','01012345678','1998-02-13','Ansan','F');
+INSERT INTO `consumer` VALUES ('root','root','root@naver.com','Jina','01012345678','1998-02-13','Seoul','F');
+INSERT INTO `consumer` VALUES ('비회원','비회원','비회원','비회원','비회원8','비회원','비회원','비회원');
+
+
+INSERT INTO `buy` VALUES (0001,'woo1','root','2017-10-29','credit',2000);
+
+INSERT INTO `buyPocket` VALUES (0001,'woo1','root','credit',1);
+

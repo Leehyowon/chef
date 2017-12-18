@@ -1,7 +1,7 @@
 # CHEF - Centre of Hanyang univ.ERICA Founding Club
 
 ## 1. Members
-+ 2016003 Kwon Chaeeun
++ 2016003290 Kwon Chaeeun
 + 2016003454 Kim Hyebeen
 + 2016003463 Nam Hyemin
 + 2016003609 Sung Jina
@@ -56,7 +56,8 @@ There are many founding club for earrings, clothes, necklaces, and slimes in Han
   * Details of Things : /things/eachThings.php
 
 **Chaeeun Kwon**
-  * bybrand : bybrand.php
+  * bybrand : brand.php
+  * bycategory : categ.php
 
 **Hyebeen Kim**
   * each product's information shopping page : /things/eachThings.php
@@ -74,7 +75,11 @@ There are many founding club for earrings, clothes, necklaces, and slimes in Han
 
 ### - Database
 **Chaeein Kwon**
-  * create table & insert data : chef.sql
+  * create table & connect data : chef.sql
+  
+### - Every Path is...
+* http://localhost:8888/chef/~ like this.  
+* It would be better to start with http://localhost:8888/chef/main/index1.html   
 
 ## 4. HOW TO CONNECT DATABASE
 **Create DB**
@@ -89,7 +94,10 @@ There are many founding club for earrings, clothes, necklaces, and slimes in Han
   * create user ‘chef’@‘%’ identified by ‘1234’;
   * grant all privileges on chef.* to chef@‘%’;
   * flush privileges;
-
+  
+**Do not copy**
+ * Copying may cause errors. Please type directly.
+ 
 **If you want to log in, Use**
 ID : abc1001 / PW : def0110  or  ID : root / PW : root
 

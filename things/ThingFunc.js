@@ -9,13 +9,14 @@ window.onload = upload;
 
 var pock;
 function pocket() {
-    pock = confirm("상품이 장바구니에 정상적으로 등록되었습니다. \n장바구니로 이동하시겠습니까?")
+    pock = confirm("장바구니로 이동하시겠습니까?")
     pocket2();
 }
 // var pock = document.getElementById("pocket");
 function pocket2() {
     if (pock == true) {
-        location.href="../mypage/buypocket.html";
+        document.getElementById("search-theme-form").action = "/chef/mypage/buypockerC.php";
+        location.href="../mypage/buypocket.php";
     }
 }
 

@@ -78,7 +78,7 @@
 
         $sql = "insert INTO consumer VALUES";
         // $sql = $sql."('".$id."','".$pw."','".$e_mail."','".$name."','".$phone."',1998-02-13,'".$gender."')";
-        $sql = $sql."('".$id."','".$pw."','".$e_mail."','".$name."','".$phoneString."',1998-02-13,'F')";
+        $sql = $sql."('".$id."','".$pw."','".$e_mail."','".$name."','".$phoneString."',1998-02-13,".$address.",'F')";
 
         $mysqli->query($sql);
         echo "<script>alert('회원가입 되었습니다.');</script>";
