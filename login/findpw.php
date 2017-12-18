@@ -41,11 +41,7 @@
                         </li>
 
                         <li><a href="/chef/customer/customer.html">CUSTOMER CARE</a></li>
-<<<<<<< HEAD
-                        <li><a href="/chef/mypage/mypage.php">MY PAGE</a></li>
-=======
                         <li><a href="/chef/mypage/buypocket.html">MY PAGE</a></li>
->>>>>>> 96c5e69e5aa86f481ed8a47d79e1aa7841c8c987
                         <li><a href="/chef/login/signup.php">Sign In</a></li>
                         <li><a href="/chef/main/search.php">Search</a></li>
                     </ul>
