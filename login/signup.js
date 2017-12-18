@@ -39,7 +39,7 @@ function login_sign_up() {
 
     setTimeout(function(){
     document.querySelector('.form_sign_up').style.display = "none";
-    // document.querySelector('.form_login').style.display = "none";
+    document.querySelector('.form_login').style.display = "none";
     },500);  
 
 }

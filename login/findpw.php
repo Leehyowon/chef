@@ -17,29 +17,35 @@
                         <li><a href="/chef/main/index1.html">HOME</a></li>
                         <li><a href="#">SHOP</a>
                             <ul class="submenu">
-                                <li><a href="#">by Brand</a>
+                                <li><a href="brand.php?brand=wootique">by Brand</a>
                                     <ul>
-                                        <li><a href="#">Wootique</a></li>
-                                        <li><a href="#">Dalrang</a></li>
-                                        <li><a href="#">Clothes</a></li>
-                                        <li><a href="#">Slime</a></li>
+                                        <li><a href = "brand.php?brand=wootique">Wootique</a></li>
+                                        <li><a href = "brand.php?brand=dallrang">Dallrang</a></li>
+                                        <li><a href = "brand.php?brand=veneno">veneno</a></li>
+                                        <li><a href = "brand.php?brand=joy">joy</a></li>
+                                        <li><a href = "brand.php?brand=ringing">ringing</a></li>
+                                        <li><a href = "brand.php?brand=wingbling">wingbling</a></li>
+                                        <li><a href = "brand.php?brand=slime1">Slime1</a></li>
+                                        <li><a href = "brand.php?brand=slime2">Slime2</a></li>              
+                                        <li><a href = "brand.php?brand=slime3">Slime3</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="#">by Product</a>
                                     <ul>
-                                        <li><a href="#">Clothes</a></li>
-                                        <li><a href="#">Jewelry</a></li>
-                                        <li><a href="#">Slime</a></li>    
+                                        <li><a href="/chef/product/categ.php?category=1">Clothes</a></li>
+                                        <li><a href="/chef/product/categ.php?category=2">Jewelry</a></li>
+                                        <li><a href="/chef/product/categ.php?category=3">Slime</a></li>
                                     </ul>
                                 </li>
                             </ul>
-                        </li>                                                                                            
-                        <li><a href="#">CUSTOMER CARE</a></li>
-                        <li><a href="#">MY PAGE</a></li>
-                        <li><a href="/chef/login/signup.php">Sign In</a></li>
+                        </li>
+
+                        <li><a href="/chef/customer/customer.html">CUSTOMER CARE</a></li>
+                        <li><a href="/chef/mypage/buypocket.html">MY PAGE</a></li>
+                        <li><a href="/chef/login/login.php">Sign In</a></li>
                         <li><a href="/chef/main/search.php">Search</a></li>
                     </ul>
-                </div>           
+                </div>
             </nav>
 
             <article>
@@ -52,7 +58,7 @@
                                 <input type="text" name="findname_pw" placeholder="Name"/></br>
                                 <input type="text" name="email_pw" placeholder="E-mail"/></br>
                                 <!-- <button class="btn_pw" name="findpw" value="findpw" onclick="">Find PW</button>  -->
-                                <input type="submit" name="findpw" value="Find PW" />
+                                <input id="btn" type="submit" name="findpw" value="Find PW" />
                             </div>
                         </form>
                     

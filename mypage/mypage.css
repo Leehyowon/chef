@@ -22,9 +22,10 @@ h1{
 
 .point ul{
     list-style: none;
-    background-color: #ffffff;
+    background-color: #ffffff52;
     padding: 20px;
     text-align: center;
+    box-shadow: 1px 5px 20px -5px rgba(0,0,0,0.4);
 }
 
 .menu{
@@ -35,7 +36,8 @@ h1{
     margin: 5px;
     text-align: center;
     padding: 10px;
-    background-color: white;
+    background-color: #ffffff91;
+    box-shadow: 1px 5px 20px -5px rgba(0,0,0,0.4);
 }
 
 .menu:hover{

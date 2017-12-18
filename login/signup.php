@@ -90,37 +90,43 @@
                             </div> -->
                             <div class="form_login">
                                 <a href="#" class="login_sign_up"><img src="arr.png"/></a>
-                                <h2>LOGIN</h2>
-                                <form method="post" action="/chef/login/login_ok.php">
-                                    <input type="text" name="logid" placeholder="Your ID"/>
-                                    <input type="password" name="logpw" placeholder="Your Password"/>
-                                        <!-- <button class="btn_login" onclick="login()">LOGIN</button> -->
-                                        <!-- HERE -->
-                                    <input type="submit" id="login" class="btn_login" value="LOGIN" />
-                                        <!-- HERE -->
-                                    <br/>
-                                </form>
-                                <button class="btn_find" onclick=""><a href="/chef/login/findID.php">FIND ID</a></button>
-                                <button class="btn_find" onclick=""><a href="/chef/login/findpw.php">FIND PW</a></button>
+                                <div class="content">
+                                    <h2>LOGIN</h2>
+                                    <form method="post" action="/chef/login/login_ok.php">
+                                        <input type="text" name="logid" placeholder="Your ID"/>
+                                        <input type="password" name="logpw" placeholder="Your Password"/>
+                                            <!-- <button class="btn_login" onclick="login()">LOGIN</button> -->
+                                            <!-- HERE -->
+                                        <input type="submit" id="login" class="btn_login" value="LOGIN" />
+                                            <!-- HERE -->
+                                        <br/>
+                                    </form>
+                                    <button class="btn_find" onclick=""><a href="/chef/login/findID.php">FIND ID</a></button>
+                                    <button class="btn_find" onclick=""><a href="/chef/login/findpw.php">FIND PW</a></button>
+                                </div>
+                                
                                 
                             </div>
                 
                             <div class="form_sign_up">
                                 <a href="#" class="login_sign_up"><img src="arr.png"/></a>
-                                <h2>SIGN UP</h2>    
-                                <form method="post" action="/chef/login/signupCheck.php">
-                                    <input type="text" name="name" placeholder="Name" />
-                                    <input type="text" name="id" placeholder="Your ID" />
-                                    <input type="password" name="pw" placeholder="Password" />
-                                    <input type="password" name="pwcheck" placeholder="Confirm Password" />
-                                    <input type="text" name="phone" placeholder="Phone" class="phone"/>-<input type="text" name="phonemid" class="phone"/>-<input type="text" name="phoneback" class="phone"/>
-                                    <input type="text" name="address" placeholder="Address" />
-                                    <input type="text" name="e_mail" placeholder="E-mail" />
-                                    <!-- <button class="btn_sign_up" onclick="sign_up()">SIGN UP</button> -->
+                                <div class="upcontent">
+                                    <h2>SIGN UP</h2>    
+                                    <form method="post" action="/chef/login/signupCheck.php">
+                                        <input type="text" name="name" placeholder="Name" />
+                                        <input type="text" name="id" placeholder="Your ID" />
+                                        <input type="password" name="pw" placeholder="Password" />
+                                        <input type="password" name="pwcheck" placeholder="Confirm Password" />
+                                        <input type="text" name="phone" placeholder="Phone" class="phone"/>-<input type="text" name="phonemid" class="phone"/>-<input type="text" name="phoneback" class="phone"/>
+                                        <input type="text" name="address" placeholder="Address" />
+                                        <input type="text" name="e_mail" placeholder="E-mail" />
+                                        <!-- <button class="btn_sign_up" onclick="sign_up()">SIGN UP</button> -->
+                                        <!-- HERE -->
+                                        <input type="submit" id="signup" class="btn_sign_up" value="SIGN UP" id="submitButton" />
                                     <!-- HERE -->
-                                    <input type="submit" id="signup" class="btn_sign_up" value="SIGN UP" id="submitButton" />
-                                <!-- HERE -->
-                                </form>
+                                    </form>
+                                </div>
+                                
                             </div>
                         </div>    
                         <?php    

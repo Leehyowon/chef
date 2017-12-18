@@ -20,48 +20,37 @@
                         <li><a href="/chef/main/index1.html">HOME</a></li>
                         <li><a href="#">SHOP</a>
                             <ul class="submenu">
-                                <li><a href="brand.php?brand=wootique">by Brand</a>
+                                <li><a href="/chef/brand.php?brand=wootique">by Brand</a>
                                     <ul>
-                                        <li><a href = "brand.php?brand=wootique">Wootique</a></li>
-                                        <li><a href = "brand.php?brand=dallrang">Dallrang</a></li>
-                                        <li><a href = "brand.php?brand=veneno">veneno</a></li>
-                                        <li><a href = "brand.php?brand=joy">joy</a></li>
-                                        <li><a href = "brand.php?brand=ringing">ringing</a></li>
-                                        <li><a href = "brand.php?brand=wingbling">wingbling</a></li>
-                                        <li><a href = "brand.php?brand=slime1">Slime1</a></li>
-                                        <li><a href = "brand.php?brand=slime2">Slime2</a></li>
-                                        <li><a href = "brand.php?brand=slime3">Slime3</a></li>
+                                        <li><a href = "/chef/brand/brand.php?brand=wootique">Wootique</a></li>
+                                        <li><a href = "/chef/brand/brand.php?brand=dallrang">Dallrang</a></li>
+                                        <li><a href = "/chef/brand/brand.php?brand=veneno">veneno</a></li>
+                                        <li><a href = "/chef/brand/brand.php?brand=joy">joy</a></li>
+                                        <li><a href = "/chef/brand/brand.php?brand=ringing">ringing</a></li>
+                                        <li><a href = "/chef/brand/brand.php?brand=wingbling">wingbling</a></li>
+                                        <li><a href = "/chef/brand/brand.php?brand=slimingo">Slimingo</a></li>
+                                        <li><a href = "/chef/brand/brand.php?brand=beslime">Beslime</a></li>
+                                        <li><a href = "/chef/brand/brand.php?brand=sliming">Sliming</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="#">by Product</a>
                                     <ul>
-                                        <li><a href="/chef/things/things.html">Clothes</a></li>
-                                        <li><a href="/chef/things/things.html">Jewelry</a></li>
-                                        <li><a href="#">Slime</a></li>
+                                        <li><a href="/chef/product/categ.php?category=1">Clothes</a></li>
+                                        <li><a href="/chef/product/categ.php?category=2">Jewelry</a></li>
+                                        <li><a href="/chef/product/categ.php?category=3">Slime</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="#">CUSTOMER CARE</a></li>
-                                <li><a href="/chef/mypage/mypage.php">MY PAGE</a></li>
-                                <li><a href="/chef/login/login.php">Sign In</a></li>
                             </ul>
                         </li>
-                        <!-- <li>COMMUNITY
-                            <ul>
-                                <li class="mincate"><a href = "/chef/board/notice.html"> Notice </a></li>
-                                <li class="mincate"><a href = "/chef/board/event.html"> Event </a></li>
-                                <li class="mincate"><a href = "/chef/board/qna.html"> QnA </a></li>
-                                <li class="mincate"><a href = "/chef/board/info.html"> Information </a></li>
-                            </ul>
-                        </li> -->
-                        <li><a href="#">CUSTOMER CARE</a></li>
-                        <li><a href="/chef/mypage/mypage.html">MY PAGE</a></li>
-                        <li><a href="/chef/login/login.php">Sign In</a></li>
+
+                        <li><a href="/chef/customer/customer.html">CUSTOMER CARE</a></li>
+                        <li><a href="/chef/mypage/mypage.php">MY PAGE</a></li>
+                        <li><a href="/chef/login/signup.php">Sign In</a></li>
+                        <li><a href="/chef/main/search.php">Search</a></li>
                     </ul>
                 </div>
             </nav>
-<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
-<!-- /things/eachThings.php?brand=***&productName=***
-dallrang, veneno, joy만 이미지가 있나봄..-->
+
             <article>
             <?php
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
