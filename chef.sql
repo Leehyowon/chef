@@ -32,19 +32,19 @@ CREATE TABLE `buy`(
 	`consumer_id` VARCHAR(30) NOT NULL,
 	`o_date` DATE NOT NULL,
 	`payment` VARCHAR(10) NOT NULL,
-	`price` INTEGER NOT NULL
+	`tot_price` INTEGER NOT NULL
 )character set utf8;
 -- o_date : order date
 
 DROP TABLE IF EXISTS `buyPocket`;
 CREATE TABLE `buyPocket`(
 	`pocket_id` INTEGER NOT NULL PRIMARY KEY,
-	`brand` VARCHAR(20) NOT NULL,
+	-- `brand` VARCHAR(20) NOT NULL,
 	`product_id` VARCHAR(20) NOT NULL,
-	`name` VARCHAR(40) NOT NULL,
+	-- `name` VARCHAR(40) NOT NULL,
 	`consumer_id` VARCHAR(30) NOT NULL,
 	`payment` VARCHAR(10) NOT NULL,
-	`price` INTEGER NOT NULL,
+	-- `price` INTEGER NOT NULL,
 	`number` INTEGER NOT NULL
 )character set utf8;
 
@@ -161,5 +161,5 @@ INSERT INTO `consumer` VALUES ('root','root','root@naver.com','Jina','0101234567
 
 INSERT INTO `buy` VALUES (0001,'woo1','root','2017-10-29','credit',2000);
 
-INSERT INTO `buyPocket` VALUES (0001,'wootique','woo1','에뜨','root','credit',3000,1);
+INSERT INTO `buyPocket` VALUES (0001,'woo1','root','credit',1);
 
