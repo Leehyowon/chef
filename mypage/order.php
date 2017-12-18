@@ -66,24 +66,26 @@
 
                 <h1>Your Order</h1>
                 <?php
-                    // $host = 'localhost';
-                    // $user = 'chef';
-                    // $pwd = '1234';
-                    // $dbName = 'chef';
+                    $host = 'localhost';
+                    $user = 'chef';
+                    $pwd = '1234';
+                    $dbName = 'chef';
                                             
-                    // $mysqli = new mysqli($host, $user, $pwd, $dbName);
-                    // $consumer_id = $user_id;
+                    $mysqli = new mysqli($host, $user, $pwd, $dbName);
+                    $consumer_id = $user_id;
 
-                    // $sql2 = "SELECT * from buyPocket where consumer_id='".$consumer_id."'";
-                    // $result = $mysqli->query($sql2);
+                    $sql2 = "SELECT * from buy where consumer_id='".$consumer_id."'";
+                    $result = $mysqli->query($sql2);
 
-                    //     // $pocket_number;
-                    // if ($result->num_rows > 0) {
-                    //     // output data of each row
-                    //     while($row = $result->fetch_assoc()) {
-
-                    //     }
-                    // }
+                        // $pocket_number;
+                    if ($result->num_rows > 0) {
+                        // output data of each row
+                        while($row = $result->fetch_assoc()) {
+                    ?>
+                            <!-- <li><?=$row[""]?></li> -->
+                    <?php
+                        }
+                    }
                 ?>
                 
             </article>

@@ -1,5 +1,12 @@
 -- chef.sql
+
+DROP TABLE IF EXISTS `buy`;
+DROP TABLE IF EXISTS `buyPocket`;
 DROP TABLE IF EXISTS `product`;
+DROP TABLE IF EXISTS `consumer`;
+
+
+
 CREATE TABLE `product`(
 	`product_id` VARCHAR(20) NOT NULL PRIMARY KEY ,
 	`brand` VARCHAR(40) NOT NULL,
@@ -25,18 +32,18 @@ CREATE TABLE `consumer`(
 	`gender` VARCHAR(5) NOT NULL
 )character set utf8;
 
-DROP TABLE IF EXISTS `buy`;
 CREATE TABLE `buy`(
 	`order_id` INTEGER NOT NULL PRIMARY KEY,
 	`product_id` VARCHAR(20) NOT NULL,
 	`consumer_id` VARCHAR(30) NOT NULL,
 	`o_date` DATE NOT NULL,
 	`payment` VARCHAR(10) NOT NULL,
-	`tot_price` INTEGER NOT NULL
+	`tot_price` INTEGER NOT NULL,
+	FOREIGN KEY(`product_id`) REFERENCES `product`(`product_id`),
+	FOREIGN KEY(`consumer_id`) REFERENCES `consumer`(`consumer_id`)
 )character set utf8;
 -- o_date : order date
 
-DROP TABLE IF EXISTS `buyPocket`;
 CREATE TABLE `buyPocket`(
 	`pocket_id` INTEGER NOT NULL PRIMARY KEY,
 	-- `brand` VARCHAR(20) NOT NULL,
@@ -45,8 +52,11 @@ CREATE TABLE `buyPocket`(
 	`consumer_id` VARCHAR(30) NOT NULL,
 	`payment` VARCHAR(10) NOT NULL,
 	-- `price` INTEGER NOT NULL,
-	`number` INTEGER NOT NULL
+	`number` INTEGER NOT NULL,
+	FOREIGN KEY(`product_id`) REFERENCES `product`(`product_id`),
+	FOREIGN KEY(`consumer_id`) REFERENCES `consumer`(`consumer_id`)
 )character set utf8;
+
 
 INSERT INTO `product` VALUES ('woo1', 'wootique','에뜨', 9000, 100, 1,'2017-10-11');
 INSERT INTO `product` VALUES ('woo2', 'wootique','드림캐쳐', 18000, 100, 1,'2017-10-11');
@@ -155,8 +165,9 @@ INSERT INTO `product` VALUES ('bes12', 'beslime', '마지막', 11500, 200, 3, '2
 
 
 
-INSERT INTO `consumer` VALUES ('abc1001','def0110','abc1001@naver.com','Jina','01012345678','1998-02-13','안산','F');
-INSERT INTO `consumer` VALUES ('root','root','root@naver.com','Jina','01012345678','1998-02-13','안산','F');
+INSERT INTO `consumer` VALUES ('abc1001','def0110','abc1001@naver.com','Jina','01012345678','1998-02-13','Ansan','F');
+INSERT INTO `consumer` VALUES ('root','root','root@naver.com','Jina','01012345678','1998-02-13','Seoul','F');
+INSERT INTO `consumer` VALUES ('비회원','비회원','비회원','비회원','비회원8','비회원','비회원','비회원');
 
 
 INSERT INTO `buy` VALUES (0001,'woo1','root','2017-10-29','credit',2000);
