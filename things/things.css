@@ -9,7 +9,7 @@
     margin-bottom:  50px;
 }
 article{
-    width: 900px;
+    width: 800px;
     margin: auto;
 }
 article{
@@ -54,11 +54,12 @@ article{
 
 }
 
-button, #buy{
+#buy, #pocket{
     width: 100px;
     height: 40px;
     border: none;
     color: white;
+    
 }
 #buy{
     background-color: #a1c9db;

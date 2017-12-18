@@ -1,0 +1,41 @@
+article{
+    width: 700px;
+    margin: auto;
+    margin-top: 150px;
+    margin-bottom: 150px;
+}
+
+h2{
+    font-weight: 300;
+    font-size: 20pt;
+}
+img{
+    width: 400px;
+    height: 400px;
+    float: left;
+    margin-right: 80px;
+}
+
+p{
+    font-size: 15pt;
+    font-weight: 300;
+}
+
+.name{
+    font-size: 20pt;
+}
+
+select{
+    width: 150px;
+    height: 40px;
+    border: none;
+    margin-bottom: 20px;
+}
+
+#buyReal{
+    width: 150px;
+    height: 30px;
+    background-color: rgb(203, 223, 253);
+    border: none;
+    color: black;
+}

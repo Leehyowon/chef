@@ -6,7 +6,7 @@
         <title>CHEF</title>
         <link href="/chef/main/favicon.png" type="image/png" rel="shortcut icon"/>
         <link href="/chef/main/main.css" type="text/css" rel="stylesheet" />
-        <link href="/chef/things/things.css" type="text/css" rel="stylesheet"> <!-- 임시 css파일 -->
+        <link href="/chef/things/buycheck.css" type="text/css" rel="stylesheet"> <!-- 임시 css파일 -->
         <script src="ThingFunc.js" type="text/javascript"></script>
         <script src="http://malsup.github.com/jquary.cycle2.js"></script>
     </head>
@@ -42,25 +42,11 @@
                                 </li>
                             </ul>
                         </li>
-<<<<<<< HEAD:things/buy.php
 
                         <li><a href="/chef/customer/customer.html">CUSTOMER CARE</a></li>
                         <li><a href="/chef/mypage/mypage.php">MY PAGE</a></li>
                         <li><a href="/chef/login/signup.php">Sign In</a></li>
                         <li><a href="/chef/main/search.php">Search</a></li>
-=======
-                        <!-- <li>COMMUNITY
-                            <ul>
-                                <li class="mincate"><a href = "/chef/board/notice.html"> Notice </a></li>
-                                <li class="mincate"><a href = "/chef/board/event.html"> Event </a></li>
-                                <li class="mincate"><a href = "/chef/board/qna.html"> QnA </a></li>
-                                <li class="mincate"><a href = "/chef/board/info.html"> Information </a></li>
-                            </ul>
-                        </li> -->
-                        <li><a href="#">CUSTOMER CARE</a></li>
-                        <li><a href="/chef/mypage/mypage.php">MY PAGE</a></li>
-                        <li><a href="/chef/login/login.php">Sign In</a></li>
->>>>>>> d52e02cf498ab42826b1deb6d01f41c91267982d:things/buyCheck.php
                     </ul>
                 </div>
             </nav>
@@ -108,19 +94,22 @@
             ?>
 
                 <h2>구매하시겠습니까?</h2>
-                <p>정보</p>
                 <img src="/chef/image/<?=$brand?>/<?= $id ?>.png" alt="ring">
-
-                <p>브랜드 : <?=$brand?></p>
-                <p>이름 : <?= $name ?></p>
-                <p>가격 : <?=$price*$number?></p>
+                
+                <div class="info">
+                    <p><?=$brand?></p>
+                    <p class="name"><?= $name ?></p>
+                    <p>판매가 <?=$price*$number?></p>
+                    <p>배송비 2,500</p>
+                </div>
+                
                 <!-- <p>id : <?= $id ?></p> -->
                 <form method="post">
                     <select name="credit">
                         <option>신용카드</option>
                         <option>계좌이체</option>
                         <option>무통장입금</option>
-                    </select>
+                    </select></br>
                     <?php 
 
                         session_start();
