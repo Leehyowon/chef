@@ -27,7 +27,7 @@ CREATE TABLE `consumer`(
 DROP TABLE IF EXISTS `buy`;
 CREATE TABLE `buy`(
 	`order_id` INTEGER NOT NULL PRIMARY KEY,
-	`product_id` INTEGER NOT NULL,
+	`product_id` VARCHAR(20) NOT NULL,
 	`consumer_id` VARCHAR(30) NOT NULL,
 	`address` VARCHAR(100) NOT NULL,
 	`o_date` DATE NOT NULL,
