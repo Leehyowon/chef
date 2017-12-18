@@ -6,6 +6,8 @@
 		<link href="https://github.com/hyemni/chef/blob/master/image/HBpic.jpeg?raw=true" type="image/jpeg" rel="shortcut icon"/>
         <link href="/chef/main/main.css" type="text/css" rel="stylesheet" />
         <link href="/chef/login/findID.css" type="text/css" rel="stylesheet" />
+        <script src="/chef/login/findID.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/prototype/1.7.3.0/prototype.js" type="text/javascript"></script>
     </head>
 
     <body>
@@ -42,7 +44,7 @@
 
                         <li><a href="/chef/customer/customer.html">CUSTOMER CARE</a></li>
                         <li><a href="/chef/mypage/buypocket.html">MY PAGE</a></li>
-                        <li><a href="/chef/login/login.php">Sign In</a></li>
+                        <li><a href="/chef/login/signup.php">Sign In</a></li>
                         <li><a href="/chef/main/search.php">Search</a></li>
                     </ul>
                 </div>
@@ -55,15 +57,17 @@
                         <!-- <div class="back_img_sec">
                             <img src="back.jpg" alt="" />
                         </div> -->
-                        <form method="post">
-                            <div class="form_login">
-                                <h2>Find ID</h2>					
-                                <input type="text" name="findname" placeholder="Name" /></br>
-                                <input type="text" name="email" placeholder="Email" /></br>
-                                <!-- <button class="btn_login" onclick="">Find ID</button> -->
-                                <input type="submit" id="btn" name="findid" class="btn_login" value="Find Id" />               												
-                            </div>
-                        </form>
+                        <div id="find1">
+                            <form method="post">
+                                <div class="form_login">
+                                    <h2>Find ID</h2>					
+                                    <input type="text" name="findname" placeholder="Name" /></br>
+                                    <input type="text" name="email" placeholder="Email" /></br>
+                                    <!-- <button class="btn_login" onclick="">Find ID</button> -->
+                                    <input type="submit" id="btn" name="findid" class="btn_login" value="Find Id" />               												
+                                </div>
+                            </form>
+                        </div>
                         <div>
                         <?php
                             $host = 'localhost';
@@ -107,6 +111,7 @@
                                 <?php
                                 } else {
                                 ?>
+                                <div id="find2">
                                     <p><?=$findname?>님의 아이디 목록</p>
                                 <?php    
                                     $sql = "SELECT consumer_id FROM consumer WHERE name = '".$findname."' and email='".$email."'";
@@ -122,6 +127,9 @@
                                     <p><?=$consumerID?></p>
                                 <?php
                                     }
+                                    ?>
+                                </div>
+                                    <?php
                                 }
                             }
                         ?>

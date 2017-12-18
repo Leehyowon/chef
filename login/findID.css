@@ -73,6 +73,9 @@ section{
     text-align: center;
 }
 
+.none{
+    display: "none";
+}
 /*
 .form_login > a,.form_sign_up > a  {
     color: #757575;
