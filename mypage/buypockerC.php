@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     } else {
     }
-    $sql = "INSERT INTO buyPocket VALUES (".$pocket_number.",'".$brand."','".$id."','".$name."','".$consumer_id."','credit',".$price.",".$number.")";
+    $sql = "INSERT INTO buyPocket VALUES (".$pocket_number.",'".$id."','".$consumer_id."','credit',".$number.")";
     $mysqli->query($sql);
 ?>
 <meta http-equiv='refresh' content='0;url=http://localhost:8888/chef/mypage/buypocket.php'>

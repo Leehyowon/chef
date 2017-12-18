@@ -87,7 +87,7 @@
                     $mysqli = new mysqli($host, $user, $pwd, $dbName);
                     $consumer_id = $user_id;
 
-                    $sql2 = "select * from buyPocket where consumer_id='".$consumer_id."'";
+                    $sql2 = "select * from buyPocket natural join product where consumer_id='".$consumer_id."'";
                     $result = $mysqli->query($sql2);
 
                         // $pocket_number;
