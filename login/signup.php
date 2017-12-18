@@ -19,7 +19,7 @@
                         <li><a href="/chef/main/index1.html">HOME</a></li>
                         <li><a href="#">SHOP</a>
                             <ul class="submenu">
-                                <li><a href="brand.php?brand=wootique">by Brand</a>
+                                <li><a href="/chef/brand.php?brand=wootique">by Brand</a>
                                     <ul>
                                         <li><a href = "/chef/brand/brand.php?brand=wootique">Wootique</a></li>
                                         <li><a href = "/chef/brand/brand.php?brand=dallrang">Dallrang</a></li>
@@ -34,19 +34,20 @@
                                 </li>
                                 <li><a href="#">by Product</a>
                                     <ul>
-                                        <li><a href="#">Clothes</a></li>
-                                        <li><a href="#">Jewelry</a></li>
-                                        <li><a href="#">Slime</a></li>    
+                                        <li><a href="/chef/product/categ.php?category=1">earring</a></li>
+                                        <li><a href="/chef/product/categ.php?category=2">necklace&ring</a></li>
+                                        <li><a href="/chef/product/categ.php?category=3">Slime</a></li>
                                     </ul>
                                 </li>
                             </ul>
-                        </li>                                                                                            
-                        <li><a href="#">CUSTOMER CARE</a></li>
+                        </li>
+
+                        <li><a href="/chef/customer/customer.html">CUSTOMER CARE</a></li>
                         <li><a href="/chef/mypage/mypage.php">MY PAGE</a></li>
                         <li><a href="/chef/login/signup.php">Sign In</a></li>
                         <li><a href="/chef/main/search.php">Search</a></li>
                     </ul>
-                </div>           
+                </div>
             </nav>
 
             <article>    

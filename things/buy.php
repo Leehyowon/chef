@@ -1,26 +1,16 @@
-<!-- 마이페이지 -->
+<!--상품 설명 페이지-->
 <!DOCTYPE html>
-<?php
-    session_start();
-    if(!isset($_SESSION['user_id']) || !isset($_SESSION['user_name'])) {
-        echo "<script>alert('로그인 하셔야 합니다.');</script>";
-        echo "<meta http-equiv='refresh' content='0;url=http://localhost:8888/chef/login/signup.php'>";
-        // header("location : http://localhost:8888/login/login.php");
-        exit;
-    }
-    $user_id = $_SESSION['user_id'];
-    $user_name = $_SESSION['user_name'];
-?>
 <html>
     <head>
         <meta charset="utf-8">
         <title>CHEF</title>
         <link href="/chef/main/favicon.png" type="image/png" rel="shortcut icon"/>
         <link href="/chef/main/main.css" type="text/css" rel="stylesheet" />
-        <link href="/chef/mypage/order.css" rel="stylesheet" type="text/css">
-        
-        <!-- <script src="http://malsup.github.com/jquary.cycle2.js"></script> -->
+        <link href="/chef/things/things.css" type="text/css" rel="stylesheet"> <!-- 임시 css파일 -->
+        <script src="ThingFunc.js" type="text/javascript"></script>
+        <script src="http://malsup.github.com/jquary.cycle2.js"></script>
     </head>
+
     <body>
         <main>
             <nav>
@@ -62,45 +52,52 @@
             </nav>
 
             <article>
-                <h1>주문내역</h1>
-                <table>
-                    <th>상품이미지</th>
-                    <th id="infor">상품정보</th>
-                    <th>날짜</th>
-                    <th>판매가</th>
+            <?php
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                $brand = $_POST["brand"];
+                $price = $_POST["price"];
+                $name = $_POST["name"];
+                // print_r($brand);
+            }
+                // $host = 'localhost';
+                // $user = 'chef';
+                // $pwd = '1234';
+                // $dbName = 'chef';
+                                    
+                // $mysqli = new mysqli($host, $user, $pwd, $dbName);
+                // // $db = new PDO("mysql:dbname=CHEF;host=localhost", "chef", "1234");
 
-                <?php
-                    $host = 'localhost';
-                    $user = 'chef';
-                    $pwd = '1234';
-                    $dbName = 'chef';
-                                            
-                    $mysqli = new mysqli($host, $user, $pwd, $dbName);
-                    $consumer_id = $user_id;
+                // $sql2 = "SELECT name,price FROM product WHERE brand = '".$brand."' AND product_id='".$productName."'";
+                // // $info = $db -> query("SELECT name,price FROM product WHERE brand = '$brand' AND name='$productName'");
+                // $result = $mysqli->query($sql2);
+                // $info = array();
+                // if ($result->num_rows > 0) {
+                // // output data of each row
+                //     while($row = $result->fetch_assoc()) {
+                //         // print_r($row);
+                //         // echo "<script>alert();</script>";
+                //         $info["name"] = $row["name"];
+                //         $info["price"] = $row["price"];
+                //         // print_r($row);
+                //     }
+                // } else {
+                //     echo "0 results";
+                // }
 
-                    $sql2 = "SELECT * from buy NATURAL JOIN product where consumer_id='".$consumer_id."'";
-                    $result = $mysqli->query($sql2);
+            ?>
 
-                        // $pocket_number;
-                    if ($result->num_rows > 0) {
-                        // output data of each row
-                        while($row = $result->fetch_assoc()) {
-                    ?>
-                        <tr>
-                            <td>
-                                <img src="/chef/image/<?= $row["brand"] ?>/<?=$row["product_id"]?>.png">
-                            </td>
-                            <td><?=$row["name"]?></td>
-                            <td><?=$row["o_date"]?></td>
-                            <td><?=$row["tot_price"]?></td>
-                        </tr>
-                    <?php
-                        }
-                    }
-                    ?>
-                </table>                                
+
+            
+                <h2>구매하시겠습니까?</h2>
+                <p>정보</p>
+
+                <p>브랜드 : <?=$brand?></p>
+                <p>이름 : <?= $name ?></p>
+                <p>가격 : <?=$price?></p>
+                <p>정보</p>
             </article>
         </main>
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 
         <footer>
             <ul>

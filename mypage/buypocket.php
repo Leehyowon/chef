@@ -1,23 +1,22 @@
 <!--장바구니 페이지-->
 <!DOCTYPE html>
-<?php
-    session_start();
-    if(!isset($_SESSION['user_id']) || !isset($_SESSION['user_name'])) {
-        echo "<script>alert('로그인 하셔야 합니다.');</script>";
-        echo "<meta http-equiv='refresh' content='0;url=http://localhost:8888/chef/login/signup.php'>";
-        // header("location : http://localhost:8888/login/login.php");
-        exit;
-    }
-    $user_id = $_SESSION['user_id'];
-    $user_name = $_SESSION['user_name'];
-?>
+    <?php
+        session_start();
+        if(!isset($_SESSION['user_id']) || !isset($_SESSION['user_name'])) {
+            echo "<script>alert('로그인 하셔야 합니다.');</script>";
+            echo "<meta http-equiv='refresh' content='0;url=http://localhost:8888/chef/login/signup.php'>";
+            // header("location : http://localhost:8888/login/login.php");
+            exit;
+        }
+        $user_id = $_SESSION['user_id'];
+        $user_name = $_SESSION['user_name'];
+    ?>
 <html>
     <head>
         <meta charset="utf-8">
         <title>CHEF</title>
         <link href="/chef/main/favicon.png" type="image/png" rel="shortcut icon"/>
-        <link href="/chef/main/main.css" type="text/css" rel="stylesheet" />
-        <link href="/chef/things/things.css" type="text/css" rel="stylesheet"> <!-- 임시 css파일 -->
+        <link href="/chef/main/main.css" type="text/css" rel="stylesheet" />        
         <link href="/chef/mypage/buypocket.css" type="text/css" rel="stylesheet">
         <script src="ThingFunc.js" type="text/javascript"></script>
         <script src="http://malsup.github.com/jquary.cycle2.js"></script>
@@ -63,10 +62,6 @@
             </nav>
 
             <article>
-                <div class = "slide">
-                    <img src="https://github.com/hyemni/chef/blob/master/main/image/slide1.png?raw=true" alt="slide image"
-                    width = "1040px" height = "550px" />
-                </div>
                 <h1>장바구니</h1>
                 <table>
                     <th>상품이미지</th>
@@ -76,8 +71,6 @@
                     <th>선택</th>
                     <th>배송정보</th>
                     
-                <hr/>
-                
                     <?php
                     $host = 'localhost';
                     $user = 'chef';
